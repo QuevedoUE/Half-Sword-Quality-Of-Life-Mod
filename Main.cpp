@@ -142,6 +142,8 @@ DWORD MainThread(HMODULE Module)
     SDK::AActor* SpawnedActor = SpawnActorFromClass(World, SDK::APostProcessVolume::StaticClass(), SpawnOriginTransform, CollisionHandling, nullptr, SpawnMethod);
     Sleep(800);
 
+    
+
     Sleep(800);
     if (SpawnedActor)
     {
