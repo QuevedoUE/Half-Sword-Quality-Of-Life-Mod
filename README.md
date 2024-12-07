@@ -11,6 +11,7 @@ Features:
 -Saves Loadout between matchs
 
 If you inyect it in the menu and dosent crash the camera will have a better position to select the class.
+For the mod to work better inyect it when you already play 2 matches for more posibilities to inyect
 
 !JOIN DISCORD!
 https://discord.gg/HmE2Wc7K
