@@ -12,4 +12,7 @@ Features:
 
 If you inyect it in the menu and dosent crash the camera will have a better position to select the class.
 
+!JOIN DISCORD!
+https://discord.gg/HmE2Wc7K
+
 -Froid
