@@ -8,6 +8,16 @@
 #include <thread> 
 #include <chrono> 
 
+
+static bool IsMassReduced = false;
+    static float OriginalPelvisMass = -1.0f;
+    static float OriginalRWeaponMass = -1.0f;
+    static float OriginalLWeaponMass = -1.0f;
+    static float OriginalAimSwingSpeed = -1.0f;
+    static float OriginalSpine05Mass = -1.0f;
+
+static float ActualTimeDilation = 1.0f;
+
 SDK::AActor* SpawnActorFromClass(class SDK::UObject* WorldContextObject,
     SDK::TSubclassOf<class SDK::AActor> ActorClass,
     struct SDK::FTransform& SpawnTransform,
@@ -80,7 +90,6 @@ DWORD MainThread(HMODULE Module)
     Sleep(800);
     SDK::AWorldSettings* WorldSettings = World->K2_GetWorldSettings();
     Sleep(800);
-    static float ActualTimeDilation = 1.0f;
     Sleep(800);
     MyController->EnableCheats();
     Sleep(800);
@@ -135,10 +144,10 @@ DWORD MainThread(HMODULE Module)
     Sleep(800);
     SDK::FTransform SpawnOriginTransform; Sleep(800);
     Sleep(800);
-    // Asignar ubicación directamente
-    SpawnOriginTransform.Translation = SDK::FVector(0.0f, 0.0f, 0.0f); // Ajusta la posición deseada
+    // Asignar ubicaciï¿½n directamente
+    SpawnOriginTransform.Translation = SDK::FVector(0.0f, 0.0f, 0.0f); // Ajusta la posiciï¿½n deseada
     Sleep(800);
-    // Asignar rotación directamente (usa una rotación por defecto, como una identidad)
+    // Asignar rotaciï¿½n directamente (usa una rotaciï¿½n por defecto, como una identidad)
     SpawnOriginTransform.Rotation = SDK::FQuat(180.0f, 0.0f, 0.0f, 1.0f); // Quaternion identidad
     Sleep(800);
     // Asignar escala directamente
@@ -265,30 +274,53 @@ DWORD MainThread(HMODULE Module)
             CurrentPawn->Stamina = 100;
         }
 
-        if (GetAsyncKeyState(VK_LBUTTON) & 1)
+        if (GetAsyncKeyState(74) & 1) // J
         {
-            CurrentPawn->Default_Pelvis_Mass = 0;
-            CurrentPawn->R_Weapon_Mass = 0;
-            CurrentPawn->L_Weapon_Mass = 0;
-            CurrentPawn->Aim_Swing_Speed = 999.0;
+            
+            if (!IsMassReduced) {
+                OriginalPelvisMass = CurrentPawn->Default_Pelvis_Mass;
+                OriginalRWeaponMass = CurrentPawn->R_Weapon_Mass;
+                OriginalLWeaponMass = CurrentPawn->L_Weapon_Mass;
+                OriginalAimSwingSpeed = CurrentPawn->Aim_Swing_Speed;
+                OriginalSpine05Mass = CurrentPawn->Default_Spine_05_Mass;
+
+                CurrentPawn->Default_Pelvis_Mass = 0;
+                CurrentPawn->R_Weapon_Mass = 0;
+                CurrentPawn->L_Weapon_Mass = 0;
+                CurrentPawn->Aim_Swing_Speed = 999.0;
+                CurrentPawn->Default_Spine_05_Mass = 0;
+
+                IsMassReduced = true;
+            }
+            else {
+
+                CurrentPawn->Default_Pelvis_Mass = OriginalPelvisMass;
+                CurrentPawn->R_Weapon_Mass = OriginalRWeaponMass;
+                CurrentPawn->L_Weapon_Mass = OriginalLWeaponMass;
+                CurrentPawn->Aim_Swing_Speed = OriginalAimSwingSpeed;
+                CurrentPawn->Default_Spine_05_Mass = OriginalSpine05Mass;
+
+                IsMassReduced = false;
+            }
+        }
         }
 
-        if (GetAsyncKeyState(71) & 1)
+        if (GetAsyncKeyState(71) & 1) //G
         {
             class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
             CurrentPawn->Save_Loadout();
         };
-        if (GetAsyncKeyState(9) & 1)
+        if (GetAsyncKeyState(9) & 1) //TAB
         {
             Level->WorldSettings->bForceNoPrecomputedLighting = true;
         };
 
-        if (GetAsyncKeyState(90) & 1)
+        if (GetAsyncKeyState(90) & 1) //Z
         {
  
-            if (ActualTimeDilation != 0.7f) {
-                WorldSettings->TimeDilation = 0.7f;  
-                ActualTimeDilation = 0.7f;           
+            if (ActualTimeDilation != 0.4f) {
+                WorldSettings->TimeDilation = 0.4f;  
+                ActualTimeDilation = 0.4f;
             }
             else {
                 WorldSettings->TimeDilation = 1.0f; 
@@ -296,10 +328,9 @@ DWORD MainThread(HMODULE Module)
             }
         }
 
-            Sleep(100);
-    }
-
-  return 0;         
+        Sleep(100); //Don't Overcharge CPU
+    
+     return 0;         
 }
 
 
