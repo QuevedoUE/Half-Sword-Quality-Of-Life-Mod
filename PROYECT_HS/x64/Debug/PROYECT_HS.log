@@ -1,0 +1,56 @@
+﻿  Main.cpp
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(296,1): warning C4099: 'SDK::FName': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(295,7): message : vea la declaración de 'SDK::FName'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1148,18): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1170,18): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1171,18): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1183,18): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1194,18): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1218,18): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\CoreUObject_structs.hpp(553,21): warning C4244: 'argumento': conversión de 'SDK::FVector::UnderlayingType' a 'float'; posible pérdida de datos
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\CoreUObject_structs.hpp(602,27): warning C4244: 'argumento': conversión de 'SDK::FVector::UnderlayingType' a 'float'; posible pérdida de datos
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\IrisCore_structs.hpp(256,34): warning C4099: 'SDK::FArrayProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1144,7): message : vea la declaración de 'SDK::FArrayProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\IrisCore_structs.hpp(270,29): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\IrisCore_structs.hpp(308,29): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(3646,2): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(3646,2): warning C4369: 'SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX':  el valor del enumerador '256' no se puede representar como 'unsigned char'; el valor es '256'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(6075,2): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(6075,2): warning C4369: 'SDK::ESkinCacheUsage::ESkinCacheUsage_MAX':  el valor del enumerador '256' no se puede representar como 'unsigned char'; el valor es '256'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(6299,2): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(6299,2): warning C4369: 'SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX':  el valor del enumerador '256' no se puede representar como 'unsigned char'; el valor es '256'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(6534,2): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(6534,2): warning C4369: 'SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX':  el valor del enumerador '256' no se puede representar como 'unsigned char'; el valor es '256'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(13865,29): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(21604,29): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_structs.hpp(21630,29): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_classes.hpp(34688,120): warning C4099: 'SDK::FField': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1043,7): message : vea la declaración de 'SDK::FField'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\HeadMountedDisplay_structs.hpp(102,2): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\HeadMountedDisplay_structs.hpp(102,2): warning C4369: 'SDK::EXRTrackedDeviceType::EXRTrackedDeviceType_MAX':  el valor del enumerador '256' no se puede representar como 'unsigned char'; el valor es '256'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\MovieScene_structs.hpp(1711,29): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\MovieSceneTracks_structs.hpp(169,29): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\GeometryFramework_structs.hpp(25,2): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\GeometryFramework_structs.hpp(25,2): warning C4369: 'SDK::EDynamicMeshComponentTangentsMode::EDynamicMeshComponentTangentsMode_MAX':  el valor del enumerador '256' no se puede representar como 'unsigned char'; el valor es '256'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\ControlRig_structs.hpp(43,2): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\ControlRig_structs.hpp(43,2): warning C4369: 'SDK::ERigElementType::ERigElementType_MAX':  el valor del enumerador '256' no se puede representar como 'unsigned char'; el valor es '256'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\VariantManagerContent_classes.hpp(106,36): warning C4099: 'SDK::FProperty': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1064,7): message : vea la declaración de 'SDK::FProperty'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Niagara_structs.hpp(797,2): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Niagara_structs.hpp(797,2): warning C4369: 'SDK::ENDISkeletalMesh_SkinningMode::ENDISkeletalMesh_MAX':  el valor del enumerador '256' no se puede representar como 'unsigned char'; el valor es '256'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Engine_parameters.hpp(53814,26): warning C4099: 'SDK::FField': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\gatus\source\repos\PROYECT_HS\SDK\Basic.hpp(1043,7): message : vea la declaración de 'SDK::FField'
+  PROYECT_HS.vcxproj -> C:\Users\gatus\source\repos\PROYECT_HS\x64\Debug\PROYECT_HS.dll
