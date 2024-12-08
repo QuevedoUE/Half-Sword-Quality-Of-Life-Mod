@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AskForItemToSpawn.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="SDK\EngineMessages_structs.hpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="SDK\Engine_structs.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AskForItem.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="SDK\Basic.cpp" />
     <ClCompile Include="SDK\CoreUObject_functions.cpp" />

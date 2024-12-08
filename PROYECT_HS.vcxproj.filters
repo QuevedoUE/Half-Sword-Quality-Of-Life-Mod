@@ -54,6 +54,9 @@
     <ClInclude Include="SDK\EngineSettings_structs.hpp">
       <Filter>MoreFiles</Filter>
     </ClInclude>
+    <ClInclude Include="AskForItemToSpawn.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -76,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="SDK\EngineSettings_functions.cpp">
       <Filter>MoreFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="AskForItem.cpp">
+      <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
