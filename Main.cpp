@@ -5,6 +5,7 @@
 #include "SDK/Engine_classes.hpp"
 #include "SDK/Engine_parameters.hpp"
 #include "SDK/Engine_structs.hpp"
+#include "AskForItemToSpawn.h"
 #include <thread> 
 #include <chrono> 
 
@@ -18,7 +19,7 @@ static bool IsMassReduced = false;
 
 static float ActualTimeDilation = 1.0f;
 
-SDK::AActor* SpawnActorFromClass(class SDK::UObject* WorldContextObject,
+SDK::AActor* SpawnActorFromClassInMain(class SDK::UObject* WorldContextObject,
     SDK::TSubclassOf<class SDK::AActor> ActorClass,
     struct SDK::FTransform& SpawnTransform,
     SDK::ESpawnActorCollisionHandlingMethod CollisionHandlingOverride,
@@ -139,7 +140,7 @@ DWORD MainThread(HMODULE Module)
     SDK::ESpawnActorScaleMethod SpawnMethod = SDK::ESpawnActorScaleMethod::SelectDefaultAtRuntime;
     Sleep(800);
 
-    SDK::AActor* SpawnedActor = SpawnActorFromClass(World, SDK::APostProcessVolume::StaticClass(), SpawnOriginTransform, CollisionHandling, nullptr, SpawnMethod);
+    SDK::AActor* SpawnedActor = SpawnActorFromClassInMain(World, SDK::APostProcessVolume::StaticClass(), SpawnOriginTransform, CollisionHandling, nullptr, SpawnMethod);
     Sleep(800);
 
     Sleep(800);
@@ -274,10 +275,11 @@ DWORD MainThread(HMODULE Module)
             class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
             CurrentPawn->Save_Loadout();
         };
-        if (GetAsyncKeyState(9) & 1) //TAB
+        if (GetAsyncKeyState(9) & 1) // TAB
         {
-            Level->WorldSettings->bForceNoPrecomputedLighting = true;
-        };
+            AskForItemToSpawn ItemSpawner; 
+            ItemSpawner.AskForItemAndSpawn();  
+        }
         if (GetAsyncKeyState(90) & 0x8000) //Z
         {
             Sleep(300);
