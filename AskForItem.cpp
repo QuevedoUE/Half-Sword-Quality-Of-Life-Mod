@@ -8,6 +8,7 @@
 #include "SDK/Engine_structs.hpp"
 #include <thread> 
 #include <chrono> 
+#include <limits> 
 
 
 SDK::UEngine* Engine = SDK::UEngine::GetEngine();
@@ -45,10 +46,21 @@ SDK::AActor* SpawnActorFromClass(class SDK::UObject* WorldContextObject,
 
 void AskForItemToSpawn::AskForItemAndSpawn() {
 
-	int ItemID;
+    int ItemID;
 
-	std::cout << "Enter Item ID:";
-	std::cin >> ItemID;
+    // Solicitar al usuario que ingrese el ID del artículo
+    std::cout << "Enter Item ID: ";
+
+    // Comprobar si la entrada es válida
+    while (!(std::cin >> ItemID)) {
+        // Limpiar el error de entrada
+        std::cin.clear();
+        // Ignorar caracteres incorrectos
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        std::cout << "Invalid input. Please enter a valid Item ID: ";
+    }
+
 
     class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
     SDK::FTransform CurrentPlayerTransform = CurrentPawn->GetTransform();
@@ -267,6 +279,119 @@ switch (ItemID)
     case 104:
         SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Armor_Waist_Foulds_T3_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break;
     /*WAPEONS*/
+    case 105:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Improv_CandleStick_Big_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; //Candle 0
+    case 106:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Improv_CandleStick_Small_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Candle 1
+    case 107:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Improv_Stool_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Stool 0
+    case 108:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Axe_A_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Axe 0
+    case 109:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Axe_B_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Axe 1
+    case 110:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Axe_C_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Axe 2
+    case 112:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Hammer_A_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Hammer 0
+    case 113:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Hammer_B_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Hammer 1
+    case 114:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Hammer_C_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Hammer 2
+    case 115:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Hoe_A_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Hoe 0
+    case 116:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Knife_A_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Knife 0
+    case 117:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Knife_B_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Knife 1
+    case 118:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Knife_C_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Knife 2
+    case 119:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Pitchfork_A_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Pitchfork 0
+    case 120:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Scissors_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Scissors 0
+    case 121:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Shovel_A_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Shovel 0
+    case 122:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Shovel_B_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Shovel 1
+    case 123:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Sickle_A_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sickle 0
+    case 124:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Sickle_D_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sickle 1
+    case 125:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Sickle_E_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sickle 2
+    case 126:
+        SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Tool_Tongs_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Tongs 0
+    case 127:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_AA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 0
+    case 128:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_AB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 1
+    case 129:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_AB_HT_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 2
+    case 130:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_BA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 3
+    case 131:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_BB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 4
+    case 132:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_CA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 5
+    case 133:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_CB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 6
+    case 134:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_CC_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 7
+    case 135:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_DA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 8
+    case 136:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_DB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 9
+    case 137:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_EA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 10
+    case 138:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_FA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 11
+    case 139:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_FB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 12
+    case 140:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_GA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 13
+    case 141:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_GB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 14
+    case 142:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_HA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 15
+    case 143:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_HB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 16
+    case 144:                                                                                                                                                                           //My Monitor Hertz :)
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_IA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 17
+    case 145:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_IB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 18
+    case 146:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_IC_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 19
+    case 147:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_JA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 20
+    case 148:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_JB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 21
+    case 149:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_JC_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 22
+    case 150:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_KA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 23
+    case 151:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_KB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 24
+    case 152:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_LA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 25
+    case 153:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_LB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 26
+    case 154:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_MA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 27
+    case 155:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_MB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 28
+    case 156:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_NA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 29
+    case 157:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_NB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 30
+    case 158:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_OA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 31
+    case 159:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_OB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 32
+    case 160:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_PA_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 33 FERNANDO ALONSO ERL NANO
+    case 161:
+        SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_PB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 34
+
 }
 }
 
