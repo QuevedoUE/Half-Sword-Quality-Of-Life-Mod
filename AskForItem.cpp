@@ -6,9 +6,9 @@
 #include "SDK/Engine_classes.hpp"
 #include "SDK/Engine_parameters.hpp"
 #include "SDK/Engine_structs.hpp"
-#include <thread> 
-#include <chrono> 
-#include <limits> 
+#include <thread>
+#include <chrono>
+#include <limits>
 
 
 SDK::UEngine* Engine = SDK::UEngine::GetEngine();
@@ -29,7 +29,6 @@ SDK::AActor* SpawnActorFromClass(class SDK::UObject* WorldContextObject,
 
     SDK::ESpawnActorScaleMethod NormalScaleMethod = SDK::ESpawnActorScaleMethod::SelectDefaultAtRuntime;
 
-
     auto Spawned = SDK::UGameplayStatics::BeginDeferredActorSpawnFromClass(WorldContextObject,
         ActorClass,
         SpawnTransform,
@@ -38,8 +37,6 @@ SDK::AActor* SpawnActorFromClass(class SDK::UObject* WorldContextObject,
         SpawnActorScaleMethod);
 
     Spawned = SDK::UGameplayStatics::FinishSpawningActor(Spawned, SpawnTransform, NormalScaleMethod);
-
-
 
     return Spawned;
 }
@@ -52,13 +49,14 @@ void AskForItemToSpawn::AskForItemAndSpawn() {
     std::cout << "Enter Item ID: ";
 
     // Comprobar si la entrada es válida
-    while (!(std::cin >> ItemID)) {
-        // Limpiar el error de entrada
-        std::cin.clear();
-        // Ignorar caracteres incorrectos
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    while (!(std::cin >> ItemID)) {        
+        if (ItemID < 1 || ItemID > 161) {
+            std::cout << "Invalid input. Please enter a valid Item ID (1-161): ";
+			continue;
+        }
 
-        std::cout << "Invalid input. Please enter a valid Item ID: ";
+		// Limpiar el buffer de entrada
+		std::cin.sync();
     }
 
 
