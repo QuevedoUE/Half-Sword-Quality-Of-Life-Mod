@@ -619,11 +619,11 @@ static_assert(offsetof(BPC_PhotoMode_C_OnFreeCameraStart__DelegateSignature, Fre
 struct BPC_PhotoMode_C_OpenGallery final
 {
 public:
-	struct FKey                                   Param_LastKey;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FKey                                   LastKey_0;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 static_assert(alignof(BPC_PhotoMode_C_OpenGallery) == 0x000008, "Wrong alignment on BPC_PhotoMode_C_OpenGallery");
 static_assert(sizeof(BPC_PhotoMode_C_OpenGallery) == 0x000018, "Wrong size on BPC_PhotoMode_C_OpenGallery");
-static_assert(offsetof(BPC_PhotoMode_C_OpenGallery, Param_LastKey) == 0x000000, "Member 'BPC_PhotoMode_C_OpenGallery::Param_LastKey' has a wrong offset!");
+static_assert(offsetof(BPC_PhotoMode_C_OpenGallery, LastKey_0) == 0x000000, "Member 'BPC_PhotoMode_C_OpenGallery::LastKey_0' has a wrong offset!");
 
 // Function BPC_PhotoMode.BPC_PhotoMode_C.Photo Mode
 // 0x0018 (0x0018 - 0x0000)
@@ -641,11 +641,11 @@ static_assert(offsetof(BPC_PhotoMode_C_Photo_Mode, Key) == 0x000000, "Member 'BP
 struct BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature final
 {
 public:
-	double                                        Param_CurrentTimeDilation;                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentTimeDilation_0;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature) == 0x000008, "Wrong alignment on BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature");
 static_assert(sizeof(BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature) == 0x000008, "Wrong size on BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature");
-static_assert(offsetof(BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature, Param_CurrentTimeDilation) == 0x000000, "Member 'BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature::Param_CurrentTimeDilation' has a wrong offset!");
+static_assert(offsetof(BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature, CurrentTimeDilation_0) == 0x000000, "Member 'BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature::CurrentTimeDilation_0' has a wrong offset!");
 
 // Function BPC_PhotoMode.BPC_PhotoMode_C.PhotoTaken__DelegateSignature
 // 0x0020 (0x0020 - 0x0000)

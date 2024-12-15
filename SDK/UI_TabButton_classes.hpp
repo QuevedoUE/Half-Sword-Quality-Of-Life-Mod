@@ -38,7 +38,7 @@ public:
 public:
 	void BndEvt__Button_99_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_UI_TabButton(int32 EntryPoint);
-	void Initialize(class UUI_PhotoMode_C* Param_PhotoModeWidgetRef);
+	void Initialize(class UUI_PhotoMode_C* PhotoModeWidgetRef_0);
 	void PreConstruct(bool IsDesignTime);
 	void SetSelectedTabStyle();
 	void SetUnselectedTabStyle();

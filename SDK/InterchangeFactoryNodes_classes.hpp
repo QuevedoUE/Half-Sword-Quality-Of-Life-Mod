@@ -211,7 +211,7 @@ public:
 	bool RemoveCustomAnimationTrackUid(const class FString& AnimationTrackUid);
 	bool SetCustomFrameRate(const float& AttributeValue);
 
-	void GetCustomAnimationTrackUid(const int32 Param_Index, class FString* OutAnimationTrackUid) const;
+	void GetCustomAnimationTrackUid(const int32 Index_0, class FString* OutAnimationTrackUid) const;
 	int32 GetCustomAnimationTrackUidCount() const;
 	void GetCustomAnimationTrackUids(TArray<class FString>* OutAnimationTrackUids) const;
 	bool GetCustomFrameRate(float* AttributeValue) const;
@@ -432,7 +432,7 @@ public:
 	bool AddCustomVariantSetUid(const class FString& VariantUid);
 	bool RemoveCustomVariantSetUid(const class FString& VariantUid);
 
-	void GetCustomVariantSetUid(const int32 Param_Index, class FString* OutVariantUid) const;
+	void GetCustomVariantSetUid(const int32 Index_0, class FString* OutVariantUid) const;
 	int32 GetCustomVariantSetUidCount() const;
 	void GetCustomVariantSetUids(TArray<class FString>* OutVariantUids) const;
 	class UClass* GetObjectClass() const;
@@ -752,13 +752,13 @@ public:
 	bool SetCustomSkeletonFactoryNodeUid(const class FString& AttributeValue);
 	bool SetCustomSkeletonSoftObjectPath(const struct FSoftObjectPath& AttributeValue);
 
-	void GetAnimatedAttributeCurveName(const int32 Param_Index, class FString* OutAttributeCurveName) const;
+	void GetAnimatedAttributeCurveName(const int32 Index_0, class FString* OutAttributeCurveName) const;
 	void GetAnimatedAttributeCurveNames(TArray<class FString>* OutAttributeCurveNames) const;
 	int32 GetAnimatedAttributeCurveNamesCount() const;
-	void GetAnimatedAttributeStepCurveName(const int32 Param_Index, class FString* OutAttributeStepCurveName) const;
+	void GetAnimatedAttributeStepCurveName(const int32 Index_0, class FString* OutAttributeStepCurveName) const;
 	void GetAnimatedAttributeStepCurveNames(TArray<class FString>* OutAttributeStepCurveNames) const;
 	int32 GetAnimatedAttributeStepCurveNamesCount() const;
-	void GetAnimatedMaterialCurveSuffixe(const int32 Param_Index, class FString* OutMaterialCurveSuffixe) const;
+	void GetAnimatedMaterialCurveSuffixe(const int32 Index_0, class FString* OutMaterialCurveSuffixe) const;
 	void GetAnimatedMaterialCurveSuffixes(TArray<class FString>* OutMaterialCurveSuffixes) const;
 	int32 GetAnimatedMaterialCurveSuffixesCount() const;
 	bool GetCustomAddCurveMetadataToSkeleton(bool* AttributeValue) const;

@@ -25,14 +25,14 @@ struct PhysicsControlBPLibrary_AddControlParameters final
 public:
 	struct FPhysicsControlControlAndModifierParameters InParameters;                                      // 0x0000(0x0030)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FPhysicsControlControlAndModifierParameters OutParameters;                                     // 0x0030(0x0030)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0060(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0060(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlSparseData              ControlData;                                       // 0x0068(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PhysicsControlBPLibrary_AddControlParameters) == 0x000008, "Wrong alignment on PhysicsControlBPLibrary_AddControlParameters");
 static_assert(sizeof(PhysicsControlBPLibrary_AddControlParameters) == 0x0000B8, "Wrong size on PhysicsControlBPLibrary_AddControlParameters");
 static_assert(offsetof(PhysicsControlBPLibrary_AddControlParameters, InParameters) == 0x000000, "Member 'PhysicsControlBPLibrary_AddControlParameters::InParameters' has a wrong offset!");
 static_assert(offsetof(PhysicsControlBPLibrary_AddControlParameters, OutParameters) == 0x000030, "Member 'PhysicsControlBPLibrary_AddControlParameters::OutParameters' has a wrong offset!");
-static_assert(offsetof(PhysicsControlBPLibrary_AddControlParameters, Param_Name) == 0x000060, "Member 'PhysicsControlBPLibrary_AddControlParameters::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlBPLibrary_AddControlParameters, Name_0) == 0x000060, "Member 'PhysicsControlBPLibrary_AddControlParameters::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlBPLibrary_AddControlParameters, ControlData) == 0x000068, "Member 'PhysicsControlBPLibrary_AddControlParameters::ControlData' has a wrong offset!");
 
 // Function PhysicsControl.PhysicsControlBPLibrary.AddModifierParameters
@@ -42,14 +42,14 @@ struct PhysicsControlBPLibrary_AddModifierParameters final
 public:
 	struct FPhysicsControlControlAndModifierParameters InParameters;                                      // 0x0000(0x0030)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FPhysicsControlControlAndModifierParameters OutParameters;                                     // 0x0030(0x0030)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0060(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0060(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlModifierSparseData      ModifierData;                                      // 0x0068(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PhysicsControlBPLibrary_AddModifierParameters) == 0x000008, "Wrong alignment on PhysicsControlBPLibrary_AddModifierParameters");
 static_assert(sizeof(PhysicsControlBPLibrary_AddModifierParameters) == 0x000078, "Wrong size on PhysicsControlBPLibrary_AddModifierParameters");
 static_assert(offsetof(PhysicsControlBPLibrary_AddModifierParameters, InParameters) == 0x000000, "Member 'PhysicsControlBPLibrary_AddModifierParameters::InParameters' has a wrong offset!");
 static_assert(offsetof(PhysicsControlBPLibrary_AddModifierParameters, OutParameters) == 0x000030, "Member 'PhysicsControlBPLibrary_AddModifierParameters::OutParameters' has a wrong offset!");
-static_assert(offsetof(PhysicsControlBPLibrary_AddModifierParameters, Param_Name) == 0x000060, "Member 'PhysicsControlBPLibrary_AddModifierParameters::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlBPLibrary_AddModifierParameters, Name_0) == 0x000060, "Member 'PhysicsControlBPLibrary_AddModifierParameters::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlBPLibrary_AddModifierParameters, ModifierData) == 0x000068, "Member 'PhysicsControlBPLibrary_AddModifierParameters::ModifierData' has a wrong offset!");
 
 // Function PhysicsControl.PhysicsControlBPLibrary.AddMultipleControlParameters
@@ -559,7 +559,7 @@ static_assert(offsetof(PhysicsControlComponent_CreateControlsFromSkeletalMeshBel
 struct PhysicsControlComponent_CreateNamedBodyModifier final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMeshComponent*                         MeshComponent;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   BoneName;                                          // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Set;                                               // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -569,7 +569,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_CreateNamedBodyModifier) == 0x000008, "Wrong alignment on PhysicsControlComponent_CreateNamedBodyModifier");
 static_assert(sizeof(PhysicsControlComponent_CreateNamedBodyModifier) == 0x000038, "Wrong size on PhysicsControlComponent_CreateNamedBodyModifier");
-static_assert(offsetof(PhysicsControlComponent_CreateNamedBodyModifier, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_CreateNamedBodyModifier::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_CreateNamedBodyModifier, Name_0) == 0x000000, "Member 'PhysicsControlComponent_CreateNamedBodyModifier::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_CreateNamedBodyModifier, MeshComponent) == 0x000008, "Member 'PhysicsControlComponent_CreateNamedBodyModifier::MeshComponent' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_CreateNamedBodyModifier, BoneName) == 0x000010, "Member 'PhysicsControlComponent_CreateNamedBodyModifier::BoneName' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_CreateNamedBodyModifier, Set) == 0x000018, "Member 'PhysicsControlComponent_CreateNamedBodyModifier::Set' has a wrong offset!");
@@ -581,7 +581,7 @@ static_assert(offsetof(PhysicsControlComponent_CreateNamedBodyModifier, ReturnVa
 struct PhysicsControlComponent_CreateNamedControl final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMeshComponent*                         ParentMeshComponent;                               // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ParentBoneName;                                    // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMeshComponent*                         ChildMeshComponent;                                // 0x0018(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -594,7 +594,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_CreateNamedControl) == 0x000008, "Wrong alignment on PhysicsControlComponent_CreateNamedControl");
 static_assert(sizeof(PhysicsControlComponent_CreateNamedControl) == 0x0000F0, "Wrong size on PhysicsControlComponent_CreateNamedControl");
-static_assert(offsetof(PhysicsControlComponent_CreateNamedControl, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_CreateNamedControl::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_CreateNamedControl, Name_0) == 0x000000, "Member 'PhysicsControlComponent_CreateNamedControl::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_CreateNamedControl, ParentMeshComponent) == 0x000008, "Member 'PhysicsControlComponent_CreateNamedControl::ParentMeshComponent' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_CreateNamedControl, ParentBoneName) == 0x000010, "Member 'PhysicsControlComponent_CreateNamedControl::ParentBoneName' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_CreateNamedControl, ChildMeshComponent) == 0x000018, "Member 'PhysicsControlComponent_CreateNamedControl::ChildMeshComponent' has a wrong offset!");
@@ -609,13 +609,13 @@ static_assert(offsetof(PhysicsControlComponent_CreateNamedControl, ReturnValue) 
 struct PhysicsControlComponent_DestroyBodyModifier final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_DestroyBodyModifier) == 0x000004, "Wrong alignment on PhysicsControlComponent_DestroyBodyModifier");
 static_assert(sizeof(PhysicsControlComponent_DestroyBodyModifier) == 0x00000C, "Wrong size on PhysicsControlComponent_DestroyBodyModifier");
-static_assert(offsetof(PhysicsControlComponent_DestroyBodyModifier, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_DestroyBodyModifier::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_DestroyBodyModifier, Name_0) == 0x000000, "Member 'PhysicsControlComponent_DestroyBodyModifier::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_DestroyBodyModifier, ReturnValue) == 0x000008, "Member 'PhysicsControlComponent_DestroyBodyModifier::ReturnValue' has a wrong offset!");
 
 // Function PhysicsControl.PhysicsControlComponent.DestroyBodyModifiers
@@ -645,13 +645,13 @@ static_assert(offsetof(PhysicsControlComponent_DestroyBodyModifiersInSet, Set) =
 struct PhysicsControlComponent_DestroyControl final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_DestroyControl) == 0x000004, "Wrong alignment on PhysicsControlComponent_DestroyControl");
 static_assert(sizeof(PhysicsControlComponent_DestroyControl) == 0x00000C, "Wrong size on PhysicsControlComponent_DestroyControl");
-static_assert(offsetof(PhysicsControlComponent_DestroyControl, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_DestroyControl::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_DestroyControl, Name_0) == 0x000000, "Member 'PhysicsControlComponent_DestroyControl::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_DestroyControl, ReturnValue) == 0x000008, "Member 'PhysicsControlComponent_DestroyControl::ReturnValue' has a wrong offset!");
 
 // Function PhysicsControl.PhysicsControlComponent.DestroyControls
@@ -870,14 +870,14 @@ static_assert(offsetof(PhysicsControlComponent_ResetBodyModifiersToCachedBoneTra
 struct PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EResetToCachedTargetBehavior                  Behavior;                                          // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform) == 0x000004, "Wrong alignment on PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform");
 static_assert(sizeof(PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform) == 0x00000C, "Wrong size on PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform");
-static_assert(offsetof(PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform, Name_0) == 0x000000, "Member 'PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform, Behavior) == 0x000008, "Member 'PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform::Behavior' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform, ReturnValue) == 0x000009, "Member 'PhysicsControlComponent_ResetBodyModifierToCachedBoneTransform::ReturnValue' has a wrong offset!");
 
@@ -886,13 +886,13 @@ static_assert(offsetof(PhysicsControlComponent_ResetBodyModifierToCachedBoneTran
 struct PhysicsControlComponent_ResetControlPoint final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_ResetControlPoint) == 0x000004, "Wrong alignment on PhysicsControlComponent_ResetControlPoint");
 static_assert(sizeof(PhysicsControlComponent_ResetControlPoint) == 0x00000C, "Wrong size on PhysicsControlComponent_ResetControlPoint");
-static_assert(offsetof(PhysicsControlComponent_ResetControlPoint, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_ResetControlPoint::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_ResetControlPoint, Name_0) == 0x000000, "Member 'PhysicsControlComponent_ResetControlPoint::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_ResetControlPoint, ReturnValue) == 0x000008, "Member 'PhysicsControlComponent_ResetControlPoint::ReturnValue' has a wrong offset!");
 
 // Function PhysicsControl.PhysicsControlComponent.SetBodyModifierCollisionType
@@ -900,14 +900,14 @@ static_assert(offsetof(PhysicsControlComponent_ResetControlPoint, ReturnValue) =
 struct PhysicsControlComponent_SetBodyModifierCollisionType final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECollisionEnabled                             CollisionType;                                     // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierCollisionType) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetBodyModifierCollisionType");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierCollisionType) == 0x00000C, "Wrong size on PhysicsControlComponent_SetBodyModifierCollisionType");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierCollisionType, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierCollisionType::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierCollisionType, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierCollisionType::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierCollisionType, CollisionType) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierCollisionType::CollisionType' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierCollisionType, ReturnValue) == 0x000009, "Member 'PhysicsControlComponent_SetBodyModifierCollisionType::ReturnValue' has a wrong offset!");
 
@@ -916,14 +916,14 @@ static_assert(offsetof(PhysicsControlComponent_SetBodyModifierCollisionType, Ret
 struct PhysicsControlComponent_SetBodyModifierData final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlModifierData            ModifierData;                                      // 0x0008(0x0010)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierData) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetBodyModifierData");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierData) == 0x00001C, "Wrong size on PhysicsControlComponent_SetBodyModifierData");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierData, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierData::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierData, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierData::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierData, ModifierData) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierData::ModifierData' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierData, ReturnValue) == 0x000018, "Member 'PhysicsControlComponent_SetBodyModifierData::ReturnValue' has a wrong offset!");
 
@@ -958,14 +958,14 @@ static_assert(offsetof(PhysicsControlComponent_SetBodyModifierDatasInSet, Modifi
 struct PhysicsControlComponent_SetBodyModifierGravityMultiplier final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         GravityMultiplier;                                 // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierGravityMultiplier) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetBodyModifierGravityMultiplier");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierGravityMultiplier) == 0x000010, "Wrong size on PhysicsControlComponent_SetBodyModifierGravityMultiplier");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierGravityMultiplier, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierGravityMultiplier::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierGravityMultiplier, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierGravityMultiplier::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierGravityMultiplier, GravityMultiplier) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierGravityMultiplier::GravityMultiplier' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierGravityMultiplier, ReturnValue) == 0x00000C, "Member 'PhysicsControlComponent_SetBodyModifierGravityMultiplier::ReturnValue' has a wrong offset!");
 
@@ -974,7 +974,7 @@ static_assert(offsetof(PhysicsControlComponent_SetBodyModifierGravityMultiplier,
 struct PhysicsControlComponent_SetBodyModifierKinematicTarget final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                KinematicTargetPosition;                           // 0x0008(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               KinematicTargetOrienation;                         // 0x0020(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bMakeKinematic;                                    // 0x0038(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -983,7 +983,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierKinematicTarget) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetBodyModifierKinematicTarget");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierKinematicTarget) == 0x000040, "Wrong size on PhysicsControlComponent_SetBodyModifierKinematicTarget");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierKinematicTarget, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierKinematicTarget::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierKinematicTarget, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierKinematicTarget::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierKinematicTarget, KinematicTargetPosition) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierKinematicTarget::KinematicTargetPosition' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierKinematicTarget, KinematicTargetOrienation) == 0x000020, "Member 'PhysicsControlComponent_SetBodyModifierKinematicTarget::KinematicTargetOrienation' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierKinematicTarget, bMakeKinematic) == 0x000038, "Member 'PhysicsControlComponent_SetBodyModifierKinematicTarget::bMakeKinematic' has a wrong offset!");
@@ -994,14 +994,14 @@ static_assert(offsetof(PhysicsControlComponent_SetBodyModifierKinematicTarget, R
 struct PhysicsControlComponent_SetBodyModifierMovementType final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPhysicsMovementType                          MovementType;                                      // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierMovementType) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetBodyModifierMovementType");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierMovementType) == 0x00000C, "Wrong size on PhysicsControlComponent_SetBodyModifierMovementType");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierMovementType, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierMovementType::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierMovementType, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierMovementType::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierMovementType, MovementType) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierMovementType::MovementType' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierMovementType, ReturnValue) == 0x000009, "Member 'PhysicsControlComponent_SetBodyModifierMovementType::ReturnValue' has a wrong offset!");
 
@@ -1010,14 +1010,14 @@ static_assert(offsetof(PhysicsControlComponent_SetBodyModifierMovementType, Retu
 struct PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PhysicsBlendWeight;                                // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight) == 0x000010, "Wrong size on PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight, PhysicsBlendWeight) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight::PhysicsBlendWeight' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight, ReturnValue) == 0x00000C, "Member 'PhysicsControlComponent_SetBodyModifierPhysicsBlendWeight::ReturnValue' has a wrong offset!");
 
@@ -1150,14 +1150,14 @@ static_assert(offsetof(PhysicsControlComponent_SetBodyModifiersMovementType, Mov
 struct PhysicsControlComponent_SetBodyModifierSparseData final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlModifierSparseData      ModifierData;                                      // 0x0008(0x0010)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierSparseData) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetBodyModifierSparseData");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierSparseData) == 0x00001C, "Wrong size on PhysicsControlComponent_SetBodyModifierSparseData");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierSparseData, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierSparseData::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierSparseData, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierSparseData::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierSparseData, ModifierData) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierSparseData::ModifierData' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierSparseData, ReturnValue) == 0x000018, "Member 'PhysicsControlComponent_SetBodyModifierSparseData::ReturnValue' has a wrong offset!");
 
@@ -1234,14 +1234,14 @@ static_assert(offsetof(PhysicsControlComponent_SetBodyModifiersUseSkeletalAnimat
 struct PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUpdateKinematicFromSimulation;                    // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation) == 0x00000C, "Wrong size on PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation, bUpdateKinematicFromSimulation) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation::bUpdateKinematicFromSimulation' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation, ReturnValue) == 0x000009, "Member 'PhysicsControlComponent_SetBodyModifierUpdateKinematicFromSimulation::ReturnValue' has a wrong offset!");
 
@@ -1250,14 +1250,14 @@ static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUpdateKinematicFro
 struct PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseSkeletalAnimation;                             // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation");
 static_assert(sizeof(PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation) == 0x00000C, "Wrong size on PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation");
-static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation, bUseSkeletalAnimation) == 0x000008, "Member 'PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation::bUseSkeletalAnimation' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation, ReturnValue) == 0x000009, "Member 'PhysicsControlComponent_SetBodyModifierUseSkeletalAnimation::ReturnValue' has a wrong offset!");
 
@@ -1288,7 +1288,7 @@ static_assert(offsetof(PhysicsControlComponent_SetCachedBoneData, ReturnValue) =
 struct PhysicsControlComponent_SetControlAngularData final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Strength;                                          // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DampingRatio;                                      // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ExtraDamping;                                      // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1299,7 +1299,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlAngularData) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetControlAngularData");
 static_assert(sizeof(PhysicsControlComponent_SetControlAngularData) == 0x00001C, "Wrong size on PhysicsControlComponent_SetControlAngularData");
-static_assert(offsetof(PhysicsControlComponent_SetControlAngularData, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlAngularData::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlAngularData, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlAngularData::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlAngularData, Strength) == 0x000008, "Member 'PhysicsControlComponent_SetControlAngularData::Strength' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlAngularData, DampingRatio) == 0x00000C, "Member 'PhysicsControlComponent_SetControlAngularData::DampingRatio' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlAngularData, ExtraDamping) == 0x000010, "Member 'PhysicsControlComponent_SetControlAngularData::ExtraDamping' has a wrong offset!");
@@ -1312,14 +1312,14 @@ static_assert(offsetof(PhysicsControlComponent_SetControlAngularData, ReturnValu
 struct PhysicsControlComponent_SetControlData final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlData                    ControlData;                                       // 0x0008(0x0050)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetControlData) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlData");
 static_assert(sizeof(PhysicsControlComponent_SetControlData) == 0x000060, "Wrong size on PhysicsControlComponent_SetControlData");
-static_assert(offsetof(PhysicsControlComponent_SetControlData, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlData::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlData, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlData::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlData, ControlData) == 0x000008, "Member 'PhysicsControlComponent_SetControlData::ControlData' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlData, ReturnValue) == 0x000058, "Member 'PhysicsControlComponent_SetControlData::ReturnValue' has a wrong offset!");
 
@@ -1354,14 +1354,14 @@ static_assert(offsetof(PhysicsControlComponent_SetControlDatasInSet, ControlData
 struct PhysicsControlComponent_SetControlDisableCollision final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisableCollision;                                 // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetControlDisableCollision) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetControlDisableCollision");
 static_assert(sizeof(PhysicsControlComponent_SetControlDisableCollision) == 0x00000C, "Wrong size on PhysicsControlComponent_SetControlDisableCollision");
-static_assert(offsetof(PhysicsControlComponent_SetControlDisableCollision, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlDisableCollision::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlDisableCollision, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlDisableCollision::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlDisableCollision, bDisableCollision) == 0x000008, "Member 'PhysicsControlComponent_SetControlDisableCollision::bDisableCollision' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlDisableCollision, ReturnValue) == 0x000009, "Member 'PhysicsControlComponent_SetControlDisableCollision::ReturnValue' has a wrong offset!");
 
@@ -1370,14 +1370,14 @@ static_assert(offsetof(PhysicsControlComponent_SetControlDisableCollision, Retur
 struct PhysicsControlComponent_SetControlEnabled final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnable;                                           // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetControlEnabled) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetControlEnabled");
 static_assert(sizeof(PhysicsControlComponent_SetControlEnabled) == 0x00000C, "Wrong size on PhysicsControlComponent_SetControlEnabled");
-static_assert(offsetof(PhysicsControlComponent_SetControlEnabled, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlEnabled::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlEnabled, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlEnabled::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlEnabled, bEnable) == 0x000008, "Member 'PhysicsControlComponent_SetControlEnabled::bEnable' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlEnabled, ReturnValue) == 0x000009, "Member 'PhysicsControlComponent_SetControlEnabled::ReturnValue' has a wrong offset!");
 
@@ -1386,7 +1386,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlEnabled, ReturnValue) =
 struct PhysicsControlComponent_SetControlLinearData final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Strength;                                          // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DampingRatio;                                      // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ExtraDamping;                                      // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1397,7 +1397,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlLinearData) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetControlLinearData");
 static_assert(sizeof(PhysicsControlComponent_SetControlLinearData) == 0x00001C, "Wrong size on PhysicsControlComponent_SetControlLinearData");
-static_assert(offsetof(PhysicsControlComponent_SetControlLinearData, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlLinearData::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlLinearData, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlLinearData::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlLinearData, Strength) == 0x000008, "Member 'PhysicsControlComponent_SetControlLinearData::Strength' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlLinearData, DampingRatio) == 0x00000C, "Member 'PhysicsControlComponent_SetControlLinearData::DampingRatio' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlLinearData, ExtraDamping) == 0x000010, "Member 'PhysicsControlComponent_SetControlLinearData::ExtraDamping' has a wrong offset!");
@@ -1410,7 +1410,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlLinearData, ReturnValue
 struct PhysicsControlComponent_SetControlMultiplier final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlMultiplier              ControlMultiplier;                                 // 0x0008(0x0070)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bEnableControl;                                    // 0x0078(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0079(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1418,7 +1418,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlMultiplier) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlMultiplier");
 static_assert(sizeof(PhysicsControlComponent_SetControlMultiplier) == 0x000080, "Wrong size on PhysicsControlComponent_SetControlMultiplier");
-static_assert(offsetof(PhysicsControlComponent_SetControlMultiplier, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlMultiplier::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlMultiplier, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlMultiplier::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlMultiplier, ControlMultiplier) == 0x000008, "Member 'PhysicsControlComponent_SetControlMultiplier::ControlMultiplier' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlMultiplier, bEnableControl) == 0x000078, "Member 'PhysicsControlComponent_SetControlMultiplier::bEnableControl' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlMultiplier, ReturnValue) == 0x000079, "Member 'PhysicsControlComponent_SetControlMultiplier::ReturnValue' has a wrong offset!");
@@ -1460,7 +1460,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlMultipliersInSet, bEnab
 struct PhysicsControlComponent_SetControlParent final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMeshComponent*                         ParentMeshComponent;                               // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ParentBoneName;                                    // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1468,7 +1468,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlParent) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlParent");
 static_assert(sizeof(PhysicsControlComponent_SetControlParent) == 0x000020, "Wrong size on PhysicsControlComponent_SetControlParent");
-static_assert(offsetof(PhysicsControlComponent_SetControlParent, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlParent::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlParent, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlParent::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlParent, ParentMeshComponent) == 0x000008, "Member 'PhysicsControlComponent_SetControlParent::ParentMeshComponent' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlParent, ParentBoneName) == 0x000010, "Member 'PhysicsControlComponent_SetControlParent::ParentBoneName' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlParent, ReturnValue) == 0x000018, "Member 'PhysicsControlComponent_SetControlParent::ReturnValue' has a wrong offset!");
@@ -1508,14 +1508,14 @@ static_assert(offsetof(PhysicsControlComponent_SetControlParentsInSet, ParentBon
 struct PhysicsControlComponent_SetControlPoint final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Position;                                          // 0x0008(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetControlPoint) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlPoint");
 static_assert(sizeof(PhysicsControlComponent_SetControlPoint) == 0x000028, "Wrong size on PhysicsControlComponent_SetControlPoint");
-static_assert(offsetof(PhysicsControlComponent_SetControlPoint, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlPoint::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlPoint, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlPoint::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlPoint, Position) == 0x000008, "Member 'PhysicsControlComponent_SetControlPoint::Position' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlPoint, ReturnValue) == 0x000020, "Member 'PhysicsControlComponent_SetControlPoint::ReturnValue' has a wrong offset!");
 
@@ -1596,14 +1596,14 @@ static_assert(offsetof(PhysicsControlComponent_SetControlsInSetUseSkeletalAnimat
 struct PhysicsControlComponent_SetControlSparseData final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlSparseData              ControlData;                                       // 0x0008(0x0050)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_SetControlSparseData) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlSparseData");
 static_assert(sizeof(PhysicsControlComponent_SetControlSparseData) == 0x000060, "Wrong size on PhysicsControlComponent_SetControlSparseData");
-static_assert(offsetof(PhysicsControlComponent_SetControlSparseData, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlSparseData::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlSparseData, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlSparseData::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlSparseData, ControlData) == 0x000008, "Member 'PhysicsControlComponent_SetControlSparseData::ControlData' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlSparseData, ReturnValue) == 0x000058, "Member 'PhysicsControlComponent_SetControlSparseData::ReturnValue' has a wrong offset!");
 
@@ -1638,7 +1638,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlSparseDatasInSet, Contr
 struct PhysicsControlComponent_SetControlSparseMultiplier final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlSparseMultiplier        ControlMultiplier;                                 // 0x0008(0x0078)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bEnableControl;                                    // 0x0080(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0081(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1646,7 +1646,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlSparseMultiplier) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlSparseMultiplier");
 static_assert(sizeof(PhysicsControlComponent_SetControlSparseMultiplier) == 0x000088, "Wrong size on PhysicsControlComponent_SetControlSparseMultiplier");
-static_assert(offsetof(PhysicsControlComponent_SetControlSparseMultiplier, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlSparseMultiplier::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlSparseMultiplier, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlSparseMultiplier::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlSparseMultiplier, ControlMultiplier) == 0x000008, "Member 'PhysicsControlComponent_SetControlSparseMultiplier::ControlMultiplier' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlSparseMultiplier, bEnableControl) == 0x000080, "Member 'PhysicsControlComponent_SetControlSparseMultiplier::bEnableControl' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlSparseMultiplier, ReturnValue) == 0x000081, "Member 'PhysicsControlComponent_SetControlSparseMultiplier::ReturnValue' has a wrong offset!");
@@ -1704,7 +1704,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlsUseSkeletalAnimation, 
 struct PhysicsControlComponent_SetControlTarget final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlTarget                  ControlTarget;                                     // 0x0008(0x0068)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bEnableControl;                                    // 0x0070(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0071(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1712,7 +1712,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlTarget) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlTarget");
 static_assert(sizeof(PhysicsControlComponent_SetControlTarget) == 0x000078, "Wrong size on PhysicsControlComponent_SetControlTarget");
-static_assert(offsetof(PhysicsControlComponent_SetControlTarget, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlTarget::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlTarget, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlTarget::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTarget, ControlTarget) == 0x000008, "Member 'PhysicsControlComponent_SetControlTarget::ControlTarget' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTarget, bEnableControl) == 0x000070, "Member 'PhysicsControlComponent_SetControlTarget::bEnableControl' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTarget, ReturnValue) == 0x000071, "Member 'PhysicsControlComponent_SetControlTarget::ReturnValue' has a wrong offset!");
@@ -1722,7 +1722,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlTarget, ReturnValue) ==
 struct PhysicsControlComponent_SetControlTargetOrientation final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               Orientation;                                       // 0x0008(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         AngularVelocityDeltaTime;                          // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableControl;                                    // 0x0024(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1732,7 +1732,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlTargetOrientation) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlTargetOrientation");
 static_assert(sizeof(PhysicsControlComponent_SetControlTargetOrientation) == 0x000028, "Wrong size on PhysicsControlComponent_SetControlTargetOrientation");
-static_assert(offsetof(PhysicsControlComponent_SetControlTargetOrientation, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlTargetOrientation::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlTargetOrientation, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlTargetOrientation::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetOrientation, Orientation) == 0x000008, "Member 'PhysicsControlComponent_SetControlTargetOrientation::Orientation' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetOrientation, AngularVelocityDeltaTime) == 0x000020, "Member 'PhysicsControlComponent_SetControlTargetOrientation::AngularVelocityDeltaTime' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetOrientation, bEnableControl) == 0x000024, "Member 'PhysicsControlComponent_SetControlTargetOrientation::bEnableControl' has a wrong offset!");
@@ -1806,7 +1806,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlTargetOrientationsInSet
 struct PhysicsControlComponent_SetControlTargetPoses final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ParentPosition;                                    // 0x0008(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               ParentOrientation;                                 // 0x0020(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                ChildPosition;                                     // 0x0038(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1818,7 +1818,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlTargetPoses) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlTargetPoses");
 static_assert(sizeof(PhysicsControlComponent_SetControlTargetPoses) == 0x000070, "Wrong size on PhysicsControlComponent_SetControlTargetPoses");
-static_assert(offsetof(PhysicsControlComponent_SetControlTargetPoses, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlTargetPoses::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlTargetPoses, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlTargetPoses::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPoses, ParentPosition) == 0x000008, "Member 'PhysicsControlComponent_SetControlTargetPoses::ParentPosition' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPoses, ParentOrientation) == 0x000020, "Member 'PhysicsControlComponent_SetControlTargetPoses::ParentOrientation' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPoses, ChildPosition) == 0x000038, "Member 'PhysicsControlComponent_SetControlTargetPoses::ChildPosition' has a wrong offset!");
@@ -1832,7 +1832,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlTargetPoses, ReturnValu
 struct PhysicsControlComponent_SetControlTargetPosition final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Position;                                          // 0x0008(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         VelocityDeltaTime;                                 // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableControl;                                    // 0x0024(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1842,7 +1842,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlTargetPosition) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlTargetPosition");
 static_assert(sizeof(PhysicsControlComponent_SetControlTargetPosition) == 0x000028, "Wrong size on PhysicsControlComponent_SetControlTargetPosition");
-static_assert(offsetof(PhysicsControlComponent_SetControlTargetPosition, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlTargetPosition::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlTargetPosition, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlTargetPosition::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPosition, Position) == 0x000008, "Member 'PhysicsControlComponent_SetControlTargetPosition::Position' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPosition, VelocityDeltaTime) == 0x000020, "Member 'PhysicsControlComponent_SetControlTargetPosition::VelocityDeltaTime' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPosition, bEnableControl) == 0x000024, "Member 'PhysicsControlComponent_SetControlTargetPosition::bEnableControl' has a wrong offset!");
@@ -1854,7 +1854,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlTargetPosition, ReturnV
 struct PhysicsControlComponent_SetControlTargetPositionAndOrientation final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Position;                                          // 0x0008(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               Orientation;                                       // 0x0020(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         VelocityDeltaTime;                                 // 0x0038(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1865,7 +1865,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlTargetPositionAndOrientation) == 0x000008, "Wrong alignment on PhysicsControlComponent_SetControlTargetPositionAndOrientation");
 static_assert(sizeof(PhysicsControlComponent_SetControlTargetPositionAndOrientation) == 0x000040, "Wrong size on PhysicsControlComponent_SetControlTargetPositionAndOrientation");
-static_assert(offsetof(PhysicsControlComponent_SetControlTargetPositionAndOrientation, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlTargetPositionAndOrientation::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlTargetPositionAndOrientation, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlTargetPositionAndOrientation::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPositionAndOrientation, Position) == 0x000008, "Member 'PhysicsControlComponent_SetControlTargetPositionAndOrientation::Position' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPositionAndOrientation, Orientation) == 0x000020, "Member 'PhysicsControlComponent_SetControlTargetPositionAndOrientation::Orientation' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlTargetPositionAndOrientation, VelocityDeltaTime) == 0x000038, "Member 'PhysicsControlComponent_SetControlTargetPositionAndOrientation::VelocityDeltaTime' has a wrong offset!");
@@ -2040,7 +2040,7 @@ static_assert(offsetof(PhysicsControlComponent_SetControlTargetsInSet, bEnableCo
 struct PhysicsControlComponent_SetControlUseSkeletalAnimation final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseSkeletalAnimation;                             // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SkeletalAnimationVelocityMultiplier;               // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2049,7 +2049,7 @@ public:
 };
 static_assert(alignof(PhysicsControlComponent_SetControlUseSkeletalAnimation) == 0x000004, "Wrong alignment on PhysicsControlComponent_SetControlUseSkeletalAnimation");
 static_assert(sizeof(PhysicsControlComponent_SetControlUseSkeletalAnimation) == 0x000014, "Wrong size on PhysicsControlComponent_SetControlUseSkeletalAnimation");
-static_assert(offsetof(PhysicsControlComponent_SetControlUseSkeletalAnimation, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_SetControlUseSkeletalAnimation::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_SetControlUseSkeletalAnimation, Name_0) == 0x000000, "Member 'PhysicsControlComponent_SetControlUseSkeletalAnimation::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlUseSkeletalAnimation, bUseSkeletalAnimation) == 0x000008, "Member 'PhysicsControlComponent_SetControlUseSkeletalAnimation::bUseSkeletalAnimation' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlUseSkeletalAnimation, SkeletalAnimationVelocityMultiplier) == 0x00000C, "Member 'PhysicsControlComponent_SetControlUseSkeletalAnimation::SkeletalAnimationVelocityMultiplier' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_SetControlUseSkeletalAnimation, ReturnValue) == 0x000010, "Member 'PhysicsControlComponent_SetControlUseSkeletalAnimation::ReturnValue' has a wrong offset!");
@@ -2103,13 +2103,13 @@ static_assert(offsetof(PhysicsControlComponent_GetAllControlNames, ReturnValue) 
 struct PhysicsControlComponent_GetBodyModifierExists final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_GetBodyModifierExists) == 0x000004, "Wrong alignment on PhysicsControlComponent_GetBodyModifierExists");
 static_assert(sizeof(PhysicsControlComponent_GetBodyModifierExists) == 0x00000C, "Wrong size on PhysicsControlComponent_GetBodyModifierExists");
-static_assert(offsetof(PhysicsControlComponent_GetBodyModifierExists, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_GetBodyModifierExists::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_GetBodyModifierExists, Name_0) == 0x000000, "Member 'PhysicsControlComponent_GetBodyModifierExists::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetBodyModifierExists, ReturnValue) == 0x000008, "Member 'PhysicsControlComponent_GetBodyModifierExists::ReturnValue' has a wrong offset!");
 
 // Function PhysicsControl.PhysicsControlComponent.GetBodyModifierNamesInSet
@@ -2130,14 +2130,14 @@ static_assert(offsetof(PhysicsControlComponent_GetBodyModifierNamesInSet, Return
 struct PhysicsControlComponent_GetControlData final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlData                    ControlData;                                       // 0x0008(0x0050)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_GetControlData) == 0x000008, "Wrong alignment on PhysicsControlComponent_GetControlData");
 static_assert(sizeof(PhysicsControlComponent_GetControlData) == 0x000060, "Wrong size on PhysicsControlComponent_GetControlData");
-static_assert(offsetof(PhysicsControlComponent_GetControlData, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_GetControlData::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_GetControlData, Name_0) == 0x000000, "Member 'PhysicsControlComponent_GetControlData::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetControlData, ControlData) == 0x000008, "Member 'PhysicsControlComponent_GetControlData::ControlData' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetControlData, ReturnValue) == 0x000058, "Member 'PhysicsControlComponent_GetControlData::ReturnValue' has a wrong offset!");
 
@@ -2146,13 +2146,13 @@ static_assert(offsetof(PhysicsControlComponent_GetControlData, ReturnValue) == 0
 struct PhysicsControlComponent_GetControlEnabled final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_GetControlEnabled) == 0x000004, "Wrong alignment on PhysicsControlComponent_GetControlEnabled");
 static_assert(sizeof(PhysicsControlComponent_GetControlEnabled) == 0x00000C, "Wrong size on PhysicsControlComponent_GetControlEnabled");
-static_assert(offsetof(PhysicsControlComponent_GetControlEnabled, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_GetControlEnabled::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_GetControlEnabled, Name_0) == 0x000000, "Member 'PhysicsControlComponent_GetControlEnabled::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetControlEnabled, ReturnValue) == 0x000008, "Member 'PhysicsControlComponent_GetControlEnabled::ReturnValue' has a wrong offset!");
 
 // Function PhysicsControl.PhysicsControlComponent.GetControlExists
@@ -2160,13 +2160,13 @@ static_assert(offsetof(PhysicsControlComponent_GetControlEnabled, ReturnValue) =
 struct PhysicsControlComponent_GetControlExists final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_GetControlExists) == 0x000004, "Wrong alignment on PhysicsControlComponent_GetControlExists");
 static_assert(sizeof(PhysicsControlComponent_GetControlExists) == 0x00000C, "Wrong size on PhysicsControlComponent_GetControlExists");
-static_assert(offsetof(PhysicsControlComponent_GetControlExists, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_GetControlExists::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_GetControlExists, Name_0) == 0x000000, "Member 'PhysicsControlComponent_GetControlExists::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetControlExists, ReturnValue) == 0x000008, "Member 'PhysicsControlComponent_GetControlExists::ReturnValue' has a wrong offset!");
 
 // Function PhysicsControl.PhysicsControlComponent.GetControlMultiplier
@@ -2174,14 +2174,14 @@ static_assert(offsetof(PhysicsControlComponent_GetControlExists, ReturnValue) ==
 struct PhysicsControlComponent_GetControlMultiplier final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlMultiplier              ControlMultiplier;                                 // 0x0008(0x0070)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0078(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_GetControlMultiplier) == 0x000008, "Wrong alignment on PhysicsControlComponent_GetControlMultiplier");
 static_assert(sizeof(PhysicsControlComponent_GetControlMultiplier) == 0x000080, "Wrong size on PhysicsControlComponent_GetControlMultiplier");
-static_assert(offsetof(PhysicsControlComponent_GetControlMultiplier, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_GetControlMultiplier::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_GetControlMultiplier, Name_0) == 0x000000, "Member 'PhysicsControlComponent_GetControlMultiplier::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetControlMultiplier, ControlMultiplier) == 0x000008, "Member 'PhysicsControlComponent_GetControlMultiplier::ControlMultiplier' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetControlMultiplier, ReturnValue) == 0x000078, "Member 'PhysicsControlComponent_GetControlMultiplier::ReturnValue' has a wrong offset!");
 
@@ -2203,14 +2203,14 @@ static_assert(offsetof(PhysicsControlComponent_GetControlNamesInSet, ReturnValue
 struct PhysicsControlComponent_GetControlTarget final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPhysicsControlTarget                  ControlTarget;                                     // 0x0008(0x0068)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicsControlComponent_GetControlTarget) == 0x000008, "Wrong alignment on PhysicsControlComponent_GetControlTarget");
 static_assert(sizeof(PhysicsControlComponent_GetControlTarget) == 0x000078, "Wrong size on PhysicsControlComponent_GetControlTarget");
-static_assert(offsetof(PhysicsControlComponent_GetControlTarget, Param_Name) == 0x000000, "Member 'PhysicsControlComponent_GetControlTarget::Param_Name' has a wrong offset!");
+static_assert(offsetof(PhysicsControlComponent_GetControlTarget, Name_0) == 0x000000, "Member 'PhysicsControlComponent_GetControlTarget::Name_0' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetControlTarget, ControlTarget) == 0x000008, "Member 'PhysicsControlComponent_GetControlTarget::ControlTarget' has a wrong offset!");
 static_assert(offsetof(PhysicsControlComponent_GetControlTarget, ReturnValue) == 0x000070, "Member 'PhysicsControlComponent_GetControlTarget::ReturnValue' has a wrong offset!");
 

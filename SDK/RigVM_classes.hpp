@@ -287,7 +287,7 @@ public:
 	uint8                                         Pad_238[0x40];                                     // 0x0238(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static TArray<class URigVMHost*> FindRigVMHosts(class UObject* Param_Outer, TSubclassOf<class URigVMHost> OptionalClass);
+	static TArray<class URigVMHost*> FindRigVMHosts(class UObject* Outer_0, TSubclassOf<class URigVMHost> OptionalClass);
 
 	bool Execute(const class FName& InEventName);
 	bool ExecuteEvent(const class FName& InEventName);

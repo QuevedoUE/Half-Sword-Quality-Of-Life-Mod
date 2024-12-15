@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Str_Medieval_Color_Swatches_structs.hpp"
+#include "Enum_Tiers_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "HideBodyPart_Enum_structs.hpp"
-#include "ArmorSlots_Enum_structs.hpp"
+#include "Str_Medieval_Color_Swatches_structs.hpp"
 #include "Enum_Clothing_Material_structs.hpp"
-#include "Enum_Tiers_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ArmorSlots_Enum_structs.hpp"
+#include "HideBodyPart_Enum_structs.hpp"
 #include "Enum_DismembermentPart_structs.hpp"
 
 
@@ -47,7 +47,7 @@ public:
 	double                                        Protection_Cut;                                    // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Protection_Stab;                                   // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<EHideBodyPart_Enum, bool>                Hide_Body_Parts;                                   // 0x0308(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          Outer_BP_Armor_Master_C;                           // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Outer_0;                                           // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Material_Density;                                  // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<class FName, bool>                       Affected_Bones;                                    // 0x0368(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -139,7 +139,7 @@ static_assert(offsetof(ABP_Armor_Master_C, Protection_Blunt) == 0x0002F0, "Membe
 static_assert(offsetof(ABP_Armor_Master_C, Protection_Cut) == 0x0002F8, "Member 'ABP_Armor_Master_C::Protection_Cut' has a wrong offset!");
 static_assert(offsetof(ABP_Armor_Master_C, Protection_Stab) == 0x000300, "Member 'ABP_Armor_Master_C::Protection_Stab' has a wrong offset!");
 static_assert(offsetof(ABP_Armor_Master_C, Hide_Body_Parts) == 0x000308, "Member 'ABP_Armor_Master_C::Hide_Body_Parts' has a wrong offset!");
-static_assert(offsetof(ABP_Armor_Master_C, Outer_BP_Armor_Master_C) == 0x000358, "Member 'ABP_Armor_Master_C::Outer_BP_Armor_Master_C' has a wrong offset!");
+static_assert(offsetof(ABP_Armor_Master_C, Outer_0) == 0x000358, "Member 'ABP_Armor_Master_C::Outer_0' has a wrong offset!");
 static_assert(offsetof(ABP_Armor_Master_C, Material_Density) == 0x000360, "Member 'ABP_Armor_Master_C::Material_Density' has a wrong offset!");
 static_assert(offsetof(ABP_Armor_Master_C, Affected_Bones) == 0x000368, "Member 'ABP_Armor_Master_C::Affected_Bones' has a wrong offset!");
 static_assert(offsetof(ABP_Armor_Master_C, Layer_Levels) == 0x0003B8, "Member 'ABP_Armor_Master_C::Layer_Levels' has a wrong offset!");

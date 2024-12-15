@@ -461,7 +461,7 @@ public:
 	bool GetCustomSubPath(class FString* AttributeValue) const;
 	void GetFactoryDependencies(TArray<class FString>* OutDependencies) const;
 	int32 GetFactoryDependenciesCount() const;
-	void GetFactoryDependency(const int32 Param_Index, class FString* OutDependency) const;
+	void GetFactoryDependency(const int32 Index_0, class FString* OutDependency) const;
 	EReimportStrategyFlags GetReimportStrategyFlags() const;
 	bool ShouldForceNodeReimport() const;
 	bool ShouldSkipNodeImport() const;

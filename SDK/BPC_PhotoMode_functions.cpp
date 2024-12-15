@@ -324,9 +324,9 @@ void UBPC_PhotoMode_C::OnFreenCameraEnd__DelegateSignature()
 // Function BPC_PhotoMode.BPC_PhotoMode_C.OpenGallery
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FKey                             Param_LastKey                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// struct FKey                             LastKey_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UBPC_PhotoMode_C::OpenGallery(const struct FKey& Param_LastKey)
+void UBPC_PhotoMode_C::OpenGallery(const struct FKey& LastKey_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -335,7 +335,7 @@ void UBPC_PhotoMode_C::OpenGallery(const struct FKey& Param_LastKey)
 
 	Params::BPC_PhotoMode_C_OpenGallery Parms{};
 
-	Parms.Param_LastKey = std::move(Param_LastKey);
+	Parms.LastKey_0 = std::move(LastKey_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -378,9 +378,9 @@ void UBPC_PhotoMode_C::PhotoModeClosed__DelegateSignature()
 // Function BPC_PhotoMode.BPC_PhotoMode_C.PhotoModeOpened__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_CurrentTimeDilation                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CurrentTimeDilation_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_PhotoMode_C::PhotoModeOpened__DelegateSignature(double Param_CurrentTimeDilation)
+void UBPC_PhotoMode_C::PhotoModeOpened__DelegateSignature(double CurrentTimeDilation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -389,7 +389,7 @@ void UBPC_PhotoMode_C::PhotoModeOpened__DelegateSignature(double Param_CurrentTi
 
 	Params::BPC_PhotoMode_C_PhotoModeOpened__DelegateSignature Parms{};
 
-	Parms.Param_CurrentTimeDilation = Param_CurrentTimeDilation;
+	Parms.CurrentTimeDilation_0 = CurrentTimeDilation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

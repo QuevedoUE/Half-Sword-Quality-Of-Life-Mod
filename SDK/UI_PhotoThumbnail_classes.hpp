@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "S_PhotosData_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
@@ -56,11 +56,11 @@ public:
 	ESlateVisibility Edges_Visibility();
 	void ExecuteUbergraph_UI_PhotoThumbnail(int32 EntryPoint);
 	struct FLinearColor FrameFocusedAndUnfocusedColor();
-	void Initialize(class UUI_Gallery_C* Param_GalleryReference, class UUI_PhotoPage_C* OwnPage);
+	void Initialize(class UUI_Gallery_C* GalleryReference_0, class UUI_PhotoPage_C* OwnPage);
 	void PreConstruct(bool IsDesignTime);
 	void ResetThumb();
 	void ResetThumbAnimation();
-	void SendPhoto__DelegateSignature(const struct FS_PhotosData& Param_PhotoData);
+	void SendPhoto__DelegateSignature(const struct FS_PhotosData& PhotoData_0);
 	void SetPhotoData(const struct FS_PhotosData& PhotoInfo);
 	void UpdatePhoto();
 

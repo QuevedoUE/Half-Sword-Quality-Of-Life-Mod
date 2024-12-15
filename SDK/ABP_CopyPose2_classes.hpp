@@ -39,7 +39,7 @@ public:
 	int32                                         Spawned_Bone_Int;                                  // 0x0548(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintBeginPlay();
 	void BlueprintInitializeAnimation();
 	void BlueprintUpdateAnimation(float DeltaTimeX);

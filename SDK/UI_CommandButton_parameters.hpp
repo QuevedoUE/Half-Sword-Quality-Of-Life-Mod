@@ -91,22 +91,22 @@ static_assert(offsetof(UI_CommandButton_C_PreConstruct, IsDesignTime) == 0x00000
 struct UI_CommandButton_C_UpdateIconByIndex final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_CommandButton_C_UpdateIconByIndex) == 0x000004, "Wrong alignment on UI_CommandButton_C_UpdateIconByIndex");
 static_assert(sizeof(UI_CommandButton_C_UpdateIconByIndex) == 0x000004, "Wrong size on UI_CommandButton_C_UpdateIconByIndex");
-static_assert(offsetof(UI_CommandButton_C_UpdateIconByIndex, Param_Index) == 0x000000, "Member 'UI_CommandButton_C_UpdateIconByIndex::Param_Index' has a wrong offset!");
+static_assert(offsetof(UI_CommandButton_C_UpdateIconByIndex, Index_0) == 0x000000, "Member 'UI_CommandButton_C_UpdateIconByIndex::Index_0' has a wrong offset!");
 
 // Function UI_CommandButton.UI_CommandButton_C.UpdateIconDT
 // 0x0010 (0x0010 - 0x0000)
 struct UI_CommandButton_C_UpdateIconDT final
 {
 public:
-	struct FDataTableRowHandle                    Param_IconDT;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FDataTableRowHandle                    IconDT_0;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
 static_assert(alignof(UI_CommandButton_C_UpdateIconDT) == 0x000008, "Wrong alignment on UI_CommandButton_C_UpdateIconDT");
 static_assert(sizeof(UI_CommandButton_C_UpdateIconDT) == 0x000010, "Wrong size on UI_CommandButton_C_UpdateIconDT");
-static_assert(offsetof(UI_CommandButton_C_UpdateIconDT, Param_IconDT) == 0x000000, "Member 'UI_CommandButton_C_UpdateIconDT::Param_IconDT' has a wrong offset!");
+static_assert(offsetof(UI_CommandButton_C_UpdateIconDT, IconDT_0) == 0x000000, "Member 'UI_CommandButton_C_UpdateIconDT::IconDT_0' has a wrong offset!");
 
 }
 

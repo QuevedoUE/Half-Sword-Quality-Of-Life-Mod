@@ -644,9 +644,9 @@ void UUI_Gallery_C::SendPhotoData(const struct FS_PhotosData& PhotoData)
 // Function UI_Gallery.UI_Gallery_C.SetIcons
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_Gallery_C::SetIcons(int32 Param_Index)
+void UUI_Gallery_C::SetIcons(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -655,7 +655,7 @@ void UUI_Gallery_C::SetIcons(int32 Param_Index)
 
 	Params::UI_Gallery_C_SetIcons Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

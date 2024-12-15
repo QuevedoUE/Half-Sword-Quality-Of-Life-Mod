@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Str_Loadout_Equipment_structs.hpp"
-#include "Engine_structs.hpp"
-#include "VertexPaintDetectionPlugin_structs.hpp"
-#include "Enum_PlayCards_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ArmorSlots_Enum_structs.hpp"
 #include "Str_Equipment_Loadout_Old_structs.hpp"
+#include "Enum_PlayCards_structs.hpp"
+#include "Str_Loadout_Equipment_structs.hpp"
+#include "VertexPaintDetectionPlugin_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ArmorSlots_Enum_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

@@ -44,8 +44,8 @@ public:
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
 	void OnPressed__DelegateSignature();
 	void PreConstruct(bool IsDesignTime);
-	void UpdateIconByIndex(int32 Param_Index);
-	void UpdateIconDT(const struct FDataTableRowHandle& Param_IconDT);
+	void UpdateIconByIndex(int32 Index_0);
+	void UpdateIconDT(const struct FDataTableRowHandle& IconDT_0);
 
 public:
 	static class UClass* StaticClass()

@@ -40,9 +40,9 @@ void UUI_Selector_C::AddOption(const class FText& NewOption)
 // Function UI_Selector.UI_Selector_C.AddOptions(Name)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FName>                     Param_Options                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FName>                     Options_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UUI_Selector_C::AddOptions_Name_(TArray<class FName>& Param_Options)
+void UUI_Selector_C::AddOptions_Name_(TArray<class FName>& Options_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -51,20 +51,20 @@ void UUI_Selector_C::AddOptions_Name_(TArray<class FName>& Param_Options)
 
 	Params::UI_Selector_C_AddOptions_Name_ Parms{};
 
-	Parms.Param_Options = std::move(Param_Options);
+	Parms.Options_0 = std::move(Options_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_Options = std::move(Parms.Param_Options);
+	Options_0 = std::move(Parms.Options_0);
 }
 
 
 // Function UI_Selector.UI_Selector_C.AddOptions(String)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FString>                   Param_Options                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FString>                   Options_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UUI_Selector_C::AddOptions_String_(TArray<class FString>& Param_Options)
+void UUI_Selector_C::AddOptions_String_(TArray<class FString>& Options_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -73,20 +73,20 @@ void UUI_Selector_C::AddOptions_String_(TArray<class FString>& Param_Options)
 
 	Params::UI_Selector_C_AddOptions_String_ Parms{};
 
-	Parms.Param_Options = std::move(Param_Options);
+	Parms.Options_0 = std::move(Options_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_Options = std::move(Parms.Param_Options);
+	Options_0 = std::move(Parms.Options_0);
 }
 
 
 // Function UI_Selector.UI_Selector_C.AddOptions(Text)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FText>                     Param_Options                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FText>                     Options_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UUI_Selector_C::AddOptions_Text_(TArray<class FText>& Param_Options)
+void UUI_Selector_C::AddOptions_Text_(TArray<class FText>& Options_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -95,11 +95,11 @@ void UUI_Selector_C::AddOptions_Text_(TArray<class FText>& Param_Options)
 
 	Params::UI_Selector_C_AddOptions_Text_ Parms{};
 
-	Parms.Param_Options = std::move(Param_Options);
+	Parms.Options_0 = std::move(Options_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_Options = std::move(Parms.Param_Options);
+	Options_0 = std::move(Parms.Options_0);
 }
 
 
@@ -155,9 +155,9 @@ void UUI_Selector_C::BndEvt__Slider_K2Node_ComponentBoundEvent_2_OnFloatValueCha
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_bShouldFocus                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShouldFocus_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_Selector_C::ChangeValue(double Value, bool Param_bShouldFocus)
+void UUI_Selector_C::ChangeValue(double Value, bool bShouldFocus_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -167,7 +167,7 @@ void UUI_Selector_C::ChangeValue(double Value, bool Param_bShouldFocus)
 	Params::UI_Selector_C_ChangeValue Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_bShouldFocus = Param_bShouldFocus;
+	Parms.bShouldFocus_0 = bShouldFocus_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -253,17 +253,17 @@ void UUI_Selector_C::FocusWithMouseWheel()
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bChangeSliderColorWhenFocused                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_bChangeTextColorWhenFocused                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USlider*                          Param_Slider                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    bChangeTextColorWhenFocused_0                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USlider*                          Slider_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UImage*                           ImgLeftButton                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UImage*                           ImgRightButton                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          Param_SliderTitle                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          Param_SliderValue                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          SliderTitle_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          SliderValue_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    bSetMargin                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FSlateBrush                      LeftButtonColor                                        (Parm, OutParm)
 // struct FSlateBrush                      RightButtonColor                                       (Parm, OutParm)
 
-void UUI_Selector_C::GetFocusedOrUnfocusedColor(bool bChangeSliderColorWhenFocused, bool Param_bChangeTextColorWhenFocused, class USlider* Param_Slider, class UImage* ImgLeftButton, class UImage* ImgRightButton, class UWidget* Param_SliderTitle, class UWidget* Param_SliderValue, bool bSetMargin, struct FSlateBrush* LeftButtonColor, struct FSlateBrush* RightButtonColor)
+void UUI_Selector_C::GetFocusedOrUnfocusedColor(bool bChangeSliderColorWhenFocused, bool bChangeTextColorWhenFocused_0, class USlider* Slider_0, class UImage* ImgLeftButton, class UImage* ImgRightButton, class UWidget* SliderTitle_0, class UWidget* SliderValue_0, bool bSetMargin, struct FSlateBrush* LeftButtonColor, struct FSlateBrush* RightButtonColor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -273,12 +273,12 @@ void UUI_Selector_C::GetFocusedOrUnfocusedColor(bool bChangeSliderColorWhenFocus
 	Params::UI_Selector_C_GetFocusedOrUnfocusedColor Parms{};
 
 	Parms.bChangeSliderColorWhenFocused = bChangeSliderColorWhenFocused;
-	Parms.Param_bChangeTextColorWhenFocused = Param_bChangeTextColorWhenFocused;
-	Parms.Param_Slider = Param_Slider;
+	Parms.bChangeTextColorWhenFocused_0 = bChangeTextColorWhenFocused_0;
+	Parms.Slider_0 = Slider_0;
 	Parms.ImgLeftButton = ImgLeftButton;
 	Parms.ImgRightButton = ImgRightButton;
-	Parms.Param_SliderTitle = Param_SliderTitle;
-	Parms.Param_SliderValue = Param_SliderValue;
+	Parms.SliderTitle_0 = SliderTitle_0;
+	Parms.SliderValue_0 = SliderValue_0;
 	Parms.bSetMargin = bSetMargin;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -547,10 +547,10 @@ void UUI_Selector_C::ResetDispatcher__DelegateSignature()
 // Function UI_Selector.UI_Selector_C.ResetSlider
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_bShouldFocus                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShouldFocus_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bResetThisSlider                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_Selector_C::ResetSlider(bool Param_bShouldFocus, bool bResetThisSlider)
+void UUI_Selector_C::ResetSlider(bool bShouldFocus_0, bool bResetThisSlider)
 {
 	static class UFunction* Func = nullptr;
 
@@ -559,7 +559,7 @@ void UUI_Selector_C::ResetSlider(bool Param_bShouldFocus, bool bResetThisSlider)
 
 	Params::UI_Selector_C_ResetSlider Parms{};
 
-	Parms.Param_bShouldFocus = Param_bShouldFocus;
+	Parms.bShouldFocus_0 = bShouldFocus_0;
 	Parms.bResetThisSlider = bResetThisSlider;
 
 	UObject::ProcessEvent(Func, &Parms);

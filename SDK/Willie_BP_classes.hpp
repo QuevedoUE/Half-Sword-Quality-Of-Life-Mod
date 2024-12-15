@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "GripType_Enum_structs.hpp"
+#include "Enum_Tiers_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Severable_BodyParts_Enum_structs.hpp"
-#include "FootStepping_Enum_structs.hpp"
-#include "ArmorSlots_Enum_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SheathType_Enum_structs.hpp"
 #include "BodyPart_Enum_structs.hpp"
+#include "Enum_VoiceType_structs.hpp"
+#include "GripType_Enum_structs.hpp"
+#include "ArmorSlots_Enum_structs.hpp"
+#include "FootStepping_Enum_structs.hpp"
 #include "Willie_Bones_Enum_structs.hpp"
 #include "Attached_Transform_Str_structs.hpp"
 #include "Weapon_Slots_Enum_structs.hpp"
-#include "Enum_VoiceType_structs.hpp"
 #include "Str_Loadout_Equipment_structs.hpp"
 #include "VertexPaintDetectionPlugin_structs.hpp"
 #include "Enum_DismembermentPart_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "SheathSlots_Enum_structs.hpp"
-#include "SheathType_Enum_structs.hpp"
 #include "LeftRight_Enum_structs.hpp"
 #include "HideBodyPart_Enum_structs.hpp"
-#include "Enum_Tiers_structs.hpp"
 
 
 namespace SDK
@@ -1183,7 +1183,7 @@ public:
 	void BndEvt__Willie_BP_BPC_RuntimeVertexPaintAndDetectionComponent_K2Node_ComponentBoundEvent_2_VertexColorGetClosestVertexData__DelegateSignature(const struct FRVPDPTaskResults& TaskResultInfo, const struct FRVPDPGetClosestVertexDataSettings& DetectedMeshWithSettings, const struct FRVPDPClosestVertexDataResults& ClosestVertexInfo, const struct FRVPDPEstimatedColorAtHitLocationInfo& EstimatedColorAtHitLocationInfo, const struct FRVPDPAverageColorInAreaInfo& AvarageColorInAreaInfo, const struct FRVPDPAdditionalDataToPassThroughInfo& AdditionalData);
 	void BndEvt__Willie_BP_Gut_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void Box_Vertex_Paint(class UBoxComponent* Box, class FName Hit_Bone, EBodyPart_Enum Hit_Body_Part, bool* Nul);
-	void BOXX2(Enum_DismembermentPart Param_Index);
+	void BOXX2(Enum_DismembermentPart Index_0);
 	void BOXXX(class UBoxComponent* VP_Collision_Box_1, class UBoxComponent* VP_Collision_Box_2);
 	void Break_L_Constraint();
 	void Break_R_Constraint();
@@ -1203,7 +1203,7 @@ public:
 	void CustomEvent(Enum_DismembermentPart InputPin);
 	double Damage_Rate();
 	void Dead__DelegateSignature();
-	void Deal_Complex_Damage(class UPrimitiveComponent* Param_Hit_Component, class UPrimitiveComponent* Collided_Component, class FName Hit_Bone, const struct FVector& Location, const struct FVector& Normal, const struct FVector& Hit_Velocity, const struct FVector& Hit_Impulse, double Cutting_Power, double Stab_Rate, double Rigidity, int32 Blunt_Destruction_Int, bool Lower_Threshold_In, bool Damage_Parent_Bone_, double Kick_Power, class UBoxComponent* Hit_Box, EPhysicalSurface* Hit_Surface, double* Damage_Out, double* Cutting_Rate_Out, double* Rigidity_Out, double* Material_Density_Out, bool* Lower_Threshold_Out);
+	void Deal_Complex_Damage(class UPrimitiveComponent* Hit_Component_0, class UPrimitiveComponent* Collided_Component, class FName Hit_Bone, const struct FVector& Location, const struct FVector& Normal, const struct FVector& Hit_Velocity, const struct FVector& Hit_Impulse, double Cutting_Power, double Stab_Rate, double Rigidity, int32 Blunt_Destruction_Int, bool Lower_Threshold_In, bool Damage_Parent_Bone_, double Kick_Power, class UBoxComponent* Hit_Box, EPhysicalSurface* Hit_Surface, double* Damage_Out, double* Cutting_Rate_Out, double* Rigidity_Out, double* Material_Density_Out, bool* Lower_Threshold_Out);
 	void Death();
 	void Death_Timeline__FinishedFunc();
 	void Death_Timeline__UpdateFunc();
@@ -1227,7 +1227,7 @@ public:
 	void Find_Node_Time_Begin();
 	void Find_Node_Time_End();
 	double Find_Sheath_Length(class AModularWeaponBP_C* InputPin);
-	struct FVector Find_Thrusting_Location(EGripType_Enum Grip_Typr, double Thrust_Position, double Param_Y);
+	struct FVector Find_Thrusting_Location(EGripType_Enum Grip_Typr, double Thrust_Position, double Y_0);
 	void Force_TPP();
 	void Get_Damage(const struct FVector& Impulse, const struct FVector& Velocity, const struct FVector& Location, const struct FVector& Normal, class FName bone, double Raw_Damage, double Cutting_Power, bool Inside, class UPrimitiveComponent* Damaged_Mesh, int32 Dism_Blunt, bool Lower_Threshold, bool Shockwave, class UPrimitiveComponent* Hit_By_Component, bool Stab_, class UBoxComponent* Hit_Box, double* Damage_Out);
 	void Get_Damage_0(const struct FVector& Impulse, const struct FVector& Velocity, const struct FVector& Location, const struct FVector& Normal, class FName bone, double Raw_Damage, double Cutting_Power, bool Inside, class UPrimitiveComponent* Damaged_Mesh, int32 Dism_Blunt, bool Lower_Threshold, bool Shockwave, class UPrimitiveComponent* Hit_By_Component, double* Damage_Out);
@@ -1303,7 +1303,7 @@ public:
 	void Release_Grab_R();
 	void Release_No_Dismember_Bones();
 	void Release_Offhand();
-	void Remove_Armor(class UClass* Param_Class, const struct FTransform& SpawnTransform, const EArmorSlots_Enum& Key, class ABP_Armor_Master_C** Dropped_Armor);
+	void Remove_Armor(class UClass* Class_0, const struct FTransform& SpawnTransform, const EArmorSlots_Enum& Key, class ABP_Armor_Master_C** Dropped_Armor);
 	void Remove_Hat();
 	void Reset_Blood_Bleed();
 	void Reset_Blood_Splash();
@@ -1318,15 +1318,15 @@ public:
 	void Reset_Sustained_Damage();
 	void Reset_Trail_Blood(float Duration);
 	void Save_Loadout();
-	void Send_Threat_Location_R(const struct FVector& Param_Threat_Location, const struct FVector& Offset, bool Immediate, bool* Nul);
+	void Send_Threat_Location_R(const struct FVector& Threat_Location_0, const struct FVector& Offset, bool Immediate, bool* Nul);
 	void Set_Arm_Aim_Location(double Control_Rate, class USceneComponent* Aim_Scene, class USceneComponent* Shoulder_Scene, const struct FRotator& Aim_Roataion, const struct FVector& Default_Arm_Position, EGripType_Enum Grip, double A, struct FVector* Result);
-	void Set_Arm_Aim_Rotation(class USceneComponent* Shoulder_Scene, double Param_Y, double Param_X, bool Guarding_, double Control_Rate, const struct FRotator& Aim_ROtation, class FName Hand_Socket_Name, struct FRotator* Result);
+	void Set_Arm_Aim_Rotation(class USceneComponent* Shoulder_Scene, double Y_0, double X_0, bool Guarding_, double Control_Rate, const struct FRotator& Aim_ROtation, class FName Hand_Socket_Name, struct FRotator* Result);
 	void Set_Arm_IK_Relative_Rotation(double Control_Rate, float Wrist_Direction, class USceneComponent* Shoulder_Scene, EGripType_Enum Grip_Type, struct FRotator* Result);
 	void Set_Pain_Location(class FName BoneName, const struct FVector& A);
 	void Set_Shoulder_Rotation(double Control_Rate, const struct FRotator& Aim_ROtation, struct FRotator* Result);
 	void Set_Up_Armor(bool Clear_Previous, bool Load_Saved_Armor, bool Save_Armor, const struct FStr_Loadout_Equipment& Load_Armor);
-	void Set_Up_Left_Hand_Weapon(class UClass* Weapon_Class, class AModularWeaponBP_C* Param_Weapon_L, bool Dropped_With_no_Damage, bool Destroy_Previous, const struct FStr_WeaponParts& Str_Weapon_Parts);
-	void Set_Up_Right_Hand_Weapon(class UClass* Weapon_Class, class AModularWeaponBP_C* Param_Weapon_R, bool Dropped_With_no_Damage, bool Destroy_Previous, const struct FStr_WeaponParts& Str_Weapon_Parts);
+	void Set_Up_Left_Hand_Weapon(class UClass* Weapon_Class, class AModularWeaponBP_C* Weapon_L_0, bool Dropped_With_no_Damage, bool Destroy_Previous, const struct FStr_WeaponParts& Str_Weapon_Parts);
+	void Set_Up_Right_Hand_Weapon(class UClass* Weapon_Class, class AModularWeaponBP_C* Weapon_R_0, bool Dropped_With_no_Damage, bool Destroy_Previous, const struct FStr_WeaponParts& Str_Weapon_Parts);
 	double Set_X(class USceneComponent* Shoulder_Scene, double X_Offset);
 	double Set_Y(class USceneComponent* Shoulder_Scene, double Y_Offset);
 	void Sheath_L(class FName Sheath_Slot, bool Scabbard_);
@@ -1356,8 +1356,8 @@ public:
 	void Timeline__UpdateFunc();
 	void Toggle_Invert();
 	void Un_Kneel_Event();
-	void Unsheath_Event_L_Delayed(class UPrimitiveComponent* Param_Grab_Component_R);
-	void Unsheath_Event_R_Delayed(class UPrimitiveComponent* Param_Grab_Component_R);
+	void Unsheath_Event_L_Delayed(class UPrimitiveComponent* Grab_Component_R_0);
+	void Unsheath_Event_R_Delayed(class UPrimitiveComponent* Grab_Component_R_0);
 	void Unsheath_L(class AModularWeaponBP_C* Unsheathed_Weapon);
 	void Unsheath_R(class AModularWeaponBP_C* Unsheathed_Weapon);
 	void Unsheath_R_Event();
@@ -1370,7 +1370,7 @@ public:
 	void VO_Interrupt();
 	void VO_Plead();
 	void Wake_Up();
-	void Weapon_HIt(class UPrimitiveComponent* Param_Hit_Component, const struct FVector& Weapon_Velocity, const struct FHitResult& Hit_Result, double EdgeAllignment_Dot, bool Laser_temp_, class UClass* Weapon);
+	void Weapon_HIt(class UPrimitiveComponent* Hit_Component_0, const struct FVector& Weapon_Velocity, const struct FHitResult& Hit_Result, double EdgeAllignment_Dot, bool Laser_temp_, class UClass* Weapon);
 	void Woke_Up__DelegateSignature();
 
 public:

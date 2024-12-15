@@ -147,33 +147,33 @@ static_assert(offsetof(TraceUtilLibrary_ToggleChannel, ReturnValue) == 0x000011,
 struct TraceUtilLibrary_TraceBookmark final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TraceUtilLibrary_TraceBookmark) == 0x000008, "Wrong alignment on TraceUtilLibrary_TraceBookmark");
 static_assert(sizeof(TraceUtilLibrary_TraceBookmark) == 0x000010, "Wrong size on TraceUtilLibrary_TraceBookmark");
-static_assert(offsetof(TraceUtilLibrary_TraceBookmark, Param_Name) == 0x000000, "Member 'TraceUtilLibrary_TraceBookmark::Param_Name' has a wrong offset!");
+static_assert(offsetof(TraceUtilLibrary_TraceBookmark, Name_0) == 0x000000, "Member 'TraceUtilLibrary_TraceBookmark::Name_0' has a wrong offset!");
 
 // Function TraceUtilities.TraceUtilLibrary.TraceMarkRegionEnd
 // 0x0010 (0x0010 - 0x0000)
 struct TraceUtilLibrary_TraceMarkRegionEnd final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TraceUtilLibrary_TraceMarkRegionEnd) == 0x000008, "Wrong alignment on TraceUtilLibrary_TraceMarkRegionEnd");
 static_assert(sizeof(TraceUtilLibrary_TraceMarkRegionEnd) == 0x000010, "Wrong size on TraceUtilLibrary_TraceMarkRegionEnd");
-static_assert(offsetof(TraceUtilLibrary_TraceMarkRegionEnd, Param_Name) == 0x000000, "Member 'TraceUtilLibrary_TraceMarkRegionEnd::Param_Name' has a wrong offset!");
+static_assert(offsetof(TraceUtilLibrary_TraceMarkRegionEnd, Name_0) == 0x000000, "Member 'TraceUtilLibrary_TraceMarkRegionEnd::Name_0' has a wrong offset!");
 
 // Function TraceUtilities.TraceUtilLibrary.TraceMarkRegionStart
 // 0x0010 (0x0010 - 0x0000)
 struct TraceUtilLibrary_TraceMarkRegionStart final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TraceUtilLibrary_TraceMarkRegionStart) == 0x000008, "Wrong alignment on TraceUtilLibrary_TraceMarkRegionStart");
 static_assert(sizeof(TraceUtilLibrary_TraceMarkRegionStart) == 0x000010, "Wrong size on TraceUtilLibrary_TraceMarkRegionStart");
-static_assert(offsetof(TraceUtilLibrary_TraceMarkRegionStart, Param_Name) == 0x000000, "Member 'TraceUtilLibrary_TraceMarkRegionStart::Param_Name' has a wrong offset!");
+static_assert(offsetof(TraceUtilLibrary_TraceMarkRegionStart, Name_0) == 0x000000, "Member 'TraceUtilLibrary_TraceMarkRegionStart::Name_0' has a wrong offset!");
 
 }
 

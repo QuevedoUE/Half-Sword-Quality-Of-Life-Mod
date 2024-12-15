@@ -1460,10 +1460,10 @@ void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 // Function MovieScene.MovieSceneSequencePlayer.SetTimeRange
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// float                                   Param_StartTime                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   StartTime_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneSequencePlayer::SetTimeRange(float Param_StartTime, float Duration)
+void UMovieSceneSequencePlayer::SetTimeRange(float StartTime_0, float Duration)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1472,7 +1472,7 @@ void UMovieSceneSequencePlayer::SetTimeRange(float Param_StartTime, float Durati
 
 	Params::MovieSceneSequencePlayer_SetTimeRange Parms{};
 
-	Parms.Param_StartTime = Param_StartTime;
+	Parms.StartTime_0 = StartTime_0;
 	Parms.Duration = Duration;
 
 	auto Flgs = Func->FunctionFlags;

@@ -291,16 +291,16 @@ public:
 
 public:
 	int32 AddDependency(struct FVariantDependency* Dependency);
-	void DeleteDependency(int32 Param_Index);
+	void DeleteDependency(int32 Index_0);
 	class AActor* GetActor(int32 ActorIndex);
-	struct FVariantDependency GetDependency(int32 Param_Index);
+	struct FVariantDependency GetDependency(int32 Index_0);
 	TArray<class UVariant*> GetDependents(class ULevelVariantSets* LevelVariantSets, bool bOnlyEnabledDependencies);
 	int32 GetNumActors();
 	int32 GetNumDependencies();
 	class UVariantSet* GetParent();
 	class UTexture2D* GetThumbnail();
 	bool IsActive();
-	void SetDependency(int32 Param_Index, struct FVariantDependency* Dependency);
+	void SetDependency(int32 Index_0, struct FVariantDependency* Dependency);
 	void SetDisplayText(const class FText& NewDisplayText);
 	void SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma);
 	void SetThumbnailFromEditorViewport();

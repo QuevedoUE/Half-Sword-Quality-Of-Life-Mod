@@ -162,7 +162,7 @@ public:
 	TSubclassOf<class AActor>                     ClassToSpawn;                                      // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	static class UGameplayTask_SpawnActor* SpawnActor(TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, TSubclassOf<class AActor> Param_Class, bool bSpawnOnlyOnAuthority);
+	static class UGameplayTask_SpawnActor* SpawnActor(TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, TSubclassOf<class AActor> Class_0, bool bSpawnOnlyOnAuthority);
 
 	bool BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor);
 	void FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor);

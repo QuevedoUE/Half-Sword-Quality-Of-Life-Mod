@@ -64,7 +64,7 @@ public:
 	bool Next();
 	bool OpenFile(const class FString& FilePath);
 	bool OpenPlaylist(class UMediaPlaylist* InPlaylist);
-	bool OpenPlaylistIndex(class UMediaPlaylist* InPlaylist, int32 Param_Index);
+	bool OpenPlaylistIndex(class UMediaPlaylist* InPlaylist, int32 Index_0);
 	bool OpenSource(class UMediaSource* MediaSource);
 	void OpenSourceLatent(const class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UMediaSource* MediaSource, const struct FMediaPlayerOptions& Options, bool* bSuccess);
 	bool OpenSourceWithOptions(class UMediaSource* MediaSource, const struct FMediaPlayerOptions& Options);
@@ -84,7 +84,7 @@ public:
 	bool SetNativeVolume(float Volume);
 	bool SetPlaybackTimeRange(const struct FFloatInterval& InTimeRange);
 	bool SetRate(float Rate);
-	void SetTimeDelay(const struct FTimespan& Param_TimeDelay);
+	void SetTimeDelay(const struct FTimespan& TimeDelay_0);
 	bool SetTrackFormat(EMediaPlayerTrack TrackType, int32 TrackIndex, int32 FormatIndex);
 	bool SetVideoTrackFrameRate(int32 TrackIndex, int32 FormatIndex, float FrameRate);
 	bool SetViewField(float Horizontal, float Vertical, bool Absolute);
@@ -396,15 +396,15 @@ public:
 	bool Add(class UMediaSource* MediaSource);
 	bool AddFile(const class FString& FilePath);
 	bool AddUrl(const class FString& URL);
-	class UMediaSource* Get(int32 Param_Index);
+	class UMediaSource* Get(int32 Index_0);
 	class UMediaSource* GetNext(int32* InOutIndex);
 	class UMediaSource* GetPrevious(int32* InOutIndex);
 	class UMediaSource* GetRandom(int32* OutIndex);
-	void Insert(class UMediaSource* MediaSource, int32 Param_Index);
+	void Insert(class UMediaSource* MediaSource, int32 Index_0);
 	int32 Num();
 	bool Remove(class UMediaSource* MediaSource);
-	bool RemoveAt(int32 Param_Index);
-	bool Replace(int32 Param_Index, class UMediaSource* Replacement);
+	bool RemoveAt(int32 Index_0);
+	bool Replace(int32 Index_0, class UMediaSource* Replacement);
 
 public:
 	static class UClass* StaticClass()

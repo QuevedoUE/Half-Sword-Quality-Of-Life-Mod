@@ -1137,7 +1137,7 @@ class UPlayerMappableKeySettings final : public UObject
 {
 public:
 	class UObject*                                MetaData;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Name_PlayerMappableKeySettings;                    // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   DisplayName;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FText                                   DisplayCategory;                                   // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  SupportedKeyProfiles;                              // 0x0058(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
@@ -1155,7 +1155,7 @@ public:
 static_assert(alignof(UPlayerMappableKeySettings) == 0x000008, "Wrong alignment on UPlayerMappableKeySettings");
 static_assert(sizeof(UPlayerMappableKeySettings) == 0x000078, "Wrong size on UPlayerMappableKeySettings");
 static_assert(offsetof(UPlayerMappableKeySettings, MetaData) == 0x000028, "Member 'UPlayerMappableKeySettings::MetaData' has a wrong offset!");
-static_assert(offsetof(UPlayerMappableKeySettings, Name_PlayerMappableKeySettings) == 0x000030, "Member 'UPlayerMappableKeySettings::Name_PlayerMappableKeySettings' has a wrong offset!");
+static_assert(offsetof(UPlayerMappableKeySettings, Name_0) == 0x000030, "Member 'UPlayerMappableKeySettings::Name_0' has a wrong offset!");
 static_assert(offsetof(UPlayerMappableKeySettings, DisplayName) == 0x000038, "Member 'UPlayerMappableKeySettings::DisplayName' has a wrong offset!");
 static_assert(offsetof(UPlayerMappableKeySettings, DisplayCategory) == 0x000048, "Member 'UPlayerMappableKeySettings::DisplayCategory' has a wrong offset!");
 static_assert(offsetof(UPlayerMappableKeySettings, SupportedKeyProfiles) == 0x000058, "Member 'UPlayerMappableKeySettings::SupportedKeyProfiles' has a wrong offset!");

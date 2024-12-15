@@ -615,12 +615,12 @@ static_assert(offsetof(MovieSceneSequencePlayer_SetPlayRate, PlayRate) == 0x0000
 struct MovieSceneSequencePlayer_SetTimeRange final
 {
 public:
-	float                                         Param_StartTime;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartTime_0;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequencePlayer_SetTimeRange) == 0x000004, "Wrong alignment on MovieSceneSequencePlayer_SetTimeRange");
 static_assert(sizeof(MovieSceneSequencePlayer_SetTimeRange) == 0x000008, "Wrong size on MovieSceneSequencePlayer_SetTimeRange");
-static_assert(offsetof(MovieSceneSequencePlayer_SetTimeRange, Param_StartTime) == 0x000000, "Member 'MovieSceneSequencePlayer_SetTimeRange::Param_StartTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequencePlayer_SetTimeRange, StartTime_0) == 0x000000, "Member 'MovieSceneSequencePlayer_SetTimeRange::StartTime_0' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequencePlayer_SetTimeRange, Duration) == 0x000004, "Member 'MovieSceneSequencePlayer_SetTimeRange::Duration' has a wrong offset!");
 
 // Function MovieScene.MovieSceneSequencePlayer.SetWeight

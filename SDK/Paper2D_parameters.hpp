@@ -102,13 +102,13 @@ static_assert(offsetof(PaperFlipbook_GetTotalDuration, ReturnValue) == 0x000000,
 struct PaperFlipbook_IsValidKeyFrameIndex final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PaperFlipbook_IsValidKeyFrameIndex) == 0x000004, "Wrong alignment on PaperFlipbook_IsValidKeyFrameIndex");
 static_assert(sizeof(PaperFlipbook_IsValidKeyFrameIndex) == 0x000008, "Wrong size on PaperFlipbook_IsValidKeyFrameIndex");
-static_assert(offsetof(PaperFlipbook_IsValidKeyFrameIndex, Param_Index) == 0x000000, "Member 'PaperFlipbook_IsValidKeyFrameIndex::Param_Index' has a wrong offset!");
+static_assert(offsetof(PaperFlipbook_IsValidKeyFrameIndex, Index_0) == 0x000000, "Member 'PaperFlipbook_IsValidKeyFrameIndex::Index_0' has a wrong offset!");
 static_assert(offsetof(PaperFlipbook_IsValidKeyFrameIndex, ReturnValue) == 0x000004, "Member 'PaperFlipbook_IsValidKeyFrameIndex::ReturnValue' has a wrong offset!");
 
 // Function Paper2D.PaperFlipbookComponent.GetFlipbook
@@ -514,20 +514,20 @@ static_assert(offsetof(PaperTileMapComponent_AddNewLayer, ReturnValue) == 0x0000
 struct PaperTileMapComponent_CreateNewTileMap final
 {
 public:
-	int32                                         Param_MapWidth;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_MapHeight;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_TileWidth;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_TileHeight;                                  // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MapWidth_0;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MapHeight_0;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TileWidth_0;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TileHeight_0;                                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PixelsPerUnrealUnit;                               // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCreateLayer;                                      // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PaperTileMapComponent_CreateNewTileMap) == 0x000004, "Wrong alignment on PaperTileMapComponent_CreateNewTileMap");
 static_assert(sizeof(PaperTileMapComponent_CreateNewTileMap) == 0x000018, "Wrong size on PaperTileMapComponent_CreateNewTileMap");
-static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, Param_MapWidth) == 0x000000, "Member 'PaperTileMapComponent_CreateNewTileMap::Param_MapWidth' has a wrong offset!");
-static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, Param_MapHeight) == 0x000004, "Member 'PaperTileMapComponent_CreateNewTileMap::Param_MapHeight' has a wrong offset!");
-static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, Param_TileWidth) == 0x000008, "Member 'PaperTileMapComponent_CreateNewTileMap::Param_TileWidth' has a wrong offset!");
-static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, Param_TileHeight) == 0x00000C, "Member 'PaperTileMapComponent_CreateNewTileMap::Param_TileHeight' has a wrong offset!");
+static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, MapWidth_0) == 0x000000, "Member 'PaperTileMapComponent_CreateNewTileMap::MapWidth_0' has a wrong offset!");
+static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, MapHeight_0) == 0x000004, "Member 'PaperTileMapComponent_CreateNewTileMap::MapHeight_0' has a wrong offset!");
+static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, TileWidth_0) == 0x000008, "Member 'PaperTileMapComponent_CreateNewTileMap::TileWidth_0' has a wrong offset!");
+static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, TileHeight_0) == 0x00000C, "Member 'PaperTileMapComponent_CreateNewTileMap::TileHeight_0' has a wrong offset!");
 static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, PixelsPerUnrealUnit) == 0x000010, "Member 'PaperTileMapComponent_CreateNewTileMap::PixelsPerUnrealUnit' has a wrong offset!");
 static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, bCreateLayer) == 0x000014, "Member 'PaperTileMapComponent_CreateNewTileMap::bCreateLayer' has a wrong offset!");
 
@@ -536,14 +536,14 @@ static_assert(offsetof(PaperTileMapComponent_CreateNewTileMap, bCreateLayer) == 
 struct PaperTileMapComponent_GetMapSize final
 {
 public:
-	int32                                         Param_MapWidth;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_MapHeight;                                   // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MapWidth_0;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MapHeight_0;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumLayers;                                         // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PaperTileMapComponent_GetMapSize) == 0x000004, "Wrong alignment on PaperTileMapComponent_GetMapSize");
 static_assert(sizeof(PaperTileMapComponent_GetMapSize) == 0x00000C, "Wrong size on PaperTileMapComponent_GetMapSize");
-static_assert(offsetof(PaperTileMapComponent_GetMapSize, Param_MapWidth) == 0x000000, "Member 'PaperTileMapComponent_GetMapSize::Param_MapWidth' has a wrong offset!");
-static_assert(offsetof(PaperTileMapComponent_GetMapSize, Param_MapHeight) == 0x000004, "Member 'PaperTileMapComponent_GetMapSize::Param_MapHeight' has a wrong offset!");
+static_assert(offsetof(PaperTileMapComponent_GetMapSize, MapWidth_0) == 0x000000, "Member 'PaperTileMapComponent_GetMapSize::MapWidth_0' has a wrong offset!");
+static_assert(offsetof(PaperTileMapComponent_GetMapSize, MapHeight_0) == 0x000004, "Member 'PaperTileMapComponent_GetMapSize::MapHeight_0' has a wrong offset!");
 static_assert(offsetof(PaperTileMapComponent_GetMapSize, NumLayers) == 0x000008, "Member 'PaperTileMapComponent_GetMapSize::NumLayers' has a wrong offset!");
 
 // Function Paper2D.PaperTileMapComponent.ResizeMap

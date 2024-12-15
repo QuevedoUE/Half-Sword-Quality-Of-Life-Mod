@@ -48,19 +48,19 @@ public:
 
 public:
 	void BndEvt__ToggleDoF_1_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
-	void ChangeValue(bool bValue, bool Param_bShouldFocus);
+	void ChangeValue(bool bValue, bool bShouldFocus_0);
 	void Construct();
 	void ExecuteUbergraph_UI_Checkbox(int32 EntryPoint);
-	void Initialize(bool Param_bDefaultValue);
+	void Initialize(bool bDefaultValue_0);
 	void OnCheckboxValueChanged__DelegateSignature(bool Value);
 	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void PreConstruct(bool IsDesignTime);
-	void ResetCheckbox(bool Param_bShouldFocus);
+	void ResetCheckbox(bool bShouldFocus_0);
 	void ResetToggleFocus();
-	void Set_Focused_or_Unfocused_Color(bool Param_bChangeCheckboxColorWhenFocused, bool Param_bChangeTextColorWhenFocused, class UCheckBox* Param_CheckBox, class UWidget* CheckboxTitle, class UWidget* Param_CheckboxValue);
+	void Set_Focused_or_Unfocused_Color(bool bChangeCheckboxColorWhenFocused_0, bool bChangeTextColorWhenFocused_0, class UCheckBox* CheckBox_0, class UWidget* CheckboxTitle, class UWidget* CheckboxValue_0);
 	void SetToggleFocus();
 	class FText SetTxtValue();
-	class UWidget* ToggleUsingArrows(EUINavigation Param_Navigation);
+	class UWidget* ToggleUsingArrows(EUINavigation Navigation_0);
 
 public:
 	static class UClass* StaticClass()

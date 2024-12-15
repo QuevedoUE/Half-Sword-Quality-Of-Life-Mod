@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Enum_Weapon_Material_Type_structs.hpp"
 #include "Engine_structs.hpp"
-#include "PhysicsCore_structs.hpp"
-#include "Str_WeaponParts_structs.hpp"
+#include "Enum_Weapon_Material_Type_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Enum_MaterialQuality_structs.hpp"
+#include "Str_WeaponParts_structs.hpp"
+#include "PhysicsCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -171,15 +171,15 @@ struct ModularWeaponBP_C_Collision_Hit final
 {
 public:
 	class UPrimitiveComponent*                    Hit_Component;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Other_Actor;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Param_Normal_Impulse;                              // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Other_Actor_0;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Normal_Impulse_0;                                  // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             Hit;                                               // 0x0028(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(ModularWeaponBP_C_Collision_Hit) == 0x000008, "Wrong alignment on ModularWeaponBP_C_Collision_Hit");
 static_assert(sizeof(ModularWeaponBP_C_Collision_Hit) == 0x000120, "Wrong size on ModularWeaponBP_C_Collision_Hit");
 static_assert(offsetof(ModularWeaponBP_C_Collision_Hit, Hit_Component) == 0x000000, "Member 'ModularWeaponBP_C_Collision_Hit::Hit_Component' has a wrong offset!");
-static_assert(offsetof(ModularWeaponBP_C_Collision_Hit, Param_Other_Actor) == 0x000008, "Member 'ModularWeaponBP_C_Collision_Hit::Param_Other_Actor' has a wrong offset!");
-static_assert(offsetof(ModularWeaponBP_C_Collision_Hit, Param_Normal_Impulse) == 0x000010, "Member 'ModularWeaponBP_C_Collision_Hit::Param_Normal_Impulse' has a wrong offset!");
+static_assert(offsetof(ModularWeaponBP_C_Collision_Hit, Other_Actor_0) == 0x000008, "Member 'ModularWeaponBP_C_Collision_Hit::Other_Actor_0' has a wrong offset!");
+static_assert(offsetof(ModularWeaponBP_C_Collision_Hit, Normal_Impulse_0) == 0x000010, "Member 'ModularWeaponBP_C_Collision_Hit::Normal_Impulse_0' has a wrong offset!");
 static_assert(offsetof(ModularWeaponBP_C_Collision_Hit, Hit) == 0x000028, "Member 'ModularWeaponBP_C_Collision_Hit::Hit' has a wrong offset!");
 
 // Function ModularWeaponBP.ModularWeaponBP_C.ExecuteUbergraph_ModularWeaponBP
@@ -2367,8 +2367,8 @@ struct ModularWeaponBP_C_Weapon_HIt final
 {
 public:
 	class UPrimitiveComponent*                    Hit_Component;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Param_Weapon_Velocity;                             // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Param_Hit_Result;                                  // 0x0020(0x00F8)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                Weapon_Velocity_0;                                 // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             Hit_Result_0;                                      // 0x0020(0x00F8)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	double                                        EdgeAllignment_Dot;                                // 0x0118(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Laser_temp_;                                       // 0x0120(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -2377,8 +2377,8 @@ public:
 static_assert(alignof(ModularWeaponBP_C_Weapon_HIt) == 0x000008, "Wrong alignment on ModularWeaponBP_C_Weapon_HIt");
 static_assert(sizeof(ModularWeaponBP_C_Weapon_HIt) == 0x000130, "Wrong size on ModularWeaponBP_C_Weapon_HIt");
 static_assert(offsetof(ModularWeaponBP_C_Weapon_HIt, Hit_Component) == 0x000000, "Member 'ModularWeaponBP_C_Weapon_HIt::Hit_Component' has a wrong offset!");
-static_assert(offsetof(ModularWeaponBP_C_Weapon_HIt, Param_Weapon_Velocity) == 0x000008, "Member 'ModularWeaponBP_C_Weapon_HIt::Param_Weapon_Velocity' has a wrong offset!");
-static_assert(offsetof(ModularWeaponBP_C_Weapon_HIt, Param_Hit_Result) == 0x000020, "Member 'ModularWeaponBP_C_Weapon_HIt::Param_Hit_Result' has a wrong offset!");
+static_assert(offsetof(ModularWeaponBP_C_Weapon_HIt, Weapon_Velocity_0) == 0x000008, "Member 'ModularWeaponBP_C_Weapon_HIt::Weapon_Velocity_0' has a wrong offset!");
+static_assert(offsetof(ModularWeaponBP_C_Weapon_HIt, Hit_Result_0) == 0x000020, "Member 'ModularWeaponBP_C_Weapon_HIt::Hit_Result_0' has a wrong offset!");
 static_assert(offsetof(ModularWeaponBP_C_Weapon_HIt, EdgeAllignment_Dot) == 0x000118, "Member 'ModularWeaponBP_C_Weapon_HIt::EdgeAllignment_Dot' has a wrong offset!");
 static_assert(offsetof(ModularWeaponBP_C_Weapon_HIt, Laser_temp_) == 0x000120, "Member 'ModularWeaponBP_C_Weapon_HIt::Laser_temp_' has a wrong offset!");
 static_assert(offsetof(ModularWeaponBP_C_Weapon_HIt, Weapon) == 0x000128, "Member 'ModularWeaponBP_C_Weapon_HIt::Weapon' has a wrong offset!");

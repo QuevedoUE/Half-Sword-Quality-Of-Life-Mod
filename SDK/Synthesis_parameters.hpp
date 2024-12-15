@@ -819,11 +819,11 @@ static_assert(offsetof(SourceEffectBitCrusherPreset_SetSampleRateModulators, InM
 struct SourceEffectBitCrusherPreset_SetSettings final
 {
 public:
-	struct FSourceEffectBitCrusherBaseSettings    Param_Settings;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectBitCrusherBaseSettings    Settings_0;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SourceEffectBitCrusherPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectBitCrusherPreset_SetSettings");
 static_assert(sizeof(SourceEffectBitCrusherPreset_SetSettings) == 0x000008, "Wrong size on SourceEffectBitCrusherPreset_SetSettings");
-static_assert(offsetof(SourceEffectBitCrusherPreset_SetSettings, Param_Settings) == 0x000000, "Member 'SourceEffectBitCrusherPreset_SetSettings::Param_Settings' has a wrong offset!");
+static_assert(offsetof(SourceEffectBitCrusherPreset_SetSettings, Settings_0) == 0x000000, "Member 'SourceEffectBitCrusherPreset_SetSettings::Settings_0' has a wrong offset!");
 
 // Function Synthesis.SourceEffectChorusPreset.SetDepth
 // 0x0004 (0x0004 - 0x0000)
@@ -973,11 +973,11 @@ static_assert(offsetof(SourceEffectChorusPreset_SetModulationSettings, Modulatio
 struct SourceEffectChorusPreset_SetSettings final
 {
 public:
-	struct FSourceEffectChorusBaseSettings        Param_Settings;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectChorusBaseSettings        Settings_0;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SourceEffectChorusPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectChorusPreset_SetSettings");
 static_assert(sizeof(SourceEffectChorusPreset_SetSettings) == 0x000018, "Wrong size on SourceEffectChorusPreset_SetSettings");
-static_assert(offsetof(SourceEffectChorusPreset_SetSettings, Param_Settings) == 0x000000, "Member 'SourceEffectChorusPreset_SetSettings::Param_Settings' has a wrong offset!");
+static_assert(offsetof(SourceEffectChorusPreset_SetSettings, Settings_0) == 0x000000, "Member 'SourceEffectChorusPreset_SetSettings::Settings_0' has a wrong offset!");
 
 // Function Synthesis.SourceEffectChorusPreset.SetSpread
 // 0x0004 (0x0004 - 0x0000)
@@ -1886,11 +1886,11 @@ static_assert(offsetof(SynthComponentMonoWaveTable_NoteOn, InVelocity) == 0x0000
 struct SynthComponentMonoWaveTable_RefreshWaveTable final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SynthComponentMonoWaveTable_RefreshWaveTable) == 0x000004, "Wrong alignment on SynthComponentMonoWaveTable_RefreshWaveTable");
 static_assert(sizeof(SynthComponentMonoWaveTable_RefreshWaveTable) == 0x000004, "Wrong size on SynthComponentMonoWaveTable_RefreshWaveTable");
-static_assert(offsetof(SynthComponentMonoWaveTable_RefreshWaveTable, Param_Index) == 0x000000, "Member 'SynthComponentMonoWaveTable_RefreshWaveTable::Param_Index' has a wrong offset!");
+static_assert(offsetof(SynthComponentMonoWaveTable_RefreshWaveTable, Index_0) == 0x000000, "Member 'SynthComponentMonoWaveTable_RefreshWaveTable::Index_0' has a wrong offset!");
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeAttackTime
 // 0x0004 (0x0004 - 0x0000)

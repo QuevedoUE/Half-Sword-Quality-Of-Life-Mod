@@ -18,7 +18,7 @@ namespace SDK
 
 // Class CoreUObject.Object
 // 0x0028 (0x0028 - 0x0000)
-class UObject
+class alignas(0x08) UObject
 {
 public:
 	static inline class TUObjectArrayWrapper      GObjects;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
@@ -67,15 +67,6 @@ public:
 	void ProcessEvent(class UFunction* Function, void* Parms) const
 	{
 		InSDKUtils::CallGameFunction(InSDKUtils::GetVirtualFunction<void(*)(const UObject*, class UFunction*, void*)>(this, Offsets::ProcessEventIdx), this, Function, Parms);
-	}
-
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"Object">();
-	}
-	static class UObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UObject>();
 	}
 };
 static_assert(alignof(UObject) == 0x000008, "Wrong alignment on UObject");

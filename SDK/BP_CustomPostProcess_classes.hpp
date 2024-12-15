@@ -31,7 +31,7 @@ public:
 public:
 	void ExecuteUbergraph_BP_CustomPostProcess(int32 EntryPoint);
 	void GetPostProcess(struct FPostProcessSettings* PostProcessSettings);
-	void UpdatePostProcess(const struct FPostProcessSettings& Param_PP);
+	void UpdatePostProcess(const struct FPostProcessSettings& PP_0);
 	void UserConstructionScript();
 
 public:

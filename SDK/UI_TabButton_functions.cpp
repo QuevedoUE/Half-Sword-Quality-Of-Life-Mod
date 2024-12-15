@@ -54,9 +54,9 @@ void UUI_TabButton_C::ExecuteUbergraph_UI_TabButton(int32 EntryPoint)
 // Function UI_TabButton.UI_TabButton_C.Initialize
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUI_PhotoMode_C*                  Param_PhotoModeWidgetRef                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUI_PhotoMode_C*                  PhotoModeWidgetRef_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UUI_TabButton_C::Initialize(class UUI_PhotoMode_C* Param_PhotoModeWidgetRef)
+void UUI_TabButton_C::Initialize(class UUI_PhotoMode_C* PhotoModeWidgetRef_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -65,7 +65,7 @@ void UUI_TabButton_C::Initialize(class UUI_PhotoMode_C* Param_PhotoModeWidgetRef
 
 	Params::UI_TabButton_C_Initialize Parms{};
 
-	Parms.Param_PhotoModeWidgetRef = Param_PhotoModeWidgetRef;
+	Parms.PhotoModeWidgetRef_0 = PhotoModeWidgetRef_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

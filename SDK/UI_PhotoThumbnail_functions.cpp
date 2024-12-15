@@ -136,10 +136,10 @@ struct FLinearColor UUI_PhotoThumbnail_C::FrameFocusedAndUnfocusedColor()
 // Function UI_PhotoThumbnail.UI_PhotoThumbnail_C.Initialize
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUI_Gallery_C*                    Param_GalleryReference                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUI_Gallery_C*                    GalleryReference_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UUI_PhotoPage_C*                  OwnPage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UUI_PhotoThumbnail_C::Initialize(class UUI_Gallery_C* Param_GalleryReference, class UUI_PhotoPage_C* OwnPage)
+void UUI_PhotoThumbnail_C::Initialize(class UUI_Gallery_C* GalleryReference_0, class UUI_PhotoPage_C* OwnPage)
 {
 	static class UFunction* Func = nullptr;
 
@@ -148,7 +148,7 @@ void UUI_PhotoThumbnail_C::Initialize(class UUI_Gallery_C* Param_GalleryReferenc
 
 	Params::UI_PhotoThumbnail_C_Initialize Parms{};
 
-	Parms.Param_GalleryReference = Param_GalleryReference;
+	Parms.GalleryReference_0 = GalleryReference_0;
 	Parms.OwnPage = OwnPage;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -206,9 +206,9 @@ void UUI_PhotoThumbnail_C::ResetThumbAnimation()
 // Function UI_PhotoThumbnail.UI_PhotoThumbnail_C.SendPhoto__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FS_PhotosData                    Param_PhotoData                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// struct FS_PhotosData                    PhotoData_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UUI_PhotoThumbnail_C::SendPhoto__DelegateSignature(const struct FS_PhotosData& Param_PhotoData)
+void UUI_PhotoThumbnail_C::SendPhoto__DelegateSignature(const struct FS_PhotosData& PhotoData_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -217,7 +217,7 @@ void UUI_PhotoThumbnail_C::SendPhoto__DelegateSignature(const struct FS_PhotosDa
 
 	Params::UI_PhotoThumbnail_C_SendPhoto__DelegateSignature Parms{};
 
-	Parms.Param_PhotoData = std::move(Param_PhotoData);
+	Parms.PhotoData_0 = std::move(PhotoData_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

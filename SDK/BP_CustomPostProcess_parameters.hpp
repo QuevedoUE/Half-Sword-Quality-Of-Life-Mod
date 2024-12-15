@@ -46,11 +46,11 @@ static_assert(offsetof(BP_CustomPostProcess_C_GetPostProcess, PostProcessSetting
 struct BP_CustomPostProcess_C_UpdatePostProcess final
 {
 public:
-	struct FPostProcessSettings                   Param_PP;                                          // 0x0000(0x06F0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FPostProcessSettings                   PP_0;                                              // 0x0000(0x06F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(BP_CustomPostProcess_C_UpdatePostProcess) == 0x000010, "Wrong alignment on BP_CustomPostProcess_C_UpdatePostProcess");
 static_assert(sizeof(BP_CustomPostProcess_C_UpdatePostProcess) == 0x0006F0, "Wrong size on BP_CustomPostProcess_C_UpdatePostProcess");
-static_assert(offsetof(BP_CustomPostProcess_C_UpdatePostProcess, Param_PP) == 0x000000, "Member 'BP_CustomPostProcess_C_UpdatePostProcess::Param_PP' has a wrong offset!");
+static_assert(offsetof(BP_CustomPostProcess_C_UpdatePostProcess, PP_0) == 0x000000, "Member 'BP_CustomPostProcess_C_UpdatePostProcess::PP_0' has a wrong offset!");
 
 }
 

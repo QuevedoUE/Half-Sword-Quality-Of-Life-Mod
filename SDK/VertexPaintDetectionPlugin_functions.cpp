@@ -3731,12 +3731,12 @@ void UVertexPaintFunctionLibrary::SetChaosWheeledVehicleFrictionMultiplier_Wrapp
 // Parameters:
 // class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptColorFlags        Param_Flags                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptColorFlags        Flags_0                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bClearExisting                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UDynamicMesh* UVertexPaintFunctionLibrary::SetMeshConstantVertexColorsAndEnablesThem(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Param_Flags, bool bClearExisting, class UGeometryScriptDebug* Debug)
+class UDynamicMesh* UVertexPaintFunctionLibrary::SetMeshConstantVertexColorsAndEnablesThem(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Flags_0, bool bClearExisting, class UGeometryScriptDebug* Debug)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3747,7 +3747,7 @@ class UDynamicMesh* UVertexPaintFunctionLibrary::SetMeshConstantVertexColorsAndE
 
 	Parms.TargetMesh = TargetMesh;
 	Parms.Color = std::move(Color);
-	Parms.Param_Flags = std::move(Param_Flags);
+	Parms.Flags_0 = std::move(Flags_0);
 	Parms.bClearExisting = bClearExisting;
 	Parms.Debug = Debug;
 

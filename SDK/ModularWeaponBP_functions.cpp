@@ -237,11 +237,11 @@ void AModularWeaponBP_C::Clear_Stuck_Bone(class FName bone)
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*              Hit_Component                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Other_Actor                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Param_Normal_Impulse                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Other_Actor_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          Normal_Impulse_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FHitResult                       Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void AModularWeaponBP_C::Collision_Hit(class UPrimitiveComponent* Hit_Component, class AActor* Param_Other_Actor, const struct FVector& Param_Normal_Impulse, const struct FHitResult& Hit)
+void AModularWeaponBP_C::Collision_Hit(class UPrimitiveComponent* Hit_Component, class AActor* Other_Actor_0, const struct FVector& Normal_Impulse_0, const struct FHitResult& Hit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -251,8 +251,8 @@ void AModularWeaponBP_C::Collision_Hit(class UPrimitiveComponent* Hit_Component,
 	Params::ModularWeaponBP_C_Collision_Hit Parms{};
 
 	Parms.Hit_Component = Hit_Component;
-	Parms.Param_Other_Actor = Param_Other_Actor;
-	Parms.Param_Normal_Impulse = std::move(Param_Normal_Impulse);
+	Parms.Other_Actor_0 = Other_Actor_0;
+	Parms.Normal_Impulse_0 = std::move(Normal_Impulse_0);
 	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -526,13 +526,13 @@ void AModularWeaponBP_C::Vertex_Paint()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*              Hit_Component                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Param_Weapon_Velocity                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FHitResult                       Param_Hit_Result                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// struct FVector                          Weapon_Velocity_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FHitResult                       Hit_Result_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 // double                                  EdgeAllignment_Dot                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Laser_temp_                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UClass*                           Weapon                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AModularWeaponBP_C::Weapon_HIt(class UPrimitiveComponent* Hit_Component, const struct FVector& Param_Weapon_Velocity, const struct FHitResult& Param_Hit_Result, double EdgeAllignment_Dot, bool Laser_temp_, class UClass* Weapon)
+void AModularWeaponBP_C::Weapon_HIt(class UPrimitiveComponent* Hit_Component, const struct FVector& Weapon_Velocity_0, const struct FHitResult& Hit_Result_0, double EdgeAllignment_Dot, bool Laser_temp_, class UClass* Weapon)
 {
 	static class UFunction* Func = nullptr;
 
@@ -542,8 +542,8 @@ void AModularWeaponBP_C::Weapon_HIt(class UPrimitiveComponent* Hit_Component, co
 	Params::ModularWeaponBP_C_Weapon_HIt Parms{};
 
 	Parms.Hit_Component = Hit_Component;
-	Parms.Param_Weapon_Velocity = std::move(Param_Weapon_Velocity);
-	Parms.Param_Hit_Result = std::move(Param_Hit_Result);
+	Parms.Weapon_Velocity_0 = std::move(Weapon_Velocity_0);
+	Parms.Hit_Result_0 = std::move(Hit_Result_0);
 	Parms.EdgeAllignment_Dot = EdgeAllignment_Dot;
 	Parms.Laser_temp_ = Laser_temp_;
 	Parms.Weapon = Weapon;

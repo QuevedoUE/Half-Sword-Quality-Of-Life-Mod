@@ -472,13 +472,13 @@ static_assert(offsetof(RigVMUserWorkflowOptions_RequiresDialog, ReturnValue) == 
 struct RigVMHost_FindRigVMHosts final
 {
 public:
-	class UObject*                                Param_Outer;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class URigVMHost>                 OptionalClass;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class URigVMHost*>                     ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVMHost_FindRigVMHosts) == 0x000008, "Wrong alignment on RigVMHost_FindRigVMHosts");
 static_assert(sizeof(RigVMHost_FindRigVMHosts) == 0x000020, "Wrong size on RigVMHost_FindRigVMHosts");
-static_assert(offsetof(RigVMHost_FindRigVMHosts, Param_Outer) == 0x000000, "Member 'RigVMHost_FindRigVMHosts::Param_Outer' has a wrong offset!");
+static_assert(offsetof(RigVMHost_FindRigVMHosts, Outer_0) == 0x000000, "Member 'RigVMHost_FindRigVMHosts::Outer_0' has a wrong offset!");
 static_assert(offsetof(RigVMHost_FindRigVMHosts, OptionalClass) == 0x000008, "Member 'RigVMHost_FindRigVMHosts::OptionalClass' has a wrong offset!");
 static_assert(offsetof(RigVMHost_FindRigVMHosts, ReturnValue) == 0x000010, "Member 'RigVMHost_FindRigVMHosts::ReturnValue' has a wrong offset!");
 

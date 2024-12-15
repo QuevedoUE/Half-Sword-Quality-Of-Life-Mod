@@ -47,13 +47,13 @@ static_assert(offsetof(ControlRigShapeLibraryLink_GetShapeLibrary, ReturnValue) 
 struct ControlRig_FindControlRigs final
 {
 public:
-	class UObject*                                Param_Outer;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UControlRig>                OptionalClass;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UControlRig*>                    ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRig_FindControlRigs) == 0x000008, "Wrong alignment on ControlRig_FindControlRigs");
 static_assert(sizeof(ControlRig_FindControlRigs) == 0x000020, "Wrong size on ControlRig_FindControlRigs");
-static_assert(offsetof(ControlRig_FindControlRigs, Param_Outer) == 0x000000, "Member 'ControlRig_FindControlRigs::Param_Outer' has a wrong offset!");
+static_assert(offsetof(ControlRig_FindControlRigs, Outer_0) == 0x000000, "Member 'ControlRig_FindControlRigs::Outer_0' has a wrong offset!");
 static_assert(offsetof(ControlRig_FindControlRigs, OptionalClass) == 0x000008, "Member 'ControlRig_FindControlRigs::OptionalClass' has a wrong offset!");
 static_assert(offsetof(ControlRig_FindControlRigs, ReturnValue) == 0x000010, "Member 'ControlRig_FindControlRigs::ReturnValue' has a wrong offset!");
 
@@ -3068,14 +3068,14 @@ static_assert(offsetof(ControlRigComponent_CanExecute, ReturnValue) == 0x000000,
 struct ControlRigComponent_DoesElementExist final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERigElementType                               ElementType;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_DoesElementExist) == 0x000004, "Wrong alignment on ControlRigComponent_DoesElementExist");
 static_assert(sizeof(ControlRigComponent_DoesElementExist) == 0x00000C, "Wrong size on ControlRigComponent_DoesElementExist");
-static_assert(offsetof(ControlRigComponent_DoesElementExist, Param_Name) == 0x000000, "Member 'ControlRigComponent_DoesElementExist::Param_Name' has a wrong offset!");
+static_assert(offsetof(ControlRigComponent_DoesElementExist, Name_0) == 0x000000, "Member 'ControlRigComponent_DoesElementExist::Name_0' has a wrong offset!");
 static_assert(offsetof(ControlRigComponent_DoesElementExist, ElementType) == 0x000008, "Member 'ControlRigComponent_DoesElementExist::ElementType' has a wrong offset!");
 static_assert(offsetof(ControlRigComponent_DoesElementExist, ReturnValue) == 0x000009, "Member 'ControlRigComponent_DoesElementExist::ReturnValue' has a wrong offset!");
 

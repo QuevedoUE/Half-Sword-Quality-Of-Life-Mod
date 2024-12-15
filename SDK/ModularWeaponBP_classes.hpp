@@ -11,16 +11,16 @@
 #include "Basic.hpp"
 
 #include "GripType_Enum_structs.hpp"
+#include "SheathType_Enum_structs.hpp"
+#include "Enum_Weapon_Material_Type_structs.hpp"
+#include "SwitchGrip_Type_Enum_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SwitchGrip_Type_Enum_structs.hpp"
-#include "Enum_MaterialQuality_structs.hpp"
 #include "Str_WeaponParts_structs.hpp"
 #include "Enum_MaterialLayer_structs.hpp"
 #include "PhysicsCore_structs.hpp"
-#include "SheathType_Enum_structs.hpp"
-#include "Enum_Weapon_Material_Type_structs.hpp"
+#include "Enum_MaterialQuality_structs.hpp"
 
 
 namespace SDK
@@ -219,7 +219,7 @@ public:
 	void BndEvt__ModularWeaponBP_Pommel_K2Node_ComponentBoundEvent_3_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void BndEvt__ModularWeaponBP_SubModule_2_K2Node_ComponentBoundEvent_5_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void Clear_Stuck_Bone(class FName bone);
-	void Collision_Hit(class UPrimitiveComponent* Hit_Component, class AActor* Param_Other_Actor, const struct FVector& Param_Normal_Impulse, const struct FHitResult& Hit);
+	void Collision_Hit(class UPrimitiveComponent* Hit_Component, class AActor* Other_Actor_0, const struct FVector& Normal_Impulse_0, const struct FHitResult& Hit);
 	void ExecuteUbergraph_ModularWeaponBP(int32 EntryPoint);
 	void GGAGA();
 	void ReceiveBeginPlay();
@@ -235,7 +235,7 @@ public:
 	void Unsheathed_Mode();
 	void UserConstructionScript();
 	void Vertex_Paint();
-	void Weapon_HIt(class UPrimitiveComponent* Hit_Component, const struct FVector& Param_Weapon_Velocity, const struct FHitResult& Param_Hit_Result, double EdgeAllignment_Dot, bool Laser_temp_, class UClass* Weapon);
+	void Weapon_HIt(class UPrimitiveComponent* Hit_Component, const struct FVector& Weapon_Velocity_0, const struct FHitResult& Hit_Result_0, double EdgeAllignment_Dot, bool Laser_temp_, class UClass* Weapon);
 
 public:
 	static class UClass* StaticClass()

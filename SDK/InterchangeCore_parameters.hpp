@@ -963,13 +963,13 @@ static_assert(offsetof(InterchangeFactoryBaseNode_GetFactoryDependenciesCount, R
 struct InterchangeFactoryBaseNode_GetFactoryDependency final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutDependency;                                     // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InterchangeFactoryBaseNode_GetFactoryDependency) == 0x000008, "Wrong alignment on InterchangeFactoryBaseNode_GetFactoryDependency");
 static_assert(sizeof(InterchangeFactoryBaseNode_GetFactoryDependency) == 0x000018, "Wrong size on InterchangeFactoryBaseNode_GetFactoryDependency");
-static_assert(offsetof(InterchangeFactoryBaseNode_GetFactoryDependency, Param_Index) == 0x000000, "Member 'InterchangeFactoryBaseNode_GetFactoryDependency::Param_Index' has a wrong offset!");
+static_assert(offsetof(InterchangeFactoryBaseNode_GetFactoryDependency, Index_0) == 0x000000, "Member 'InterchangeFactoryBaseNode_GetFactoryDependency::Index_0' has a wrong offset!");
 static_assert(offsetof(InterchangeFactoryBaseNode_GetFactoryDependency, OutDependency) == 0x000008, "Member 'InterchangeFactoryBaseNode_GetFactoryDependency::OutDependency' has a wrong offset!");
 
 // Function InterchangeCore.InterchangeFactoryBaseNode.GetReimportStrategyFlags
