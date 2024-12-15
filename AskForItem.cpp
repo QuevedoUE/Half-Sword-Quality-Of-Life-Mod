@@ -49,29 +49,29 @@ void AskForItemToSpawn::AskForItemAndSpawn() {
     std::cout << "Enter Item ID: ";
 
     // Comprobar si la entrada es válida
-    while (!(std::cin >> ItemID)) {        
+    while (!(std::cin >> ItemID)) {
         if (ItemID < 1 || ItemID > 161) {
             std::cout << "Invalid input. Please enter a valid Item ID (1-161): ";
-			continue;
+            continue;
         }
 
-		// Limpiar el buffer de entrada
-		std::cin.sync();
+        // Limpiar el buffer de entrada
+        std::cin.sync();
     }
 
 
     class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
     SDK::FTransform CurrentPlayerTransform = CurrentPawn->GetTransform();
-   
+
     CurrentPlayerTransform.Translation = CurrentPlayerTransform.Translation + (CurrentPawn->GetActorForwardVector() * 40);
     SDK::ESpawnActorCollisionHandlingMethod CollisionHandling = SDK::ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
     SDK::ESpawnActorScaleMethod SpawnMethod = SDK::ESpawnActorScaleMethod::SelectDefaultAtRuntime;
 
     SDK::AActor* SpawnedActor = nullptr;
 
-switch (ItemID)
-{
-    /*ARMORS*/
+    switch (ItemID)
+    {
+        /*ARMORS*/
     case 1:
         SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Armor_Arms_Chains_T1_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break;
     case 2:
@@ -276,7 +276,7 @@ switch (ItemID)
         SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Armor_Waist_Foulds_T2_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break;
     case 104:
         SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Armor_Waist_Foulds_T3_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break;
-    /*WAPEONS*/
+        /*WAPEONS*/
     case 105:
         SpawnedActor = SpawnActorFromClass(World, SDK::ABP_Weapon_Improv_CandleStick_Big_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; //Candle 0
     case 106:
@@ -390,6 +390,6 @@ switch (ItemID)
     case 161:
         SpawnedActor = SpawnActorFromClass(World, SDK::AWeapon_Sword_Guard_PB_C::StaticClass(), CurrentPlayerTransform, CollisionHandling, nullptr, SpawnMethod); break; // Sword 34
 
-}
+    }
 }
 
