@@ -550,7 +550,7 @@ public:
 public:
 	FVector& Normalize()
 	{
-		*this /= Magnitude();
+		*this /= static_cast<float>(Magnitude());
 		return *this;
 	}
 	FVector& operator*=(const FVector& Other)
@@ -599,7 +599,7 @@ public:
 	}
 	FVector GetNormalized() const
 	{
-		return *this / Magnitude();
+		return *this / static_cast<float>(Magnitude());
 	}
 	bool IsZero() const
 	{
