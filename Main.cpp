@@ -267,7 +267,7 @@ static DWORD MainThread(HMODULE Module)
         }
 
 
-        if (GetAsyncKeyState(71) & 1) //G
+        if (GetAsyncKeyState(71 or VK_LBUTTON) & 1) //G
         {
             class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
             CurrentPawn->Save_Loadout();
