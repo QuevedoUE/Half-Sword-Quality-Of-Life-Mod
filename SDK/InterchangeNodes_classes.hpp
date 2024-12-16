@@ -30,7 +30,7 @@ public:
 	bool RemoveCustomAnimationTrackUid(const class FString& AnimationTrackUid);
 	bool SetCustomFrameRate(const float& AttributeValue);
 
-	void GetCustomAnimationTrackUid(const int32 Param_Index, class FString* OutAnimationTrackUid) const;
+	void GetCustomAnimationTrackUid(const int32 Index_0, class FString* OutAnimationTrackUid) const;
 	int32 GetCustomAnimationTrackUidCount() const;
 	void GetCustomAnimationTrackUids(TArray<class FString>* OutAnimationTrackUids) const;
 	bool GetCustomFrameRate(float* AttributeValue) const;
@@ -615,7 +615,7 @@ public:
 	bool SetCustomDisplayText(const class FString& AttributeValue);
 	bool SetCustomVariantsPayloadKey(const class FString& PayloadKey);
 
-	void GetCustomDependencyUid(const int32 Param_Index, class FString* OutDependencyUid) const;
+	void GetCustomDependencyUid(const int32 Index_0, class FString* OutDependencyUid) const;
 	int32 GetCustomDependencyUidCount() const;
 	void GetCustomDependencyUids(TArray<class FString>* OutDependencyUids) const;
 	bool GetCustomDisplayText(class FString* AttributeValue) const;
@@ -645,7 +645,7 @@ public:
 	bool AddCustomVariantSetUid(const class FString& VariantUid);
 	bool RemoveCustomVariantSetUid(const class FString& VariantUid);
 
-	void GetCustomVariantSetUid(const int32 Param_Index, class FString* OutVariantUid) const;
+	void GetCustomVariantSetUid(const int32 Index_0, class FString* OutVariantUid) const;
 	int32 GetCustomVariantSetUidCount() const;
 	void GetCustomVariantSetUids(TArray<class FString>* OutVariantUids) const;
 
@@ -753,14 +753,14 @@ public:
 	bool GetCustomVertexCount(int32* AttributeValue) const;
 	int32 GetMorphTargetDependeciesCount() const;
 	void GetMorphTargetDependencies(TArray<class FString>* OutDependencies) const;
-	void GetMorphTargetDependency(const int32 Param_Index, class FString* OutDependency) const;
+	void GetMorphTargetDependency(const int32 Index_0, class FString* OutDependency) const;
 	bool GetMorphTargetName(class FString* OutMorphTargetName) const;
-	void GetSceneInstanceUid(const int32 Param_Index, class FString* OutDependency) const;
+	void GetSceneInstanceUid(const int32 Index_0, class FString* OutDependency) const;
 	void GetSceneInstanceUids(TArray<class FString>* OutDependencies) const;
 	int32 GetSceneInstanceUidsCount() const;
 	int32 GetSkeletonDependeciesCount() const;
 	void GetSkeletonDependencies(TArray<class FString>* OutDependencies) const;
-	void GetSkeletonDependency(const int32 Param_Index, class FString* OutDependency) const;
+	void GetSkeletonDependency(const int32 Index_0, class FString* OutDependency) const;
 	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
 	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
 	bool IsMorphTarget() const;
@@ -811,7 +811,7 @@ public:
 	void GetMorphTargetCurveWeights(TMap<class FString, float>* OutMorphTargetCurveWeights) const;
 	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
 	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
-	void GetSpecializedType(const int32 Param_Index, class FString* OutSpecializedType) const;
+	void GetSpecializedType(const int32 Index_0, class FString* OutSpecializedType) const;
 	int32 GetSpecializedTypeCount() const;
 	void GetSpecializedTypes(TArray<class FString>* OutSpecializedTypes) const;
 	bool IsSpecializedTypeContains(const class FString& SpecializedType) const;

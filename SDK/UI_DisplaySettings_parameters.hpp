@@ -24,22 +24,22 @@ namespace SDK::Params
 struct UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature final
 {
 public:
-	float                                         Param_Value;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Value_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature) == 0x000004, "Wrong alignment on UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature");
 static_assert(sizeof(UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature) == 0x000004, "Wrong size on UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature");
-static_assert(offsetof(UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature, Param_Value) == 0x000000, "Member 'UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature::Param_Value' has a wrong offset!");
+static_assert(offsetof(UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature, Value_0) == 0x000000, "Member 'UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature::Value_0' has a wrong offset!");
 
 // Function UI_DisplaySettings.UI_DisplaySettings_C.BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature
 // 0x0004 (0x0004 - 0x0000)
 struct UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature final
 {
 public:
-	float                                         Param_Value;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Value_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature) == 0x000004, "Wrong alignment on UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature");
 static_assert(sizeof(UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature) == 0x000004, "Wrong size on UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature");
-static_assert(offsetof(UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature, Param_Value) == 0x000000, "Member 'UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature::Param_Value' has a wrong offset!");
+static_assert(offsetof(UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature, Value_0) == 0x000000, "Member 'UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature::Value_0' has a wrong offset!");
 
 // Function UI_DisplaySettings.UI_DisplaySettings_C.ExecuteUbergraph_UI_DisplaySettings
 // 0x0288 (0x0288 - 0x0000)

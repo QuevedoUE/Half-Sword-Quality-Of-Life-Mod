@@ -823,9 +823,9 @@ public:
 	void SetDataLayerAssets(const TArray<class UDataLayerAsset*>& InDataLayerAssets);
 	void SetDataLayers(const TArray<struct FActorDataLayer>& InDataLayers);
 	void SetDesiredState(EDataLayerRuntimeState InDesiredState);
-	void SetFlushOnActivated(bool Param_bFlushOnActivated);
-	void SetFlushOnUnload(bool Param_bFlushOnUnload);
-	void SetPerformGCOnUnload(bool Param_bPerformGCOnUnload);
+	void SetFlushOnActivated(bool bFlushOnActivated_0);
+	void SetFlushOnUnload(bool bFlushOnUnload_0);
+	void SetPerformGCOnUnload(bool bPerformGCOnUnload_0);
 	void SetPrerollState(EDataLayerRuntimeState InPrerollState);
 
 	const TArray<class UDataLayerAsset*> GetDataLayerAssets() const;
@@ -1177,7 +1177,7 @@ class alignas(0x10) UMovieSceneSkeletalAnimationSection final : public UMovieSce
 {
 public:
 	uint8                                         Pad_F0[0x8];                                       // 0x00F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneSkeletalAnimationParams     Params;                                            // 0x00F8(0x0150)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FMovieSceneSkeletalAnimationParams     Params_0;                                          // 0x00F8(0x0150)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	class UAnimSequence*                          AnimSequence;                                      // 0x0248(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UAnimSequenceBase*                      Animation;                                         // 0x0250(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         StartOffset;                                       // 0x0258(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -1213,7 +1213,7 @@ public:
 };
 static_assert(alignof(UMovieSceneSkeletalAnimationSection) == 0x000010, "Wrong alignment on UMovieSceneSkeletalAnimationSection");
 static_assert(sizeof(UMovieSceneSkeletalAnimationSection) == 0x000360, "Wrong size on UMovieSceneSkeletalAnimationSection");
-static_assert(offsetof(UMovieSceneSkeletalAnimationSection, Params) == 0x0000F8, "Member 'UMovieSceneSkeletalAnimationSection::Params' has a wrong offset!");
+static_assert(offsetof(UMovieSceneSkeletalAnimationSection, Params_0) == 0x0000F8, "Member 'UMovieSceneSkeletalAnimationSection::Params_0' has a wrong offset!");
 static_assert(offsetof(UMovieSceneSkeletalAnimationSection, AnimSequence) == 0x000248, "Member 'UMovieSceneSkeletalAnimationSection::AnimSequence' has a wrong offset!");
 static_assert(offsetof(UMovieSceneSkeletalAnimationSection, Animation) == 0x000250, "Member 'UMovieSceneSkeletalAnimationSection::Animation' has a wrong offset!");
 static_assert(offsetof(UMovieSceneSkeletalAnimationSection, StartOffset) == 0x000258, "Member 'UMovieSceneSkeletalAnimationSection::StartOffset' has a wrong offset!");

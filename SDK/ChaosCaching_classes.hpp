@@ -58,7 +58,7 @@ public:
 	uint8                                         Pad_2B8[0x88];                                     // 0x02B8(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void EnablePlayback(int32 Param_Index, bool bEnable);
+	void EnablePlayback(int32 Index_0, bool bEnable);
 	void EnablePlaybackByCache(class FName InCacheName, bool bEnable);
 	void ResetAllComponentTransforms();
 	void ResetSingleTransform(int32 InIndex);
@@ -163,7 +163,7 @@ static_assert(offsetof(UChaosCache, Version) == 0x0002E0, "Member 'UChaosCache::
 class UMovieSceneChaosCacheSection final : public UMovieSceneBaseCacheSection
 {
 public:
-	struct FMovieSceneChaosCacheParams            Params;                                            // 0x00F8(0x0028)(Edit, NativeAccessSpecifierPublic)
+	struct FMovieSceneChaosCacheParams            Params_0;                                          // 0x00F8(0x0028)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -177,7 +177,7 @@ public:
 };
 static_assert(alignof(UMovieSceneChaosCacheSection) == 0x000008, "Wrong alignment on UMovieSceneChaosCacheSection");
 static_assert(sizeof(UMovieSceneChaosCacheSection) == 0x000120, "Wrong size on UMovieSceneChaosCacheSection");
-static_assert(offsetof(UMovieSceneChaosCacheSection, Params) == 0x0000F8, "Member 'UMovieSceneChaosCacheSection::Params' has a wrong offset!");
+static_assert(offsetof(UMovieSceneChaosCacheSection, Params_0) == 0x0000F8, "Member 'UMovieSceneChaosCacheSection::Params_0' has a wrong offset!");
 
 // Class ChaosCaching.MovieSceneChaosCacheTrack
 // 0x0018 (0x00B0 - 0x0098)

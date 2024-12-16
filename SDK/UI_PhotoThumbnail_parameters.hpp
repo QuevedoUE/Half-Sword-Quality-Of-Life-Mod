@@ -143,12 +143,12 @@ static_assert(offsetof(UI_PhotoThumbnail_C_FrameFocusedAndUnfocusedColor, CallFu
 struct UI_PhotoThumbnail_C_Initialize final
 {
 public:
-	class UUI_Gallery_C*                          Param_GalleryReference;                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUI_Gallery_C*                          GalleryReference_0;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUI_PhotoPage_C*                        OwnPage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_PhotoThumbnail_C_Initialize) == 0x000008, "Wrong alignment on UI_PhotoThumbnail_C_Initialize");
 static_assert(sizeof(UI_PhotoThumbnail_C_Initialize) == 0x000010, "Wrong size on UI_PhotoThumbnail_C_Initialize");
-static_assert(offsetof(UI_PhotoThumbnail_C_Initialize, Param_GalleryReference) == 0x000000, "Member 'UI_PhotoThumbnail_C_Initialize::Param_GalleryReference' has a wrong offset!");
+static_assert(offsetof(UI_PhotoThumbnail_C_Initialize, GalleryReference_0) == 0x000000, "Member 'UI_PhotoThumbnail_C_Initialize::GalleryReference_0' has a wrong offset!");
 static_assert(offsetof(UI_PhotoThumbnail_C_Initialize, OwnPage) == 0x000008, "Member 'UI_PhotoThumbnail_C_Initialize::OwnPage' has a wrong offset!");
 
 // Function UI_PhotoThumbnail.UI_PhotoThumbnail_C.PreConstruct
@@ -167,11 +167,11 @@ static_assert(offsetof(UI_PhotoThumbnail_C_PreConstruct, IsDesignTime) == 0x0000
 struct UI_PhotoThumbnail_C_SendPhoto__DelegateSignature final
 {
 public:
-	struct FS_PhotosData                          Param_PhotoData;                                   // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FS_PhotosData                          PhotoData_0;                                       // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_PhotoThumbnail_C_SendPhoto__DelegateSignature) == 0x000008, "Wrong alignment on UI_PhotoThumbnail_C_SendPhoto__DelegateSignature");
 static_assert(sizeof(UI_PhotoThumbnail_C_SendPhoto__DelegateSignature) == 0x000030, "Wrong size on UI_PhotoThumbnail_C_SendPhoto__DelegateSignature");
-static_assert(offsetof(UI_PhotoThumbnail_C_SendPhoto__DelegateSignature, Param_PhotoData) == 0x000000, "Member 'UI_PhotoThumbnail_C_SendPhoto__DelegateSignature::Param_PhotoData' has a wrong offset!");
+static_assert(offsetof(UI_PhotoThumbnail_C_SendPhoto__DelegateSignature, PhotoData_0) == 0x000000, "Member 'UI_PhotoThumbnail_C_SendPhoto__DelegateSignature::PhotoData_0' has a wrong offset!");
 
 // Function UI_PhotoThumbnail.UI_PhotoThumbnail_C.SetPhotoData
 // 0x0030 (0x0030 - 0x0000)

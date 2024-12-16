@@ -2196,9 +2196,9 @@ void UUI_PhotoMode_C::Set_Focus_Distance(bool bIsHitValid, struct FPostProcessSe
 // Function UI_PhotoMode.UI_PhotoMode_C.SetFocusBasedOnTab
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_PhotoMode_C::SetFocusBasedOnTab(int32 Param_Index)
+void UUI_PhotoMode_C::SetFocusBasedOnTab(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2207,7 +2207,7 @@ void UUI_PhotoMode_C::SetFocusBasedOnTab(int32 Param_Index)
 
 	Params::UI_PhotoMode_C_SetFocusBasedOnTab Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -2230,9 +2230,9 @@ void UUI_PhotoMode_C::SetFocusOnClick()
 // Function UI_PhotoMode.UI_PhotoMode_C.SetMenuIcons
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_PhotoMode_C::SetMenuIcons(int32 Param_Index)
+void UUI_PhotoMode_C::SetMenuIcons(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2241,7 +2241,7 @@ void UUI_PhotoMode_C::SetMenuIcons(int32 Param_Index)
 
 	Params::UI_PhotoMode_C_SetMenuIcons Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

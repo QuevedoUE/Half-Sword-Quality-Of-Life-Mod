@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "S_PhotosData_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -125,7 +125,7 @@ public:
 	void ResetKeyboardIcons();
 	void ResetShowMouseCursor();
 	void SendPhotoData(const struct FS_PhotosData& PhotoData);
-	void SetIcons(int32 Param_Index);
+	void SetIcons(int32 Index_0);
 	ESlateVisibility ShowHideDeleteOption();
 	class FText ShowHideMouseTxt();
 	ESlateVisibility ShowHideMouseVisibility();

@@ -90,7 +90,7 @@ public:
 	class FString                                 RigModuleNameSpace;                                // 0x0A98(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	static TArray<class UControlRig*> FindControlRigs(class UObject* Param_Outer, TSubclassOf<class UControlRig> OptionalClass);
+	static TArray<class UControlRig*> FindControlRigs(class UObject* Outer_0, TSubclassOf<class UControlRig> OptionalClass);
 
 	bool ClearControlSelection();
 	class URigHierarchy* GetHierarchy();
@@ -522,7 +522,7 @@ public:
 	void AddMappedSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent, const TArray<struct FControlRigComponentMappedBone>& Bones, const TArray<struct FControlRigComponentMappedCurve>& Curves, const EControlRigComponentMapDirection InDirection);
 	bool CanExecute();
 	void ClearMappedElements();
-	bool DoesElementExist(class FName Param_Name, ERigElementType ElementType);
+	bool DoesElementExist(class FName Name_0, ERigElementType ElementType);
 	struct FTransform GetBoneTransform(class FName BoneName, EControlRigComponentSpace Space);
 	bool GetControlBool(class FName ControlName);
 	float GetControlFloat(class FName ControlName);

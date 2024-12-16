@@ -545,33 +545,33 @@ static_assert(offsetof(MovieSceneDataLayerSection_SetDesiredState, InDesiredStat
 struct MovieSceneDataLayerSection_SetFlushOnActivated final
 {
 public:
-	bool                                          Param_bFlushOnActivated;                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlushOnActivated_0;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneDataLayerSection_SetFlushOnActivated) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_SetFlushOnActivated");
 static_assert(sizeof(MovieSceneDataLayerSection_SetFlushOnActivated) == 0x000001, "Wrong size on MovieSceneDataLayerSection_SetFlushOnActivated");
-static_assert(offsetof(MovieSceneDataLayerSection_SetFlushOnActivated, Param_bFlushOnActivated) == 0x000000, "Member 'MovieSceneDataLayerSection_SetFlushOnActivated::Param_bFlushOnActivated' has a wrong offset!");
+static_assert(offsetof(MovieSceneDataLayerSection_SetFlushOnActivated, bFlushOnActivated_0) == 0x000000, "Member 'MovieSceneDataLayerSection_SetFlushOnActivated::bFlushOnActivated_0' has a wrong offset!");
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetFlushOnUnload
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneDataLayerSection_SetFlushOnUnload final
 {
 public:
-	bool                                          Param_bFlushOnUnload;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlushOnUnload_0;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneDataLayerSection_SetFlushOnUnload) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_SetFlushOnUnload");
 static_assert(sizeof(MovieSceneDataLayerSection_SetFlushOnUnload) == 0x000001, "Wrong size on MovieSceneDataLayerSection_SetFlushOnUnload");
-static_assert(offsetof(MovieSceneDataLayerSection_SetFlushOnUnload, Param_bFlushOnUnload) == 0x000000, "Member 'MovieSceneDataLayerSection_SetFlushOnUnload::Param_bFlushOnUnload' has a wrong offset!");
+static_assert(offsetof(MovieSceneDataLayerSection_SetFlushOnUnload, bFlushOnUnload_0) == 0x000000, "Member 'MovieSceneDataLayerSection_SetFlushOnUnload::bFlushOnUnload_0' has a wrong offset!");
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetPerformGCOnUnload
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneDataLayerSection_SetPerformGCOnUnload final
 {
 public:
-	bool                                          Param_bPerformGCOnUnload;                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPerformGCOnUnload_0;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneDataLayerSection_SetPerformGCOnUnload) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_SetPerformGCOnUnload");
 static_assert(sizeof(MovieSceneDataLayerSection_SetPerformGCOnUnload) == 0x000001, "Wrong size on MovieSceneDataLayerSection_SetPerformGCOnUnload");
-static_assert(offsetof(MovieSceneDataLayerSection_SetPerformGCOnUnload, Param_bPerformGCOnUnload) == 0x000000, "Member 'MovieSceneDataLayerSection_SetPerformGCOnUnload::Param_bPerformGCOnUnload' has a wrong offset!");
+static_assert(offsetof(MovieSceneDataLayerSection_SetPerformGCOnUnload, bPerformGCOnUnload_0) == 0x000000, "Member 'MovieSceneDataLayerSection_SetPerformGCOnUnload::bPerformGCOnUnload_0' has a wrong offset!");
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetPrerollState
 // 0x0001 (0x0001 - 0x0000)

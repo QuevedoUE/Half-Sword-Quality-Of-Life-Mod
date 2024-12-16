@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ABP_Parts_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ABP_Parts_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 
@@ -146,7 +146,7 @@ public:
 	class USkeletalMeshComponent*                 Driver_Skeleton;                                   // 0x2FC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintBeginPlay();
 	void BlueprintInitializeAnimation();
 	void BlueprintUpdateAnimation(float DeltaTimeX);

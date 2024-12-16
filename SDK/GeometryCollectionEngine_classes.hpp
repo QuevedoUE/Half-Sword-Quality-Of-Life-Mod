@@ -329,7 +329,7 @@ public:
 	void RemoveAllAnchors();
 	void SetAbandonedParticleCollisionProfileName(class FName CollisionProfile);
 	void SetAnchoredByBox(const struct FBox& WorldSpaceBox, bool bAnchored, int32 MaxLevel);
-	void SetAnchoredByIndex(int32 Param_Index, bool bAnchored);
+	void SetAnchoredByIndex(int32 Index_0, bool bAnchored);
 	void SetAnchoredByTransformedBox(const struct FBox& Box, const struct FTransform& Transform, bool bAnchored, int32 MaxLevel);
 	void SetDamageModel(EDamageModelTypeEnum InDamageModel);
 	void SetDamagePropagationData(const struct FGeometryCollectionDamagePropagationData& InDamagePropagationData);

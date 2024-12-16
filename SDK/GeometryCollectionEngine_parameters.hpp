@@ -524,13 +524,13 @@ static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByBox, MaxLevel) =
 struct GeometryCollectionComponent_SetAnchoredByIndex final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAnchored;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryCollectionComponent_SetAnchoredByIndex) == 0x000004, "Wrong alignment on GeometryCollectionComponent_SetAnchoredByIndex");
 static_assert(sizeof(GeometryCollectionComponent_SetAnchoredByIndex) == 0x000008, "Wrong size on GeometryCollectionComponent_SetAnchoredByIndex");
-static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByIndex, Param_Index) == 0x000000, "Member 'GeometryCollectionComponent_SetAnchoredByIndex::Param_Index' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByIndex, Index_0) == 0x000000, "Member 'GeometryCollectionComponent_SetAnchoredByIndex::Index_0' has a wrong offset!");
 static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByIndex, bAnchored) == 0x000004, "Member 'GeometryCollectionComponent_SetAnchoredByIndex::bAnchored' has a wrong offset!");
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByTransformedBox

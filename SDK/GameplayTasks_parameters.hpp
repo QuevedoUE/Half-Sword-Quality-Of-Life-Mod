@@ -101,7 +101,7 @@ public:
 	TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                SpawnLocation;                                     // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               SpawnRotation;                                     // 0x0028(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     Param_Class;                                       // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     Class_0;                                           // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSpawnOnlyOnAuthority;                             // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameplayTask_SpawnActor*               ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -111,7 +111,7 @@ static_assert(sizeof(GameplayTask_SpawnActor_SpawnActor) == 0x000058, "Wrong siz
 static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, TaskOwner) == 0x000000, "Member 'GameplayTask_SpawnActor_SpawnActor::TaskOwner' has a wrong offset!");
 static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, SpawnLocation) == 0x000010, "Member 'GameplayTask_SpawnActor_SpawnActor::SpawnLocation' has a wrong offset!");
 static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, SpawnRotation) == 0x000028, "Member 'GameplayTask_SpawnActor_SpawnActor::SpawnRotation' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, Param_Class) == 0x000040, "Member 'GameplayTask_SpawnActor_SpawnActor::Param_Class' has a wrong offset!");
+static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, Class_0) == 0x000040, "Member 'GameplayTask_SpawnActor_SpawnActor::Class_0' has a wrong offset!");
 static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, bSpawnOnlyOnAuthority) == 0x000048, "Member 'GameplayTask_SpawnActor_SpawnActor::bSpawnOnlyOnAuthority' has a wrong offset!");
 static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, ReturnValue) == 0x000050, "Member 'GameplayTask_SpawnActor_SpawnActor::ReturnValue' has a wrong offset!");
 

@@ -127,29 +127,29 @@ public:
 	static void DuplicateVectorList(const struct FGeometryScriptVectorList& VectorList, struct FGeometryScriptVectorList* DuplicateList);
 	static void ExtractColorListChannel(const struct FGeometryScriptColorList& ColorList, struct FGeometryScriptScalarList* ScalarList, int32 ChannelIndex);
 	static void ExtractColorListChannels(const struct FGeometryScriptColorList& ColorList, struct FGeometryScriptVectorList* VectorList, int32 XChannelIndex, int32 YChannelIndex, int32 ZChannelIndex);
-	static struct FLinearColor GetColorListItem(const struct FGeometryScriptColorList& ColorList, int32 Param_Index, bool* bIsValidIndex);
+	static struct FLinearColor GetColorListItem(const struct FGeometryScriptColorList& ColorList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetColorListLastIndex(const struct FGeometryScriptColorList& ColorList);
 	static int32 GetColorListLength(const struct FGeometryScriptColorList& ColorList);
-	static int32 GetIndexListItem(const struct FGeometryScriptIndexList& IndexList, int32 Param_Index, bool* bIsValidIndex);
+	static int32 GetIndexListItem(const struct FGeometryScriptIndexList& IndexList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetIndexListLastIndex(const struct FGeometryScriptIndexList& IndexList);
 	static int32 GetIndexListLength(const struct FGeometryScriptIndexList& IndexList);
-	static double GetScalarListItem(const struct FGeometryScriptScalarList& ScalarList, int32 Param_Index, bool* bIsValidIndex);
+	static double GetScalarListItem(const struct FGeometryScriptScalarList& ScalarList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetScalarListLastIndex(const struct FGeometryScriptScalarList& ScalarList);
 	static int32 GetScalarListLength(const struct FGeometryScriptScalarList& ScalarList);
 	static struct FIntVector GetTriangleListItem(const struct FGeometryScriptTriangleList& TriangleList, int32 Triangle, bool* bIsValidTriangle);
 	static int32 GetTriangleListLastTriangle(const struct FGeometryScriptTriangleList& TriangleList);
 	static int32 GetTriangleListLength(const struct FGeometryScriptTriangleList& TriangleList);
-	static struct FVector2D GetUVListItem(const struct FGeometryScriptUVList& UVList, int32 Param_Index, bool* bIsValidIndex);
+	static struct FVector2D GetUVListItem(const struct FGeometryScriptUVList& UVList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetUVListLastIndex(const struct FGeometryScriptUVList& UVList);
 	static int32 GetUVListLength(const struct FGeometryScriptUVList& UVList);
-	static struct FVector GetVectorListItem(const struct FGeometryScriptVectorList& VectorList, int32 Param_Index, bool* bIsValidIndex);
+	static struct FVector GetVectorListItem(const struct FGeometryScriptVectorList& VectorList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetVectorListLastIndex(const struct FGeometryScriptVectorList& VectorList);
 	static int32 GetVectorListLength(const struct FGeometryScriptVectorList& VectorList);
-	static void SetColorListItem(struct FGeometryScriptColorList& ColorList, int32 Param_Index, const struct FLinearColor& NewColor, bool* bIsValidIndex);
-	static void SetIndexListItem(struct FGeometryScriptIndexList& IndexList, int32 Param_Index, int32 NewValue, bool* bIsValidIndex);
-	static void SetScalarListItem(struct FGeometryScriptScalarList& ScalarList, int32 Param_Index, double NewValue, bool* bIsValidIndex);
-	static void SetUVListItem(struct FGeometryScriptUVList& UVList, int32 Param_Index, const struct FVector2D& NewUV, bool* bIsValidIndex);
-	static void SetVectorListItem(struct FGeometryScriptVectorList& VectorList, int32 Param_Index, const struct FVector& NewValue, bool* bIsValidIndex);
+	static void SetColorListItem(struct FGeometryScriptColorList& ColorList, int32 Index_0, const struct FLinearColor& NewColor, bool* bIsValidIndex);
+	static void SetIndexListItem(struct FGeometryScriptIndexList& IndexList, int32 Index_0, int32 NewValue, bool* bIsValidIndex);
+	static void SetScalarListItem(struct FGeometryScriptScalarList& ScalarList, int32 Index_0, double NewValue, bool* bIsValidIndex);
+	static void SetUVListItem(struct FGeometryScriptUVList& UVList, int32 Index_0, const struct FVector2D& NewUV, bool* bIsValidIndex);
+	static void SetVectorListItem(struct FGeometryScriptVectorList& VectorList, int32 Index_0, const struct FVector& NewValue, bool* bIsValidIndex);
 
 public:
 	static class UClass* StaticClass()
@@ -235,7 +235,7 @@ public:
 	static class UDynamicMesh* AddVertexToMesh(class UDynamicMesh* TargetMesh, const struct FVector& NewPosition, int32* NewVertexIndex, bool bDeferChangeNotifications);
 	static class UDynamicMesh* AddVerticesToMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptVectorList& NewPositionsList, struct FGeometryScriptIndexList* NewIndicesList, bool bDeferChangeNotifications);
 	static class UDynamicMesh* AppendBuffersToMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptSimpleMeshBuffers& Buffers, struct FGeometryScriptIndexList* NewTriangleIndicesList, int32 MaterialID, bool bDeferChangeNotifications, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* AppendMesh(class UDynamicMesh* TargetMesh, class UDynamicMesh* Param_AppendMesh, const struct FTransform& AppendTransform, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* AppendMesh(class UDynamicMesh* TargetMesh, class UDynamicMesh* AppendMesh_0, const struct FTransform& AppendTransform, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendMeshRepeated(class UDynamicMesh* TargetMesh, class UDynamicMesh* AppendMesh, const struct FTransform& AppendTransform, int32 RepeatCount, bool bApplyTransformToFirstInstance, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendMeshTransformed(class UDynamicMesh* TargetMesh, class UDynamicMesh* AppendMesh, const TArray<struct FTransform>& AppendTransforms, const struct FTransform& ConstantTransform, bool bConstantTransformIsRelative, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* DeleteSelectedTrianglesFromMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, int32* NumDeleted, bool bDeferChangeNotifications);
@@ -824,7 +824,7 @@ public:
 	static class UDynamicMesh* IsBVHValidForMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDynamicMeshBVH& TestBVH, bool* bIsValid, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* IsPointInsideMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FVector& QueryPoint, const struct FGeometryScriptSpatialQueryOptions& Options, bool* bIsInside, EGeometryScriptContainmentOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RebuildBVHForMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& UpdateBVH, bool bOnlyIfInvalid, class UGeometryScriptDebug* Debug);
-	static void ResetBVH(struct FGeometryScriptDynamicMeshBVH& Param_ResetBVH);
+	static void ResetBVH(struct FGeometryScriptDynamicMeshBVH& ResetBVH_0);
 	static class UDynamicMesh* SelectMeshElementsInBoxWithBVH(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FBox& QueryBox, const struct FGeometryScriptSpatialQueryOptions& Options, struct FGeometryScriptMeshSelection* Selection, EGeometryScriptMeshSelectionType SelectionType, int32 MinNumTrianglePoints, class UGeometryScriptDebug* Debug);
 
 public:
@@ -941,9 +941,9 @@ public:
 	static class UDynamicMesh* ConvertMeshVertexColorsLinearToSRGB(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ConvertMeshVertexColorsSRGBToLinear(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* GetMeshPerVertexColors(class UDynamicMesh* TargetMesh, struct FGeometryScriptColorList* ColorList, bool* bIsValidColorSet, bool* bHasVertexIDGaps, bool bBlendSplitVertexValues);
-	static class UDynamicMesh* SetMeshConstantVertexColor(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Param_Flags, bool bClearExisting, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetMeshConstantVertexColor(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Flags_0, bool bClearExisting, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetMeshPerVertexColors(class UDynamicMesh* TargetMesh, const struct FGeometryScriptColorList& VertexColorList, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* SetMeshSelectionVertexColor(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Param_Flags, bool bCreateColorSeam, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetMeshSelectionVertexColor(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Flags_0, bool bCreateColorSeam, class UGeometryScriptDebug* Debug);
 
 public:
 	static class UClass* StaticClass()
@@ -1105,8 +1105,8 @@ public:
 	static double GetPolyPathArcLength(const struct FGeometryScriptPolyPath& PolyPath);
 	static int32 GetPolyPathLastIndex(const struct FGeometryScriptPolyPath& PolyPath);
 	static int32 GetPolyPathNumVertices(const struct FGeometryScriptPolyPath& PolyPath);
-	static struct FVector GetPolyPathTangent(const struct FGeometryScriptPolyPath& PolyPath, int32 Param_Index, bool* bIsValidIndex);
-	static struct FVector GetPolyPathVertex(const struct FGeometryScriptPolyPath& PolyPath, int32 Param_Index, bool* bIsValidIndex);
+	static struct FVector GetPolyPathTangent(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex);
+	static struct FVector GetPolyPathVertex(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex);
 	static bool SampleSplineToTransforms(const class USplineComponent* Spline, TArray<struct FTransform>* Frames, TArray<double>* FrameTimes, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions, const struct FTransform& RelativeTransform, bool bIncludeScale);
 
 public:

@@ -1287,7 +1287,7 @@ public:
 	void SetFrameRate(const struct FFrameRate& FrameRate);
 	void SetPlaybackPosition(const struct FMovieSceneSequencePlaybackParams& PlaybackParams);
 	void SetPlayRate(float PlayRate);
-	void SetTimeRange(float Param_StartTime, float Duration);
+	void SetTimeRange(float StartTime_0, float Duration);
 	void SetWeight(double InWeight);
 	void Stop();
 	void StopAtCurrentTime();

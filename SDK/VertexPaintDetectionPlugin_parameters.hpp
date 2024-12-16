@@ -1877,7 +1877,7 @@ struct VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem fina
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Color;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptColorFlags              Param_Flags;                                       // 0x0018(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptColorFlags              Flags_0;                                           // 0x0018(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bClearExisting;                                    // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1887,7 +1887,7 @@ static_assert(alignof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndE
 static_assert(sizeof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem) == 0x000030, "Wrong size on VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem");
 static_assert(offsetof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem, TargetMesh) == 0x000000, "Member 'VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem::TargetMesh' has a wrong offset!");
 static_assert(offsetof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem, Color) == 0x000008, "Member 'VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem::Color' has a wrong offset!");
-static_assert(offsetof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem, Param_Flags) == 0x000018, "Member 'VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem::Param_Flags' has a wrong offset!");
+static_assert(offsetof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem, Flags_0) == 0x000018, "Member 'VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem::Flags_0' has a wrong offset!");
 static_assert(offsetof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem, bClearExisting) == 0x00001C, "Member 'VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem::bClearExisting' has a wrong offset!");
 static_assert(offsetof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem, Debug) == 0x000020, "Member 'VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem::Debug' has a wrong offset!");
 static_assert(offsetof(VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem, ReturnValue) == 0x000028, "Member 'VertexPaintFunctionLibrary_SetMeshConstantVertexColorsAndEnablesThem::ReturnValue' has a wrong offset!");

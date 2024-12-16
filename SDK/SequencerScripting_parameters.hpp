@@ -3096,13 +3096,13 @@ struct MovieSceneSequenceExtensions_FindBindingByName final
 {
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Param_Name;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneBindingProxy                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_FindBindingByName) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_FindBindingByName");
 static_assert(sizeof(MovieSceneSequenceExtensions_FindBindingByName) == 0x000030, "Wrong size on MovieSceneSequenceExtensions_FindBindingByName");
 static_assert(offsetof(MovieSceneSequenceExtensions_FindBindingByName, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_FindBindingByName::Sequence' has a wrong offset!");
-static_assert(offsetof(MovieSceneSequenceExtensions_FindBindingByName, Param_Name) == 0x000008, "Member 'MovieSceneSequenceExtensions_FindBindingByName::Param_Name' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindBindingByName, Name_0) == 0x000008, "Member 'MovieSceneSequenceExtensions_FindBindingByName::Name_0' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_FindBindingByName, ReturnValue) == 0x000018, "Member 'MovieSceneSequenceExtensions_FindBindingByName::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneSequenceExtensions.FindMarkedFrameByFrameNumber

@@ -440,9 +440,9 @@ void UUI_DisplaySettings_C::BndEvt__UI_Settings_AuVi_GraphicsDown_2_K2Node_Compo
 // Function UI_DisplaySettings.UI_DisplaySettings_C.BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// float                                   Param_Value                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Value_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_DisplaySettings_C::BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature(float Param_Value)
+void UUI_DisplaySettings_C::BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature(float Value_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -451,7 +451,7 @@ void UUI_DisplaySettings_C::BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_Compone
 
 	Params::UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_ComponentBoundEvent_10_OnFloatValueChangedEvent__DelegateSignature Parms{};
 
-	Parms.Param_Value = Param_Value;
+	Parms.Value_0 = Value_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -460,9 +460,9 @@ void UUI_DisplaySettings_C::BndEvt__UI_Settings_AuVi_Slider_FOV_1_K2Node_Compone
 // Function UI_DisplaySettings.UI_DisplaySettings_C.BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// float                                   Param_Value                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Value_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_DisplaySettings_C::BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature(float Param_Value)
+void UUI_DisplaySettings_C::BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature(float Value_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -471,7 +471,7 @@ void UUI_DisplaySettings_C::BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_Component
 
 	Params::UI_DisplaySettings_C_BndEvt__UI_Settings_AuVi_Slider_FOV_K2Node_ComponentBoundEvent_13_OnFloatValueChangedEvent__DelegateSignature Parms{};
 
-	Parms.Param_Value = Param_Value;
+	Parms.Value_0 = Value_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

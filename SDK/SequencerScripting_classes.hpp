@@ -892,7 +892,7 @@ public:
 	static void DeleteMarkedFrame(class UMovieSceneSequence* Sequence, int32 DeleteIndex);
 	static void DeleteMarkedFrames(class UMovieSceneSequence* Sequence);
 	static struct FMovieSceneBindingProxy FindBindingById(class UMovieSceneSequence* Sequence, const struct FGuid& BindingID);
-	static struct FMovieSceneBindingProxy FindBindingByName(class UMovieSceneSequence* Sequence, const class FString& Param_Name);
+	static struct FMovieSceneBindingProxy FindBindingByName(class UMovieSceneSequence* Sequence, const class FString& Name_0);
 	static int32 FindMarkedFrameByFrameNumber(class UMovieSceneSequence* Sequence, const struct FFrameNumber& InFrameNumber);
 	static int32 FindMarkedFrameByFrameNumberInSequence(class UMovieSceneSequence* Sequence, const struct FFrameNumber& InFrameNumber, EMovieSceneTimeUnit TimeUnit);
 	static int32 FindMarkedFrameByLabel(class UMovieSceneSequence* Sequence, const class FString& InLabel);

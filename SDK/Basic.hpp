@@ -34,7 +34,7 @@ namespace Offsets
 	constexpr int32 GObjects          = 0x07C3D9E0;
 	constexpr int32 AppendString      = 0x010C3940;
 	constexpr int32 GNames            = 0x07B86C80;
-	constexpr int32 GWorld            = 0x07DBB260;
+	constexpr int32 GWorld            = 0x07DBDAF0;
 	constexpr int32 ProcessEvent      = 0x012AC660;
 	constexpr int32 ProcessEventIdx   = 0x0000004D;
 }
@@ -84,7 +84,7 @@ class UClass;
 class UObject;
 class UFunction;
 
-struct FName;
+class FName;
 
 namespace BasicFilesImpleUtils
 {
@@ -641,7 +641,7 @@ class TScriptInterface final : public FScriptInterface
 class FFieldPath
 {
 public:
-	class FField*                                 ResolvedField;                                     // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	struct FField*                                 ResolvedField;                                     // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	TWeakObjectPtr<class UStruct>                 ResolvedOwner;                                     // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	TArray<FName>                                 Path;                                              // 0x0010(0x0010)(NOT AUTO-GENERATED PROPERTY)
 };
@@ -724,12 +724,13 @@ public:
 
 
 // Predefined struct TDelegate
-// 0x0000 (0x0000 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 template<typename FunctionSignature>
 class TDelegate
 {
 public:
 	struct InvalidUseOfTDelegate                  TemplateParamIsNotAFunctionSignature;              // 0x0000(0x0000)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // Predefined struct TDelegate<Ret(Args...)>
@@ -1028,7 +1029,7 @@ static_assert(offsetof(FFieldClass, SuperClass) == 0x000020, "Member 'FFieldClas
 class FFieldVariant
 {
 public:
-	using ContainerType = union { class FField* Field; class UObject* Object; };                     // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	using ContainerType = union { struct FField* Field; class UObject* Object; };                     // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
 	static constexpr uint64                       UObjectMask = 0x1;                                 // 0x0000(0x0001)(NOT AUTO-GENERATED PROPERTY)
 
@@ -1040,13 +1041,13 @@ static_assert(offsetof(FFieldVariant, Container) == 0x000000, "Member 'FFieldVar
 
 // Predefined struct FField
 // 0x0030 (0x0030 - 0x0000)
-class FField
+struct FField
 {
 public:
 	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class FFieldClass*                            ClassPrivate;                                      // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	FFieldVariant                                 Owner;                                             // 0x0010(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	class FField*                                 Next;                                              // 0x0018(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	struct FField*                                 Next;                                              // 0x0018(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	FName                                         Name;                                              // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	int32                                         ObjFlags;                                          // 0x0028(0x0004)(NOT AUTO-GENERATED PROPERTY)
 };
@@ -1061,7 +1062,7 @@ static_assert(offsetof(FField, ObjFlags) == 0x000028, "Member 'FField::ObjFlags'
 
 // Predefined struct FProperty
 // 0x0040 (0x0070 - 0x0030)
-class FProperty : public FField
+struct FProperty : public FField
 {
 public:
 	int32                                         ArrayDim;                                          // 0x0030(0x0004)(NOT AUTO-GENERATED PROPERTY)
@@ -1141,7 +1142,7 @@ static_assert(offsetof(FStructProperty, Struct) == 0x000070, "Member 'FStructPro
 
 // Predefined struct FArrayProperty
 // 0x0010 (0x0080 - 0x0070)
-class FArrayProperty final : public FProperty
+struct FArrayProperty final : public FProperty
 {
 public:
 	uint8                                         Pad_70[0x8];                                       // 0x0070(0x0008)(Fixing Size After Last Property [ Dumper-7 ])

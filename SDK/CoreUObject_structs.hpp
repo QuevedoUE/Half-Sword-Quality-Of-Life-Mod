@@ -550,7 +550,7 @@ public:
 public:
 	FVector& Normalize()
 	{
-		*this /= Magnitude();
+		*this /= static_cast<float>(Magnitude());
 		return *this;
 	}
 	FVector& operator*=(const FVector& Other)
@@ -595,11 +595,11 @@ public:
 	}
 	UnderlayingType GetDistanceToInMeters(const FVector& Other) const
 	{
-		return GetDistanceTo(Other) * 0.01;
+		return GetDistanceTo(Other) * static_cast<UnderlayingType>(0.01);
 	}
 	FVector GetNormalized() const
 	{
-		return *this / Magnitude();
+		return *this / static_cast<float>(Magnitude());
 	}
 	bool IsZero() const
 	{

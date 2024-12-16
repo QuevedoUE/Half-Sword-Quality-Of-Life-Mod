@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "S_PostProcessFilter_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "InputCore_structs.hpp"
+#include "E_InputMode_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "E_ScreenshotMethod_structs.hpp"
+#include "CinematicCamera_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "E_PauseGameMethod_structs.hpp"
 #include "E_CameraModes_structs.hpp"
 #include "S_Logos_structs.hpp"
-#include "CinematicCamera_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "S_PostProcessFilter_structs.hpp"
 #include "S_InputKeys_structs.hpp"
 #include "S_PostProcessRendering_structs.hpp"
-#include "E_ScreenshotMethod_structs.hpp"
 #include "S_PhotoModeIsOnConfis_structs.hpp"
-#include "E_InputMode_structs.hpp"
 #include "S_PhotoResolutions_structs.hpp"
 #include "E_ColorGradingMode_structs.hpp"
 #include "E_SaveSort_structs.hpp"
@@ -180,10 +180,10 @@ public:
 	void InitWidgets();
 	void OnFreeCameraStart__DelegateSignature(class BP_FreeCamera_0::ABP_FreeCamera_C* FreeCameraReference);
 	void OnFreenCameraEnd__DelegateSignature();
-	void OpenGallery(const struct FKey& Param_LastKey);
+	void OpenGallery(const struct FKey& LastKey_0);
 	void Photo_Mode(const struct FKey& Key);
 	void PhotoModeClosed__DelegateSignature();
-	void PhotoModeOpened__DelegateSignature(double Param_CurrentTimeDilation);
+	void PhotoModeOpened__DelegateSignature(double CurrentTimeDilation_0);
 	void PhotoTaken__DelegateSignature(const class FString& PhotoPath, const class FString& ThumbPath);
 	void ReceiveBeginPlay();
 	void ResetGallery();

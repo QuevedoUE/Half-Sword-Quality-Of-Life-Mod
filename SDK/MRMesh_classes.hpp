@@ -42,7 +42,7 @@ public:
 public:
 	void ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
 	void DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
-	void OnMockDataMeshTrackerUpdated__DelegateSignature(int32 Param_Index, const TArray<struct FVector>& Vertices, const TArray<int32>& Triangles, const TArray<struct FVector>& Normals, const TArray<float>& Confidence);
+	void OnMockDataMeshTrackerUpdated__DelegateSignature(int32 Index_0, const TArray<struct FVector>& Vertices, const TArray<int32>& Triangles, const TArray<struct FVector>& Normals, const TArray<float>& Confidence);
 
 public:
 	static class UClass* StaticClass()

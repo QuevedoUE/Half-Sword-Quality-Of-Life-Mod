@@ -28,7 +28,6 @@ SDK::AActor* SpawnActorFromClassInMain(class SDK::UObject* WorldContextObject,
 {
  
     SDK::ESpawnActorScaleMethod NormalScaleMethod = SDK::ESpawnActorScaleMethod::SelectDefaultAtRuntime;
-
    
     auto Spawned = SDK::UGameplayStatics::BeginDeferredActorSpawnFromClass(WorldContextObject,
         ActorClass,
@@ -38,8 +37,6 @@ SDK::AActor* SpawnActorFromClassInMain(class SDK::UObject* WorldContextObject,
         SpawnActorScaleMethod);
 
     Spawned = SDK::UGameplayStatics::FinishSpawningActor(Spawned, SpawnTransform, NormalScaleMethod);
-
-
     
     return Spawned; 
 }
@@ -49,7 +46,7 @@ SDK::AActor* SpawnActorFromClassInMain(class SDK::UObject* WorldContextObject,
 // Last Position OF The Mouse
 POINT lastMousePosition = { 0, 0 };
 
-bool IsMouseMoving()
+static bool IsMouseMoving()
 {
     POINT currentMousePosition;
     if (GetCursorPos(&currentMousePosition))
@@ -63,12 +60,12 @@ bool IsMouseMoving()
     return false;
 }
 
-void ClearConsole()
+static void ClearConsole()
 {
     system("cls");
 }
 
-DWORD MainThread(HMODULE Module)
+static DWORD MainThread(HMODULE Module)
 {
     Sleep(800);
     /* Code to open a console window */

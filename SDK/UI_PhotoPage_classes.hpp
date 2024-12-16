@@ -34,7 +34,7 @@ public:
 public:
 	void Construct();
 	void ExecuteUbergraph_UI_PhotoPage(int32 EntryPoint);
-	void Initialize(class UUI_Gallery_C* Param_GalleryReference, int32 Param_PageIndex);
+	void Initialize(class UUI_Gallery_C* GalleryReference_0, int32 PageIndex_0);
 	void PreConstruct(bool IsDesignTime);
 	void ResetPage();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

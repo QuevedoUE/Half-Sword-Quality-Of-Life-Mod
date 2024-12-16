@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
+#include "BodyPart_Enum_structs.hpp"
 #include "GripType_Enum_structs.hpp"
 #include "ABP_Willie_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "BodyPart_Enum_structs.hpp"
 
 
 namespace SDK
@@ -1184,7 +1184,7 @@ public:
 	bool                                          Grab_L_Begin;                                      // 0x203F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintBeginPlay();
 	void BlueprintInitializeAnimation();
 	void BlueprintUpdateAnimation(float DeltaTimeX);

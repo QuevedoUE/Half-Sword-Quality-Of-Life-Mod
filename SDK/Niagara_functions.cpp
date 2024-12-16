@@ -76,11 +76,11 @@ int32 UNiagaraDataChannelReader::Num() const
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UNiagaraDataChannelReader::ReadBool(class FName VarName, int32 Param_Index, bool* IsValid) const
+bool UNiagaraDataChannelReader::ReadBool(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -90,7 +90,7 @@ bool UNiagaraDataChannelReader::ReadBool(class FName VarName, int32 Param_Index,
 	Params::NiagaraDataChannelReader_ReadBool Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -110,11 +110,11 @@ bool UNiagaraDataChannelReader::ReadBool(class FName VarName, int32 Param_Index,
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-uint8 UNiagaraDataChannelReader::ReadEnum(class FName VarName, int32 Param_Index, bool* IsValid) const
+uint8 UNiagaraDataChannelReader::ReadEnum(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -124,7 +124,7 @@ uint8 UNiagaraDataChannelReader::ReadEnum(class FName VarName, int32 Param_Index
 	Params::NiagaraDataChannelReader_ReadEnum Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -144,11 +144,11 @@ uint8 UNiagaraDataChannelReader::ReadEnum(class FName VarName, int32 Param_Index
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double UNiagaraDataChannelReader::ReadFloat(class FName VarName, int32 Param_Index, bool* IsValid) const
+double UNiagaraDataChannelReader::ReadFloat(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -158,7 +158,7 @@ double UNiagaraDataChannelReader::ReadFloat(class FName VarName, int32 Param_Ind
 	Params::NiagaraDataChannelReader_ReadFloat Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -178,11 +178,11 @@ double UNiagaraDataChannelReader::ReadFloat(class FName VarName, int32 Param_Ind
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FNiagaraID                       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FNiagaraID UNiagaraDataChannelReader::ReadID(class FName VarName, int32 Param_Index, bool* IsValid) const
+struct FNiagaraID UNiagaraDataChannelReader::ReadID(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -192,7 +192,7 @@ struct FNiagaraID UNiagaraDataChannelReader::ReadID(class FName VarName, int32 P
 	Params::NiagaraDataChannelReader_ReadID Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -212,11 +212,11 @@ struct FNiagaraID UNiagaraDataChannelReader::ReadID(class FName VarName, int32 P
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UNiagaraDataChannelReader::ReadInt(class FName VarName, int32 Param_Index, bool* IsValid) const
+int32 UNiagaraDataChannelReader::ReadInt(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -226,7 +226,7 @@ int32 UNiagaraDataChannelReader::ReadInt(class FName VarName, int32 Param_Index,
 	Params::NiagaraDataChannelReader_ReadInt Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -246,11 +246,11 @@ int32 UNiagaraDataChannelReader::ReadInt(class FName VarName, int32 Param_Index,
 // (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FLinearColor UNiagaraDataChannelReader::ReadLinearColor(class FName VarName, int32 Param_Index, bool* IsValid) const
+struct FLinearColor UNiagaraDataChannelReader::ReadLinearColor(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -260,7 +260,7 @@ struct FLinearColor UNiagaraDataChannelReader::ReadLinearColor(class FName VarNa
 	Params::NiagaraDataChannelReader_ReadLinearColor Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -280,11 +280,11 @@ struct FLinearColor UNiagaraDataChannelReader::ReadLinearColor(class FName VarNa
 // (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UNiagaraDataChannelReader::ReadPosition(class FName VarName, int32 Param_Index, bool* IsValid) const
+struct FVector UNiagaraDataChannelReader::ReadPosition(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -294,7 +294,7 @@ struct FVector UNiagaraDataChannelReader::ReadPosition(class FName VarName, int3
 	Params::NiagaraDataChannelReader_ReadPosition Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -314,11 +314,11 @@ struct FVector UNiagaraDataChannelReader::ReadPosition(class FName VarName, int3
 // (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FQuat UNiagaraDataChannelReader::ReadQuat(class FName VarName, int32 Param_Index, bool* IsValid) const
+struct FQuat UNiagaraDataChannelReader::ReadQuat(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -328,7 +328,7 @@ struct FQuat UNiagaraDataChannelReader::ReadQuat(class FName VarName, int32 Para
 	Params::NiagaraDataChannelReader_ReadQuat Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -348,11 +348,11 @@ struct FQuat UNiagaraDataChannelReader::ReadQuat(class FName VarName, int32 Para
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FNiagaraSpawnInfo                ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
-struct FNiagaraSpawnInfo UNiagaraDataChannelReader::ReadSpawnInfo(class FName VarName, int32 Param_Index, bool* IsValid) const
+struct FNiagaraSpawnInfo UNiagaraDataChannelReader::ReadSpawnInfo(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -362,7 +362,7 @@ struct FNiagaraSpawnInfo UNiagaraDataChannelReader::ReadSpawnInfo(class FName Va
 	Params::NiagaraDataChannelReader_ReadSpawnInfo Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -382,11 +382,11 @@ struct FNiagaraSpawnInfo UNiagaraDataChannelReader::ReadSpawnInfo(class FName Va
 // (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UNiagaraDataChannelReader::ReadVector(class FName VarName, int32 Param_Index, bool* IsValid) const
+struct FVector UNiagaraDataChannelReader::ReadVector(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -396,7 +396,7 @@ struct FVector UNiagaraDataChannelReader::ReadVector(class FName VarName, int32 
 	Params::NiagaraDataChannelReader_ReadVector Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -416,11 +416,11 @@ struct FVector UNiagaraDataChannelReader::ReadVector(class FName VarName, int32 
 // (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector2D UNiagaraDataChannelReader::ReadVector2D(class FName VarName, int32 Param_Index, bool* IsValid) const
+struct FVector2D UNiagaraDataChannelReader::ReadVector2D(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -430,7 +430,7 @@ struct FVector2D UNiagaraDataChannelReader::ReadVector2D(class FName VarName, in
 	Params::NiagaraDataChannelReader_ReadVector2D Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -450,11 +450,11 @@ struct FVector2D UNiagaraDataChannelReader::ReadVector2D(class FName VarName, in
 // (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector4 UNiagaraDataChannelReader::ReadVector4(class FName VarName, int32 Param_Index, bool* IsValid) const
+struct FVector4 UNiagaraDataChannelReader::ReadVector4(class FName VarName, int32 Index_0, bool* IsValid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -464,7 +464,7 @@ struct FVector4 UNiagaraDataChannelReader::ReadVector4(class FName VarName, int3
 	Params::NiagaraDataChannelReader_ReadVector4 Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -522,10 +522,10 @@ bool UNiagaraDataChannelWriter::InitWrite(const struct FNiagaraDataChannelSearch
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteBool(class FName VarName, int32 Param_Index, bool InData)
+void UNiagaraDataChannelWriter::WriteBool(class FName VarName, int32 Index_0, bool InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -535,7 +535,7 @@ void UNiagaraDataChannelWriter::WriteBool(class FName VarName, int32 Param_Index
 	Params::NiagaraDataChannelWriter_WriteBool Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = InData;
 
 	auto Flgs = Func->FunctionFlags;
@@ -551,10 +551,10 @@ void UNiagaraDataChannelWriter::WriteBool(class FName VarName, int32 Param_Index
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // uint8                                   InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteEnum(class FName VarName, int32 Param_Index, uint8 InData)
+void UNiagaraDataChannelWriter::WriteEnum(class FName VarName, int32 Index_0, uint8 InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -564,7 +564,7 @@ void UNiagaraDataChannelWriter::WriteEnum(class FName VarName, int32 Param_Index
 	Params::NiagaraDataChannelWriter_WriteEnum Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = InData;
 
 	auto Flgs = Func->FunctionFlags;
@@ -580,10 +580,10 @@ void UNiagaraDataChannelWriter::WriteEnum(class FName VarName, int32 Param_Index
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteFloat(class FName VarName, int32 Param_Index, double InData)
+void UNiagaraDataChannelWriter::WriteFloat(class FName VarName, int32 Index_0, double InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -593,7 +593,7 @@ void UNiagaraDataChannelWriter::WriteFloat(class FName VarName, int32 Param_Inde
 	Params::NiagaraDataChannelWriter_WriteFloat Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = InData;
 
 	auto Flgs = Func->FunctionFlags;
@@ -609,10 +609,10 @@ void UNiagaraDataChannelWriter::WriteFloat(class FName VarName, int32 Param_Inde
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FNiagaraID                       InData                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteID(class FName VarName, int32 Param_Index, const struct FNiagaraID& InData)
+void UNiagaraDataChannelWriter::WriteID(class FName VarName, int32 Index_0, const struct FNiagaraID& InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -622,7 +622,7 @@ void UNiagaraDataChannelWriter::WriteID(class FName VarName, int32 Param_Index, 
 	Params::NiagaraDataChannelWriter_WriteID Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = std::move(InData);
 
 	auto Flgs = Func->FunctionFlags;
@@ -638,10 +638,10 @@ void UNiagaraDataChannelWriter::WriteID(class FName VarName, int32 Param_Index, 
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteInt(class FName VarName, int32 Param_Index, int32 InData)
+void UNiagaraDataChannelWriter::WriteInt(class FName VarName, int32 Index_0, int32 InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -651,7 +651,7 @@ void UNiagaraDataChannelWriter::WriteInt(class FName VarName, int32 Param_Index,
 	Params::NiagaraDataChannelWriter_WriteInt Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = InData;
 
 	auto Flgs = Func->FunctionFlags;
@@ -667,10 +667,10 @@ void UNiagaraDataChannelWriter::WriteInt(class FName VarName, int32 Param_Index,
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteLinearColor(class FName VarName, int32 Param_Index, const struct FLinearColor& InData)
+void UNiagaraDataChannelWriter::WriteLinearColor(class FName VarName, int32 Index_0, const struct FLinearColor& InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -680,7 +680,7 @@ void UNiagaraDataChannelWriter::WriteLinearColor(class FName VarName, int32 Para
 	Params::NiagaraDataChannelWriter_WriteLinearColor Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = std::move(InData);
 
 	auto Flgs = Func->FunctionFlags;
@@ -696,10 +696,10 @@ void UNiagaraDataChannelWriter::WriteLinearColor(class FName VarName, int32 Para
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WritePosition(class FName VarName, int32 Param_Index, const struct FVector& InData)
+void UNiagaraDataChannelWriter::WritePosition(class FName VarName, int32 Index_0, const struct FVector& InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -709,7 +709,7 @@ void UNiagaraDataChannelWriter::WritePosition(class FName VarName, int32 Param_I
 	Params::NiagaraDataChannelWriter_WritePosition Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = std::move(InData);
 
 	auto Flgs = Func->FunctionFlags;
@@ -725,10 +725,10 @@ void UNiagaraDataChannelWriter::WritePosition(class FName VarName, int32 Param_I
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuat                            InData                                                 (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteQuat(class FName VarName, int32 Param_Index, const struct FQuat& InData)
+void UNiagaraDataChannelWriter::WriteQuat(class FName VarName, int32 Index_0, const struct FQuat& InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -738,7 +738,7 @@ void UNiagaraDataChannelWriter::WriteQuat(class FName VarName, int32 Param_Index
 	Params::NiagaraDataChannelWriter_WriteQuat Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = std::move(InData);
 
 	auto Flgs = Func->FunctionFlags;
@@ -754,10 +754,10 @@ void UNiagaraDataChannelWriter::WriteQuat(class FName VarName, int32 Param_Index
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FNiagaraSpawnInfo                InData                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteSpawnInfo(class FName VarName, int32 Param_Index, const struct FNiagaraSpawnInfo& InData)
+void UNiagaraDataChannelWriter::WriteSpawnInfo(class FName VarName, int32 Index_0, const struct FNiagaraSpawnInfo& InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -767,7 +767,7 @@ void UNiagaraDataChannelWriter::WriteSpawnInfo(class FName VarName, int32 Param_
 	Params::NiagaraDataChannelWriter_WriteSpawnInfo Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = std::move(InData);
 
 	auto Flgs = Func->FunctionFlags;
@@ -783,10 +783,10 @@ void UNiagaraDataChannelWriter::WriteSpawnInfo(class FName VarName, int32 Param_
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteVector(class FName VarName, int32 Param_Index, const struct FVector& InData)
+void UNiagaraDataChannelWriter::WriteVector(class FName VarName, int32 Index_0, const struct FVector& InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -796,7 +796,7 @@ void UNiagaraDataChannelWriter::WriteVector(class FName VarName, int32 Param_Ind
 	Params::NiagaraDataChannelWriter_WriteVector Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = std::move(InData);
 
 	auto Flgs = Func->FunctionFlags;
@@ -812,10 +812,10 @@ void UNiagaraDataChannelWriter::WriteVector(class FName VarName, int32 Param_Ind
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteVector2D(class FName VarName, int32 Param_Index, const struct FVector2D& InData)
+void UNiagaraDataChannelWriter::WriteVector2D(class FName VarName, int32 Index_0, const struct FVector2D& InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -825,7 +825,7 @@ void UNiagaraDataChannelWriter::WriteVector2D(class FName VarName, int32 Param_I
 	Params::NiagaraDataChannelWriter_WriteVector2D Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = std::move(InData);
 
 	auto Flgs = Func->FunctionFlags;
@@ -841,10 +841,10 @@ void UNiagaraDataChannelWriter::WriteVector2D(class FName VarName, int32 Param_I
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector4                         InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelWriter::WriteVector4(class FName VarName, int32 Param_Index, const struct FVector4& InData)
+void UNiagaraDataChannelWriter::WriteVector4(class FName VarName, int32 Index_0, const struct FVector4& InData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -854,7 +854,7 @@ void UNiagaraDataChannelWriter::WriteVector4(class FName VarName, int32 Param_In
 	Params::NiagaraDataChannelWriter_WriteVector4 Parms{};
 
 	Parms.VarName = VarName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.InData = std::move(InData);
 
 	auto Flgs = Func->FunctionFlags;
@@ -1333,10 +1333,10 @@ void UNiagaraComponent::ClearSystemFixedBounds()
 // Function Niagara.NiagaraComponent.GetDataInterface
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UNiagaraDataInterface*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UNiagaraDataInterface* UNiagaraComponent::GetDataInterface(const class FString& Param_Name)
+class UNiagaraDataInterface* UNiagaraComponent::GetDataInterface(const class FString& Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1345,7 +1345,7 @@ class UNiagaraDataInterface* UNiagaraComponent::GetDataInterface(const class FSt
 
 	Params::NiagaraComponent_GetDataInterface Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2250,10 +2250,10 @@ void UNiagaraComponent::SetSeekDelta(float InSeekDelta)
 // Function Niagara.NiagaraComponent.SetSimCache
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// class UNiagaraSimCache*                 Param_SimCache                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraSimCache*                 SimCache_0                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bResetSystem                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraComponent::SetSimCache(class UNiagaraSimCache* Param_SimCache, bool bResetSystem)
+void UNiagaraComponent::SetSimCache(class UNiagaraSimCache* SimCache_0, bool bResetSystem)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2262,7 +2262,7 @@ void UNiagaraComponent::SetSimCache(class UNiagaraSimCache* Param_SimCache, bool
 
 	Params::NiagaraComponent_SetSimCache Parms{};
 
-	Parms.Param_SimCache = Param_SimCache;
+	Parms.SimCache_0 = SimCache_0;
 	Parms.bResetSystem = bResetSystem;
 
 	auto Flgs = Func->FunctionFlags;
@@ -3337,12 +3337,12 @@ class UNiagaraDataChannelReader* UNiagaraDataChannelLibrary::ReadFromNiagaraData
 // Parameters:
 // class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UNiagaraDataChannelAsset*         Channel                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FNiagaraDataChannelSearchParametersSearchParams                                           (Parm, NoDestructor, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
 // bool                                    bReadPreviousFrame                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ENiagartaDataChannelReadResult          ReadResult                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataChannelLibrary::ReadFromNiagaraDataChannelSingle(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel, int32 Param_Index, const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPreviousFrame, ENiagartaDataChannelReadResult* ReadResult)
+void UNiagaraDataChannelLibrary::ReadFromNiagaraDataChannelSingle(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel, int32 Index_0, const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPreviousFrame, ENiagartaDataChannelReadResult* ReadResult)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3353,7 +3353,7 @@ void UNiagaraDataChannelLibrary::ReadFromNiagaraDataChannelSingle(const class UO
 
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.Channel = Channel;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.SearchParams = std::move(SearchParams);
 	Parms.bReadPreviousFrame = bReadPreviousFrame;
 
@@ -3481,10 +3481,10 @@ TArray<bool> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBool(clas
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+bool UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3495,7 +3495,7 @@ bool UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBoolValue(class U
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3543,10 +3543,10 @@ TArray<struct FLinearColor> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagar
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FLinearColor UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+struct FLinearColor UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3557,7 +3557,7 @@ struct FLinearColor UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayCo
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3605,10 +3605,10 @@ TArray<float> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloat(cl
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+float UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3619,7 +3619,7 @@ float UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloatValue(class
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3667,10 +3667,10 @@ TArray<int32> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32(cl
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3681,7 +3681,7 @@ int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32Value(class
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3731,11 +3731,11 @@ TArray<struct FMatrix> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArra
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bApplyLWCRebase                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FMatrix                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
-struct FMatrix UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, bool bApplyLWCRebase)
+struct FMatrix UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, bool bApplyLWCRebase)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3746,7 +3746,7 @@ struct FMatrix UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayMatrixV
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.bApplyLWCRebase = bApplyLWCRebase;
 
 	auto Flgs = Func->FunctionFlags;
@@ -3795,10 +3795,10 @@ TArray<struct FVector> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArra
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3809,7 +3809,7 @@ struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayPositio
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3857,10 +3857,10 @@ TArray<struct FQuat> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQ
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FQuat UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+struct FQuat UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3871,7 +3871,7 @@ struct FQuat UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuatValue
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3919,10 +3919,10 @@ TArray<int32> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayUInt8(cl
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3933,7 +3933,7 @@ int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayUInt8Value(class
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4011,10 +4011,10 @@ TArray<struct FVector2D> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraAr
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector2D UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+struct FVector2D UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4025,7 +4025,7 @@ struct FVector2D UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVecto
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4073,10 +4073,10 @@ TArray<struct FVector4> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArr
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector4 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+struct FVector4 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4087,7 +4087,7 @@ struct FVector4 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4105,10 +4105,10 @@ struct FVector4 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4119,7 +4119,7 @@ struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVectorV
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4166,11 +4166,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBool(class UNiaga
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const bool& Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const bool& Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4181,7 +4181,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBoolValue(class U
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = Value;
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4228,11 +4228,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColor(class UNiag
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FLinearColor& Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FLinearColor& Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4243,7 +4243,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColorValue(class 
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = std::move(Value);
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4290,11 +4290,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloat(class UNiag
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, float Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, float Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4305,7 +4305,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloatValue(class 
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = Value;
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4352,11 +4352,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32(class UNiag
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, int32 Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, int32 Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4367,7 +4367,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32Value(class 
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = Value;
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4416,12 +4416,12 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayMatrix(class UNia
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FMatrix                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bApplyLWCRebase                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FMatrix& Value, bool bSizeToFit, bool bApplyLWCRebase)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FMatrix& Value, bool bSizeToFit, bool bApplyLWCRebase)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4432,7 +4432,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayMatrixValue(class
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = std::move(Value);
 	Parms.bSizeToFit = bSizeToFit;
 	Parms.bApplyLWCRebase = bApplyLWCRebase;
@@ -4480,11 +4480,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayPosition(class UN
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FVector& Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FVector& Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4495,7 +4495,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayPositionValue(cla
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = std::move(Value);
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4542,11 +4542,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuat(class UNiaga
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuat                            Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FQuat& Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FQuat& Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4557,7 +4557,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuatValue(class U
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = std::move(Value);
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4604,11 +4604,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayUInt8(class UNiag
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, int32 Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, int32 Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4619,7 +4619,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayUInt8Value(class 
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = Value;
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4695,11 +4695,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2D(class UN
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FVector2D& Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FVector2D& Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4710,7 +4710,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2DValue(cla
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = std::move(Value);
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4757,11 +4757,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4(class UNi
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector4                         Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FVector4& Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FVector4& Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4772,7 +4772,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4Value(clas
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = std::move(Value);
 	Parms.bSizeToFit = bSizeToFit;
 
@@ -4790,11 +4790,11 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4Value(clas
 // Parameters:
 // class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FVector& Value, bool bSizeToFit)
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FVector& Value, bool bSizeToFit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4805,7 +4805,7 @@ void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVectorValue(class
 
 	Parms.NiagaraSystem = NiagaraSystem;
 	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.Value = std::move(Value);
 	Parms.bSizeToFit = bSizeToFit;
 

@@ -197,11 +197,11 @@ static_assert(offsetof(Variant_AddDependency, ReturnValue) == 0x000058, "Member 
 struct Variant_DeleteDependency final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(Variant_DeleteDependency) == 0x000004, "Wrong alignment on Variant_DeleteDependency");
 static_assert(sizeof(Variant_DeleteDependency) == 0x000004, "Wrong size on Variant_DeleteDependency");
-static_assert(offsetof(Variant_DeleteDependency, Param_Index) == 0x000000, "Member 'Variant_DeleteDependency::Param_Index' has a wrong offset!");
+static_assert(offsetof(Variant_DeleteDependency, Index_0) == 0x000000, "Member 'Variant_DeleteDependency::Index_0' has a wrong offset!");
 
 // Function VariantManagerContent.Variant.GetActor
 // 0x0010 (0x0010 - 0x0000)
@@ -222,13 +222,13 @@ static_assert(offsetof(Variant_GetActor, ReturnValue) == 0x000008, "Member 'Vari
 struct Variant_GetDependency final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVariantDependency                     ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(Variant_GetDependency) == 0x000008, "Wrong alignment on Variant_GetDependency");
 static_assert(sizeof(Variant_GetDependency) == 0x000060, "Wrong size on Variant_GetDependency");
-static_assert(offsetof(Variant_GetDependency, Param_Index) == 0x000000, "Member 'Variant_GetDependency::Param_Index' has a wrong offset!");
+static_assert(offsetof(Variant_GetDependency, Index_0) == 0x000000, "Member 'Variant_GetDependency::Index_0' has a wrong offset!");
 static_assert(offsetof(Variant_GetDependency, ReturnValue) == 0x000008, "Member 'Variant_GetDependency::ReturnValue' has a wrong offset!");
 
 // Function VariantManagerContent.Variant.GetDependents
@@ -307,13 +307,13 @@ static_assert(offsetof(Variant_IsActive, ReturnValue) == 0x000000, "Member 'Vari
 struct Variant_SetDependency final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVariantDependency                     Dependency;                                        // 0x0008(0x0058)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(Variant_SetDependency) == 0x000008, "Wrong alignment on Variant_SetDependency");
 static_assert(sizeof(Variant_SetDependency) == 0x000060, "Wrong size on Variant_SetDependency");
-static_assert(offsetof(Variant_SetDependency, Param_Index) == 0x000000, "Member 'Variant_SetDependency::Param_Index' has a wrong offset!");
+static_assert(offsetof(Variant_SetDependency, Index_0) == 0x000000, "Member 'Variant_SetDependency::Index_0' has a wrong offset!");
 static_assert(offsetof(Variant_SetDependency, Dependency) == 0x000008, "Member 'Variant_SetDependency::Dependency' has a wrong offset!");
 
 // Function VariantManagerContent.Variant.SetDisplayText

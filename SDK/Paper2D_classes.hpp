@@ -59,7 +59,7 @@ public:
 	class UPaperSprite* GetSpriteAtFrame(int32 FrameIndex) const;
 	class UPaperSprite* GetSpriteAtTime(float Time, bool bClampToEnds) const;
 	float GetTotalDuration() const;
-	bool IsValidKeyFrameIndex(int32 Param_Index) const;
+	bool IsValidKeyFrameIndex(int32 Index_0) const;
 
 public:
 	static class UClass* StaticClass()
@@ -526,8 +526,8 @@ public:
 
 public:
 	class UPaperTileLayer* AddNewLayer();
-	void CreateNewTileMap(int32 Param_MapWidth, int32 Param_MapHeight, int32 Param_TileWidth, int32 Param_TileHeight, float PixelsPerUnrealUnit, bool bCreateLayer);
-	void GetMapSize(int32* Param_MapWidth, int32* Param_MapHeight, int32* NumLayers);
+	void CreateNewTileMap(int32 MapWidth_0, int32 MapHeight_0, int32 TileWidth_0, int32 TileHeight_0, float PixelsPerUnrealUnit, bool bCreateLayer);
+	void GetMapSize(int32* MapWidth_0, int32* MapHeight_0, int32* NumLayers);
 	void MakeTileMapEditable();
 	void RebuildCollision();
 	void ResizeMap(int32 NewWidthInTiles, int32 NewHeightInTiles);

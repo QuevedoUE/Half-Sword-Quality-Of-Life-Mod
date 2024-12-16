@@ -209,14 +209,14 @@ struct TypedElementListLibrary_GetElementHandleAt final
 {
 public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TypedElementListLibrary_GetElementHandleAt) == 0x000008, "Wrong alignment on TypedElementListLibrary_GetElementHandleAt");
 static_assert(sizeof(TypedElementListLibrary_GetElementHandleAt) == 0x000020, "Wrong size on TypedElementListLibrary_GetElementHandleAt");
 static_assert(offsetof(TypedElementListLibrary_GetElementHandleAt, ElementList) == 0x000000, "Member 'TypedElementListLibrary_GetElementHandleAt::ElementList' has a wrong offset!");
-static_assert(offsetof(TypedElementListLibrary_GetElementHandleAt, Param_Index) == 0x000010, "Member 'TypedElementListLibrary_GetElementHandleAt::Param_Index' has a wrong offset!");
+static_assert(offsetof(TypedElementListLibrary_GetElementHandleAt, Index_0) == 0x000010, "Member 'TypedElementListLibrary_GetElementHandleAt::Index_0' has a wrong offset!");
 static_assert(offsetof(TypedElementListLibrary_GetElementHandleAt, ReturnValue) == 0x000018, "Member 'TypedElementListLibrary_GetElementHandleAt::ReturnValue' has a wrong offset!");
 
 // Function TypedElementFramework.TypedElementListLibrary.GetElementHandles
@@ -289,14 +289,14 @@ struct TypedElementListLibrary_IsValidIndex final
 {
 public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementListLibrary_IsValidIndex) == 0x000008, "Wrong alignment on TypedElementListLibrary_IsValidIndex");
 static_assert(sizeof(TypedElementListLibrary_IsValidIndex) == 0x000018, "Wrong size on TypedElementListLibrary_IsValidIndex");
 static_assert(offsetof(TypedElementListLibrary_IsValidIndex, ElementList) == 0x000000, "Member 'TypedElementListLibrary_IsValidIndex::ElementList' has a wrong offset!");
-static_assert(offsetof(TypedElementListLibrary_IsValidIndex, Param_Index) == 0x000010, "Member 'TypedElementListLibrary_IsValidIndex::Param_Index' has a wrong offset!");
+static_assert(offsetof(TypedElementListLibrary_IsValidIndex, Index_0) == 0x000010, "Member 'TypedElementListLibrary_IsValidIndex::Index_0' has a wrong offset!");
 static_assert(offsetof(TypedElementListLibrary_IsValidIndex, ReturnValue) == 0x000014, "Member 'TypedElementListLibrary_IsValidIndex::ReturnValue' has a wrong offset!");
 
 // Function TypedElementFramework.TypedElementListLibrary.Num

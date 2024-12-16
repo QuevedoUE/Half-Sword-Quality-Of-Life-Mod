@@ -602,10 +602,10 @@ public:
 	class UPanelSlot* AddChild(class UWidget* Content);
 	void ClearChildren();
 	bool RemoveChild(class UWidget* Content);
-	bool RemoveChildAt(int32 Param_Index);
+	bool RemoveChildAt(int32 Index_0);
 
 	TArray<class UWidget*> GetAllChildren() const;
-	class UWidget* GetChildAt(int32 Param_Index) const;
+	class UWidget* GetChildAt(int32 Index_0) const;
 	int32 GetChildIndex(const class UWidget* Content) const;
 	int32 GetChildrenCount() const;
 	bool HasAnyChildren() const;
@@ -685,13 +685,13 @@ public:
 	void BP_SetListItems(const TArray<class UObject*>& InListItems);
 	void BP_SetSelectedItem(class UObject* Item);
 	void ClearListItems();
-	void NavigateToIndex(int32 Param_Index);
+	void NavigateToIndex(int32 Index_0);
 	void OnListItemEndPlayed(class AActor* Item, EEndPlayReason EndPlayReason);
 	void OnListItemOuterEndPlayed(class AActor* ItemOuter, EEndPlayReason EndPlayReason);
 	void RemoveItem(class UObject* Item);
-	void ScrollIndexIntoView(int32 Param_Index);
-	void SetSelectedIndex(int32 Param_Index);
-	void SetSelectionMode(ESelectionMode Param_SelectionMode);
+	void ScrollIndexIntoView(int32 Index_0);
+	void SetSelectedIndex(int32 Index_0);
+	void SetSelectionMode(ESelectionMode SelectionMode_0);
 
 	int32 BP_GetNumItemsSelected() const;
 	class UObject* BP_GetSelectedItem() const;
@@ -699,7 +699,7 @@ public:
 	bool BP_IsItemVisible(class UObject* Item) const;
 	float GetHorizontalEntrySpacing() const;
 	int32 GetIndexForItem(const class UObject* Item) const;
-	class UObject* GetItemAt(int32 Param_Index) const;
+	class UObject* GetItemAt(int32 Index_0) const;
 	const TArray<class UObject*> GetListItems() const;
 	int32 GetNumItems() const;
 	float GetVerticalEntrySpacing() const;
@@ -2196,7 +2196,7 @@ public:
 
 public:
 	class UStackBoxSlot* AddChildToStackBox(class UWidget* Content);
-	bool ReplaceStackBoxChildAt(int32 Param_Index, class UWidget* Content);
+	bool ReplaceStackBoxChildAt(int32 Index_0, class UWidget* Content);
 
 public:
 	static class UClass* StaticClass()
@@ -2519,11 +2519,11 @@ public:
 	void OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
 	void RefreshOptions();
 	bool RemoveOption(const class FString& Option);
-	void SetSelectedIndex(const int32 Param_Index);
+	void SetSelectedIndex(const int32 Index_0);
 	void SetSelectedOption(const class FString& Option);
 
 	int32 FindOptionIndex(const class FString& Option) const;
-	class FString GetOptionAtIndex(int32 Param_Index) const;
+	class FString GetOptionAtIndex(int32 Index_0) const;
 	int32 GetOptionCount() const;
 	int32 GetSelectedIndex() const;
 	class FString GetSelectedOption() const;
@@ -2665,8 +2665,8 @@ public:
 	uint8                                         Pad_4E8[0x18];                                     // 0x04E8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnEditableTextChangedEvent__DelegateSignature(const class FText& Param_Text);
-	void OnEditableTextCommittedEvent__DelegateSignature(const class FText& Param_Text, ETextCommit CommitMethod);
+	void OnEditableTextChangedEvent__DelegateSignature(const class FText& Text_0);
+	void OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text_0, ETextCommit CommitMethod);
 	void SetFont(const struct FSlateFontInfo& InFontInfo);
 	void SetFontMaterial(class UMaterialInterface* InMaterial);
 	void SetFontOutlineMaterial(class UMaterialInterface* InMaterial);
@@ -2754,8 +2754,8 @@ public:
 
 public:
 	void ClearError();
-	void OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Param_Text);
-	void OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Param_Text, ETextCommit CommitMethod);
+	void OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text_0);
+	void OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text_0, ETextCommit CommitMethod);
 	void SetError(const class FText& InError);
 	void SetForegroundColor(const struct FLinearColor& Color);
 	void SetHintText(const class FText& InText);
@@ -3062,7 +3062,7 @@ public:
 
 public:
 	void OnIsSelectingKeyChanged__DelegateSignature();
-	void OnKeySelected__DelegateSignature(const struct FInputChord& Param_SelectedKey);
+	void OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey_0);
 	void SetAllowGamepadKeys(bool bInAllowGamepadKeys);
 	void SetAllowModifierKeys(bool bInAllowModifierKeys);
 	void SetEscapeKeys(const TArray<struct FKey>& InKeys);
@@ -3197,8 +3197,8 @@ public:
 	uint8                                         Pad_538[0x18];                                     // 0x0538(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnMultiLineEditableTextChangedEvent__DelegateSignature(const class FText& Param_Text);
-	void OnMultiLineEditableTextCommittedEvent__DelegateSignature(const class FText& Param_Text, ETextCommit CommitMethod);
+	void OnMultiLineEditableTextChangedEvent__DelegateSignature(const class FText& Text_0);
+	void OnMultiLineEditableTextCommittedEvent__DelegateSignature(const class FText& Text_0, ETextCommit CommitMethod);
 	void SetFont(const struct FSlateFontInfo& InFontInfo);
 	void SetFontMaterial(class UMaterialInterface* InMaterial);
 	void SetFontOutlineMaterial(class UMaterialInterface* InMaterial);
@@ -3257,8 +3257,8 @@ public:
 	uint8                                         Pad_1078[0x18];                                    // 0x1078(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const class FText& Param_Text);
-	void OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Param_Text, ETextCommit CommitMethod);
+	void OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text_0);
+	void OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text_0, ETextCommit CommitMethod);
 	void SetError(const class FText& InError);
 	void SetForegroundColor(const struct FLinearColor& Color);
 	void SetHintText(const class FText& InHintText);
@@ -3358,7 +3358,7 @@ public:
 
 public:
 	class UOverlaySlot* AddChildToOverlay(class UWidget* Content);
-	bool ReplaceOverlayChildAt(int32 Param_Index, class UWidget* Content);
+	bool ReplaceOverlayChildAt(int32 Index_0, class UWidget* Content);
 
 public:
 	static class UClass* StaticClass()
@@ -3493,10 +3493,10 @@ public:
 
 public:
 	void RequestRender();
-	void SetEffectMaterial(class UMaterialInterface* Param_EffectMaterial);
+	void SetEffectMaterial(class UMaterialInterface* EffectMaterial_0);
 	void SetRenderingPhase(int32 RenderPhase, int32 TotalPhases);
 	void SetRetainRendering(bool bInRetainRendering);
-	void SetTextureParameter(class FName Param_TextureParameter);
+	void SetTextureParameter(class FName TextureParameter_0);
 
 	class UMaterialInstanceDynamic* GetEffectMaterial() const;
 
@@ -4519,7 +4519,7 @@ public:
 	void SetTickWhenOffscreen(const bool bWantTickWhenOffscreen);
 	void SetTintColorAndOpacity(const struct FLinearColor& NewTintColorAndOpacity);
 	void SetTwoSided(const bool bWantTwoSided);
-	void SetWidget(class UUserWidget* Param_Widget);
+	void SetWidget(class UUserWidget* Widget_0);
 	void SetWidgetSpace(EWidgetSpace NewSpace);
 	void SetWindowFocusable(bool bInWindowFocusable);
 	void SetWindowVisibility(EWindowVisibility InVisibility);
@@ -4686,12 +4686,12 @@ public:
 
 public:
 	void SetActiveWidget(class UWidget* Widget);
-	void SetActiveWidgetIndex(int32 Param_Index);
+	void SetActiveWidgetIndex(int32 Index_0);
 
 	class UWidget* GetActiveWidget() const;
 	int32 GetActiveWidgetIndex() const;
 	int32 GetNumWidgets() const;
-	class UWidget* GetWidgetAtIndex(int32 Param_Index) const;
+	class UWidget* GetWidgetAtIndex(int32 Index_0) const;
 
 public:
 	static class UClass* StaticClass()

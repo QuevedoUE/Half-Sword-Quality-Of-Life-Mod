@@ -34,12 +34,12 @@ struct UI_Checkbox_C_ChangeValue final
 {
 public:
 	bool                                          bValue;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_bShouldFocus;                                // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldFocus_0;                                    // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_Checkbox_C_ChangeValue) == 0x000001, "Wrong alignment on UI_Checkbox_C_ChangeValue");
 static_assert(sizeof(UI_Checkbox_C_ChangeValue) == 0x000002, "Wrong size on UI_Checkbox_C_ChangeValue");
 static_assert(offsetof(UI_Checkbox_C_ChangeValue, bValue) == 0x000000, "Member 'UI_Checkbox_C_ChangeValue::bValue' has a wrong offset!");
-static_assert(offsetof(UI_Checkbox_C_ChangeValue, Param_bShouldFocus) == 0x000001, "Member 'UI_Checkbox_C_ChangeValue::Param_bShouldFocus' has a wrong offset!");
+static_assert(offsetof(UI_Checkbox_C_ChangeValue, bShouldFocus_0) == 0x000001, "Member 'UI_Checkbox_C_ChangeValue::bShouldFocus_0' has a wrong offset!");
 
 // Function UI_Checkbox.UI_Checkbox_C.ExecuteUbergraph_UI_Checkbox
 // 0x0100 (0x0100 - 0x0000)
@@ -107,11 +107,11 @@ static_assert(offsetof(UI_Checkbox_C_ExecuteUbergraph_UI_Checkbox, CallFunc_Slot
 struct UI_Checkbox_C_Initialize final
 {
 public:
-	bool                                          Param_bDefaultValue;                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDefaultValue_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_Checkbox_C_Initialize) == 0x000001, "Wrong alignment on UI_Checkbox_C_Initialize");
 static_assert(sizeof(UI_Checkbox_C_Initialize) == 0x000001, "Wrong size on UI_Checkbox_C_Initialize");
-static_assert(offsetof(UI_Checkbox_C_Initialize, Param_bDefaultValue) == 0x000000, "Member 'UI_Checkbox_C_Initialize::Param_bDefaultValue' has a wrong offset!");
+static_assert(offsetof(UI_Checkbox_C_Initialize, bDefaultValue_0) == 0x000000, "Member 'UI_Checkbox_C_Initialize::bDefaultValue_0' has a wrong offset!");
 
 // Function UI_Checkbox.UI_Checkbox_C.OnCheckboxValueChanged__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
@@ -153,23 +153,23 @@ static_assert(offsetof(UI_Checkbox_C_PreConstruct, IsDesignTime) == 0x000000, "M
 struct UI_Checkbox_C_ResetCheckbox final
 {
 public:
-	bool                                          Param_bShouldFocus;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldFocus_0;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_Checkbox_C_ResetCheckbox) == 0x000001, "Wrong alignment on UI_Checkbox_C_ResetCheckbox");
 static_assert(sizeof(UI_Checkbox_C_ResetCheckbox) == 0x000001, "Wrong size on UI_Checkbox_C_ResetCheckbox");
-static_assert(offsetof(UI_Checkbox_C_ResetCheckbox, Param_bShouldFocus) == 0x000000, "Member 'UI_Checkbox_C_ResetCheckbox::Param_bShouldFocus' has a wrong offset!");
+static_assert(offsetof(UI_Checkbox_C_ResetCheckbox, bShouldFocus_0) == 0x000000, "Member 'UI_Checkbox_C_ResetCheckbox::bShouldFocus_0' has a wrong offset!");
 
 // Function UI_Checkbox.UI_Checkbox_C.Set Focused or Unfocused Color
 // 0x0BB0 (0x0BB0 - 0x0000)
 struct UI_Checkbox_C_Set_Focused_or_Unfocused_Color final
 {
 public:
-	bool                                          Param_bChangeCheckboxColorWhenFocused;             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_bChangeTextColorWhenFocused;                 // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bChangeCheckboxColorWhenFocused_0;                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bChangeTextColorWhenFocused_0;                     // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCheckBox*                              Param_CheckBox;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCheckBox*                              CheckBox_0;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CheckboxTitle;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                Param_CheckboxValue;                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CheckboxValue_0;                                   // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsHovered_ReturnValue;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsHovered_ReturnValue_1;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAnyUserFocus_ReturnValue;              // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -202,11 +202,11 @@ public:
 };
 static_assert(alignof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color) == 0x000010, "Wrong alignment on UI_Checkbox_C_Set_Focused_or_Unfocused_Color");
 static_assert(sizeof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color) == 0x000BB0, "Wrong size on UI_Checkbox_C_Set_Focused_or_Unfocused_Color");
-static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, Param_bChangeCheckboxColorWhenFocused) == 0x000000, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::Param_bChangeCheckboxColorWhenFocused' has a wrong offset!");
-static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, Param_bChangeTextColorWhenFocused) == 0x000001, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::Param_bChangeTextColorWhenFocused' has a wrong offset!");
-static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, Param_CheckBox) == 0x000008, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::Param_CheckBox' has a wrong offset!");
+static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, bChangeCheckboxColorWhenFocused_0) == 0x000000, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::bChangeCheckboxColorWhenFocused_0' has a wrong offset!");
+static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, bChangeTextColorWhenFocused_0) == 0x000001, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::bChangeTextColorWhenFocused_0' has a wrong offset!");
+static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, CheckBox_0) == 0x000008, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::CheckBox_0' has a wrong offset!");
 static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, CheckboxTitle) == 0x000010, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::CheckboxTitle' has a wrong offset!");
-static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, Param_CheckboxValue) == 0x000018, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::Param_CheckboxValue' has a wrong offset!");
+static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, CheckboxValue_0) == 0x000018, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::CheckboxValue_0' has a wrong offset!");
 static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, CallFunc_IsHovered_ReturnValue) == 0x000020, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::CallFunc_IsHovered_ReturnValue' has a wrong offset!");
 static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, CallFunc_IsHovered_ReturnValue_1) == 0x000021, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::CallFunc_IsHovered_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(UI_Checkbox_C_Set_Focused_or_Unfocused_Color, CallFunc_HasAnyUserFocus_ReturnValue) == 0x000022, "Member 'UI_Checkbox_C_Set_Focused_or_Unfocused_Color::CallFunc_HasAnyUserFocus_ReturnValue' has a wrong offset!");
@@ -257,7 +257,7 @@ static_assert(offsetof(UI_Checkbox_C_SetTxtValue, K2Node_Select_Default) == 0x00
 struct UI_Checkbox_C_ToggleUsingArrows final
 {
 public:
-	EUINavigation                                 Param_Navigation;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -265,7 +265,7 @@ public:
 };
 static_assert(alignof(UI_Checkbox_C_ToggleUsingArrows) == 0x000008, "Wrong alignment on UI_Checkbox_C_ToggleUsingArrows");
 static_assert(sizeof(UI_Checkbox_C_ToggleUsingArrows) == 0x000018, "Wrong size on UI_Checkbox_C_ToggleUsingArrows");
-static_assert(offsetof(UI_Checkbox_C_ToggleUsingArrows, Param_Navigation) == 0x000000, "Member 'UI_Checkbox_C_ToggleUsingArrows::Param_Navigation' has a wrong offset!");
+static_assert(offsetof(UI_Checkbox_C_ToggleUsingArrows, Navigation_0) == 0x000000, "Member 'UI_Checkbox_C_ToggleUsingArrows::Navigation_0' has a wrong offset!");
 static_assert(offsetof(UI_Checkbox_C_ToggleUsingArrows, ReturnValue) == 0x000008, "Member 'UI_Checkbox_C_ToggleUsingArrows::ReturnValue' has a wrong offset!");
 static_assert(offsetof(UI_Checkbox_C_ToggleUsingArrows, CallFunc_IsChecked_ReturnValue) == 0x000010, "Member 'UI_Checkbox_C_ToggleUsingArrows::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
 static_assert(offsetof(UI_Checkbox_C_ToggleUsingArrows, CallFunc_Not_PreBool_ReturnValue) == 0x000011, "Member 'UI_Checkbox_C_ToggleUsingArrows::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");

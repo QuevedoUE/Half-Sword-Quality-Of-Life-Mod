@@ -1151,10 +1151,10 @@ void UGeometryCollectionComponent::SetAnchoredByBox(const struct FBox& WorldSpac
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByIndex
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAnchored                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryCollectionComponent::SetAnchoredByIndex(int32 Param_Index, bool bAnchored)
+void UGeometryCollectionComponent::SetAnchoredByIndex(int32 Index_0, bool bAnchored)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1163,7 +1163,7 @@ void UGeometryCollectionComponent::SetAnchoredByIndex(int32 Param_Index, bool bA
 
 	Params::GeometryCollectionComponent_SetAnchoredByIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.bAnchored = bAnchored;
 
 	auto Flgs = Func->FunctionFlags;

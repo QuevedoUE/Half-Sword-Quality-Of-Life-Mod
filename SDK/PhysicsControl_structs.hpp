@@ -573,7 +573,7 @@ public:
 	uint8                                         bForceDisableCollisionBetweenConstraintBodies : 1; // 0x02FA(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bUseExternalClothCollision : 1;                    // 0x02FA(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bMakeKinematicConstraints : 1;                     // 0x02FA(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         BitPad_FA_4 : 4;                                   // 0x00FA(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
+	uint8                                         BitPad_2FA_4 : 4;                                  // 0x02FA(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
 	uint8                                         Pad_2FB[0x1];                                      // 0x02FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bEnableWorldGeometry : 1;                          // 0x02FC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bOverrideWorldGravity : 1;                         // 0x02FC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))

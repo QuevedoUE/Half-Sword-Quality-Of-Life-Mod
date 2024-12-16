@@ -130,9 +130,9 @@ void UUI_CommandButton_C::PreConstruct(bool IsDesignTime)
 // Function UI_CommandButton.UI_CommandButton_C.UpdateIconByIndex
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_CommandButton_C::UpdateIconByIndex(int32 Param_Index)
+void UUI_CommandButton_C::UpdateIconByIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -141,7 +141,7 @@ void UUI_CommandButton_C::UpdateIconByIndex(int32 Param_Index)
 
 	Params::UI_CommandButton_C_UpdateIconByIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -150,9 +150,9 @@ void UUI_CommandButton_C::UpdateIconByIndex(int32 Param_Index)
 // Function UI_CommandButton.UI_CommandButton_C.UpdateIconDT
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FDataTableRowHandle              Param_IconDT                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FDataTableRowHandle              IconDT_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UUI_CommandButton_C::UpdateIconDT(const struct FDataTableRowHandle& Param_IconDT)
+void UUI_CommandButton_C::UpdateIconDT(const struct FDataTableRowHandle& IconDT_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -161,7 +161,7 @@ void UUI_CommandButton_C::UpdateIconDT(const struct FDataTableRowHandle& Param_I
 
 	Params::UI_CommandButton_C_UpdateIconDT Parms{};
 
-	Parms.Param_IconDT = std::move(Param_IconDT);
+	Parms.IconDT_0 = std::move(IconDT_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

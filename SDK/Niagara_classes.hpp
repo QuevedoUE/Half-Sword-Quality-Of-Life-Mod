@@ -108,18 +108,18 @@ public:
 	bool InitAccess(const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPrevFrameData);
 
 	int32 Num() const;
-	bool ReadBool(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	uint8 ReadEnum(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	double ReadFloat(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	struct FNiagaraID ReadID(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	int32 ReadInt(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	struct FLinearColor ReadLinearColor(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	struct FVector ReadPosition(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	struct FQuat ReadQuat(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	struct FNiagaraSpawnInfo ReadSpawnInfo(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	struct FVector ReadVector(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	struct FVector2D ReadVector2D(class FName VarName, int32 Param_Index, bool* IsValid) const;
-	struct FVector4 ReadVector4(class FName VarName, int32 Param_Index, bool* IsValid) const;
+	bool ReadBool(class FName VarName, int32 Index_0, bool* IsValid) const;
+	uint8 ReadEnum(class FName VarName, int32 Index_0, bool* IsValid) const;
+	double ReadFloat(class FName VarName, int32 Index_0, bool* IsValid) const;
+	struct FNiagaraID ReadID(class FName VarName, int32 Index_0, bool* IsValid) const;
+	int32 ReadInt(class FName VarName, int32 Index_0, bool* IsValid) const;
+	struct FLinearColor ReadLinearColor(class FName VarName, int32 Index_0, bool* IsValid) const;
+	struct FVector ReadPosition(class FName VarName, int32 Index_0, bool* IsValid) const;
+	struct FQuat ReadQuat(class FName VarName, int32 Index_0, bool* IsValid) const;
+	struct FNiagaraSpawnInfo ReadSpawnInfo(class FName VarName, int32 Index_0, bool* IsValid) const;
+	struct FVector ReadVector(class FName VarName, int32 Index_0, bool* IsValid) const;
+	struct FVector2D ReadVector2D(class FName VarName, int32 Index_0, bool* IsValid) const;
+	struct FVector4 ReadVector4(class FName VarName, int32 Index_0, bool* IsValid) const;
 
 public:
 	static class UClass* StaticClass()
@@ -145,18 +145,18 @@ public:
 
 public:
 	bool InitWrite(const struct FNiagaraDataChannelSearchParameters& SearchParams, int32 Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU, const class FString& DebugSource);
-	void WriteBool(class FName VarName, int32 Param_Index, bool InData);
-	void WriteEnum(class FName VarName, int32 Param_Index, uint8 InData);
-	void WriteFloat(class FName VarName, int32 Param_Index, double InData);
-	void WriteID(class FName VarName, int32 Param_Index, const struct FNiagaraID& InData);
-	void WriteInt(class FName VarName, int32 Param_Index, int32 InData);
-	void WriteLinearColor(class FName VarName, int32 Param_Index, const struct FLinearColor& InData);
-	void WritePosition(class FName VarName, int32 Param_Index, const struct FVector& InData);
-	void WriteQuat(class FName VarName, int32 Param_Index, const struct FQuat& InData);
-	void WriteSpawnInfo(class FName VarName, int32 Param_Index, const struct FNiagaraSpawnInfo& InData);
-	void WriteVector(class FName VarName, int32 Param_Index, const struct FVector& InData);
-	void WriteVector2D(class FName VarName, int32 Param_Index, const struct FVector2D& InData);
-	void WriteVector4(class FName VarName, int32 Param_Index, const struct FVector4& InData);
+	void WriteBool(class FName VarName, int32 Index_0, bool InData);
+	void WriteEnum(class FName VarName, int32 Index_0, uint8 InData);
+	void WriteFloat(class FName VarName, int32 Index_0, double InData);
+	void WriteID(class FName VarName, int32 Index_0, const struct FNiagaraID& InData);
+	void WriteInt(class FName VarName, int32 Index_0, int32 InData);
+	void WriteLinearColor(class FName VarName, int32 Index_0, const struct FLinearColor& InData);
+	void WritePosition(class FName VarName, int32 Index_0, const struct FVector& InData);
+	void WriteQuat(class FName VarName, int32 Index_0, const struct FQuat& InData);
+	void WriteSpawnInfo(class FName VarName, int32 Index_0, const struct FNiagaraSpawnInfo& InData);
+	void WriteVector(class FName VarName, int32 Index_0, const struct FVector& InData);
+	void WriteVector2D(class FName VarName, int32 Index_0, const struct FVector2D& InData);
+	void WriteVector4(class FName VarName, int32 Index_0, const struct FVector4& InData);
 
 	int32 Num() const;
 
@@ -2397,7 +2397,7 @@ public:
 	void ClearEmitterFixedBounds(class FName EmitterName);
 	void ClearSimCache(bool bResetSystem);
 	void ClearSystemFixedBounds();
-	class UNiagaraDataInterface* GetDataInterface(const class FString& Param_Name);
+	class UNiagaraDataInterface* GetDataInterface(const class FString& Name_0);
 	void InitForPerformanceBaseline();
 	void ReinitializeSystem();
 	void ResetSystem();
@@ -2433,7 +2433,7 @@ public:
 	void SetRandomSeedOffset(int32 NewRandomSeedOffset);
 	void SetRenderingEnabled(bool bInRenderingEnabled);
 	void SetSeekDelta(float InSeekDelta);
-	void SetSimCache(class UNiagaraSimCache* Param_SimCache, bool bResetSystem);
+	void SetSimCache(class UNiagaraSimCache* SimCache_0, bool bResetSystem);
 	void SetSystemFixedBounds(const struct FBox& LocalBounds);
 	void SetTickBehavior(ENiagaraTickBehavior NewTickBehavior);
 	void SetVariableActor(class FName InVariableName, class AActor* Actor);
@@ -2632,7 +2632,7 @@ public:
 	static int32 GetDataChannelElementCount(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel, const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPreviousFrame);
 	static class UNiagaraDataChannelHandler* GetNiagaraDataChannel(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel);
 	static class UNiagaraDataChannelReader* ReadFromNiagaraDataChannel(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel, const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPreviousFrame);
-	static void ReadFromNiagaraDataChannelSingle(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel, int32 Param_Index, const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPreviousFrame, ENiagartaDataChannelReadResult* ReadResult);
+	static void ReadFromNiagaraDataChannelSingle(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel, int32 Index_0, const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPreviousFrame, ENiagartaDataChannelReadResult* ReadResult);
 	static class UNiagaraDataChannelWriter* WriteToNiagaraDataChannel(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel, const struct FNiagaraDataChannelSearchParameters& SearchParams, int32 Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU, const class FString& DebugSource);
 	static void WriteToNiagaraDataChannelSingle(const class UObject* WorldContextObject, const class UNiagaraDataChannelAsset* Channel, const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bVisibleToBlueprint, bool bVisibleToNiagaraCPU, bool bVisibleToNiagaraGPU);
 
@@ -2895,49 +2895,49 @@ class UNiagaraDataInterfaceArrayFunctionLibrary final : public UBlueprintFunctio
 {
 public:
 	static TArray<bool> GetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static bool GetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static bool GetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static TArray<struct FLinearColor> GetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static struct FLinearColor GetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static struct FLinearColor GetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static TArray<float> GetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static float GetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static float GetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static TArray<int32> GetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static int32 GetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static int32 GetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static TArray<struct FMatrix> GetNiagaraArrayMatrix(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, bool bApplyLWCRebase);
-	static struct FMatrix GetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, bool bApplyLWCRebase);
+	static struct FMatrix GetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, bool bApplyLWCRebase);
 	static TArray<struct FVector> GetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static struct FVector GetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static struct FVector GetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static TArray<struct FQuat> GetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static struct FQuat GetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static struct FQuat GetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static TArray<int32> GetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static int32 GetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static int32 GetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static TArray<struct FVector> GetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
 	static TArray<struct FVector2D> GetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static struct FVector2D GetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static struct FVector2D GetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static TArray<struct FVector4> GetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, class FName OverrideName);
-	static struct FVector4 GetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
-	static struct FVector GetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index);
+	static struct FVector4 GetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
+	static struct FVector GetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0);
 	static void SetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<bool>& ArrayData);
-	static void SetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const bool& Value, bool bSizeToFit);
+	static void SetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const bool& Value, bool bSizeToFit);
 	static void SetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<struct FLinearColor>& ArrayData);
-	static void SetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FLinearColor& Value, bool bSizeToFit);
+	static void SetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FLinearColor& Value, bool bSizeToFit);
 	static void SetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<float>& ArrayData);
-	static void SetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, float Value, bool bSizeToFit);
+	static void SetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, float Value, bool bSizeToFit);
 	static void SetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<int32>& ArrayData);
-	static void SetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, int32 Value, bool bSizeToFit);
+	static void SetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, int32 Value, bool bSizeToFit);
 	static void SetNiagaraArrayMatrix(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<struct FMatrix>& ArrayData, bool bApplyLWCRebase);
-	static void SetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FMatrix& Value, bool bSizeToFit, bool bApplyLWCRebase);
+	static void SetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FMatrix& Value, bool bSizeToFit, bool bApplyLWCRebase);
 	static void SetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<struct FVector>& ArrayData);
-	static void SetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FVector& Value, bool bSizeToFit);
+	static void SetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FVector& Value, bool bSizeToFit);
 	static void SetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<struct FQuat>& ArrayData);
-	static void SetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FQuat& Value, bool bSizeToFit);
+	static void SetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FQuat& Value, bool bSizeToFit);
 	static void SetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<int32>& ArrayData);
-	static void SetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, int32 Value, bool bSizeToFit);
+	static void SetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, int32 Value, bool bSizeToFit);
 	static void SetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<struct FVector>& ArrayData);
 	static void SetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<struct FVector2D>& ArrayData);
-	static void SetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FVector2D& Value, bool bSizeToFit);
+	static void SetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FVector2D& Value, bool bSizeToFit);
 	static void SetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, const TArray<struct FVector4>& ArrayData);
-	static void SetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FVector4& Value, bool bSizeToFit);
-	static void SetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, const struct FVector& Value, bool bSizeToFit);
+	static void SetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FVector4& Value, bool bSizeToFit);
+	static void SetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Index_0, const struct FVector& Value, bool bSizeToFit);
 
 public:
 	static class UClass* StaticClass()

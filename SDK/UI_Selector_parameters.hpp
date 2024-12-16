@@ -43,7 +43,7 @@ static_assert(offsetof(UI_Selector_C_AddOption, CallFunc_SetMaxValue_InValue_Imp
 struct UI_Selector_C_AddOptions_Name_ final
 {
 public:
-	TArray<class FName>                           Param_Options;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FName>                           Options_0;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -56,7 +56,7 @@ public:
 };
 static_assert(alignof(UI_Selector_C_AddOptions_Name_) == 0x000008, "Wrong alignment on UI_Selector_C_AddOptions_Name_");
 static_assert(sizeof(UI_Selector_C_AddOptions_Name_) == 0x000040, "Wrong size on UI_Selector_C_AddOptions_Name_");
-static_assert(offsetof(UI_Selector_C_AddOptions_Name_, Param_Options) == 0x000000, "Member 'UI_Selector_C_AddOptions_Name_::Param_Options' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_AddOptions_Name_, Options_0) == 0x000000, "Member 'UI_Selector_C_AddOptions_Name_::Options_0' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_Name_, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'UI_Selector_C_AddOptions_Name_::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_Name_, Temp_int_Array_Index_Variable) == 0x000014, "Member 'UI_Selector_C_AddOptions_Name_::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_Name_, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'UI_Selector_C_AddOptions_Name_::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -70,7 +70,7 @@ static_assert(offsetof(UI_Selector_C_AddOptions_Name_, CallFunc_Add_IntInt_Retur
 struct UI_Selector_C_AddOptions_String_ final
 {
 public:
-	TArray<class FString>                         Param_Options;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FString>                         Options_0;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -83,7 +83,7 @@ public:
 };
 static_assert(alignof(UI_Selector_C_AddOptions_String_) == 0x000008, "Wrong alignment on UI_Selector_C_AddOptions_String_");
 static_assert(sizeof(UI_Selector_C_AddOptions_String_) == 0x000048, "Wrong size on UI_Selector_C_AddOptions_String_");
-static_assert(offsetof(UI_Selector_C_AddOptions_String_, Param_Options) == 0x000000, "Member 'UI_Selector_C_AddOptions_String_::Param_Options' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_AddOptions_String_, Options_0) == 0x000000, "Member 'UI_Selector_C_AddOptions_String_::Options_0' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_String_, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'UI_Selector_C_AddOptions_String_::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_String_, Temp_int_Array_Index_Variable) == 0x000014, "Member 'UI_Selector_C_AddOptions_String_::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_String_, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'UI_Selector_C_AddOptions_String_::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -97,7 +97,7 @@ static_assert(offsetof(UI_Selector_C_AddOptions_String_, CallFunc_Add_IntInt_Ret
 struct UI_Selector_C_AddOptions_Text_ final
 {
 public:
-	TArray<class FText>                           Param_Options;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FText>                           Options_0;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -109,7 +109,7 @@ public:
 };
 static_assert(alignof(UI_Selector_C_AddOptions_Text_) == 0x000008, "Wrong alignment on UI_Selector_C_AddOptions_Text_");
 static_assert(sizeof(UI_Selector_C_AddOptions_Text_) == 0x000038, "Wrong size on UI_Selector_C_AddOptions_Text_");
-static_assert(offsetof(UI_Selector_C_AddOptions_Text_, Param_Options) == 0x000000, "Member 'UI_Selector_C_AddOptions_Text_::Param_Options' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_AddOptions_Text_, Options_0) == 0x000000, "Member 'UI_Selector_C_AddOptions_Text_::Options_0' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_Text_, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'UI_Selector_C_AddOptions_Text_::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_Text_, Temp_int_Array_Index_Variable) == 0x000014, "Member 'UI_Selector_C_AddOptions_Text_::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_AddOptions_Text_, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'UI_Selector_C_AddOptions_Text_::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -134,12 +134,12 @@ struct UI_Selector_C_ChangeValue final
 {
 public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_bShouldFocus;                                // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldFocus_0;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_Selector_C_ChangeValue) == 0x000008, "Wrong alignment on UI_Selector_C_ChangeValue");
 static_assert(sizeof(UI_Selector_C_ChangeValue) == 0x000010, "Wrong size on UI_Selector_C_ChangeValue");
 static_assert(offsetof(UI_Selector_C_ChangeValue, Value) == 0x000000, "Member 'UI_Selector_C_ChangeValue::Value' has a wrong offset!");
-static_assert(offsetof(UI_Selector_C_ChangeValue, Param_bShouldFocus) == 0x000008, "Member 'UI_Selector_C_ChangeValue::Param_bShouldFocus' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_ChangeValue, bShouldFocus_0) == 0x000008, "Member 'UI_Selector_C_ChangeValue::bShouldFocus_0' has a wrong offset!");
 
 // Function UI_Selector.UI_Selector_C.ExecuteUbergraph_UI_Selector
 // 0x0258 (0x0258 - 0x0000)
@@ -295,13 +295,13 @@ struct UI_Selector_C_GetFocusedOrUnfocusedColor final
 {
 public:
 	bool                                          bChangeSliderColorWhenFocused;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_bChangeTextColorWhenFocused;                 // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bChangeTextColorWhenFocused_0;                     // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USlider*                                Param_Slider;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USlider*                                Slider_0;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 ImgLeftButton;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 ImgRightButton;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                Param_SliderTitle;                                 // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                Param_SliderValue;                                 // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                SliderTitle_0;                                     // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                SliderValue_0;                                     // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSetMargin;                                        // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            LeftButtonColor;                                   // 0x0040(0x00D0)(Parm, OutParm)
@@ -358,12 +358,12 @@ public:
 static_assert(alignof(UI_Selector_C_GetFocusedOrUnfocusedColor) == 0x000010, "Wrong alignment on UI_Selector_C_GetFocusedOrUnfocusedColor");
 static_assert(sizeof(UI_Selector_C_GetFocusedOrUnfocusedColor) == 0x0007F0, "Wrong size on UI_Selector_C_GetFocusedOrUnfocusedColor");
 static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, bChangeSliderColorWhenFocused) == 0x000000, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::bChangeSliderColorWhenFocused' has a wrong offset!");
-static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, Param_bChangeTextColorWhenFocused) == 0x000001, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::Param_bChangeTextColorWhenFocused' has a wrong offset!");
-static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, Param_Slider) == 0x000008, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::Param_Slider' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, bChangeTextColorWhenFocused_0) == 0x000001, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::bChangeTextColorWhenFocused_0' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, Slider_0) == 0x000008, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::Slider_0' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, ImgLeftButton) == 0x000010, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::ImgLeftButton' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, ImgRightButton) == 0x000018, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::ImgRightButton' has a wrong offset!");
-static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, Param_SliderTitle) == 0x000020, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::Param_SliderTitle' has a wrong offset!");
-static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, Param_SliderValue) == 0x000028, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::Param_SliderValue' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, SliderTitle_0) == 0x000020, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::SliderTitle_0' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, SliderValue_0) == 0x000028, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::SliderValue_0' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, bSetMargin) == 0x000030, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::bSetMargin' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, LeftButtonColor) == 0x000040, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::LeftButtonColor' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_GetFocusedOrUnfocusedColor, RightButtonColor) == 0x000110, "Member 'UI_Selector_C_GetFocusedOrUnfocusedColor::RightButtonColor' has a wrong offset!");
@@ -664,12 +664,12 @@ static_assert(offsetof(UI_Selector_C_RemoveOption, CallFunc_SetMaxValue_InValue_
 struct UI_Selector_C_ResetSlider final
 {
 public:
-	bool                                          Param_bShouldFocus;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldFocus_0;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bResetThisSlider;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_Selector_C_ResetSlider) == 0x000001, "Wrong alignment on UI_Selector_C_ResetSlider");
 static_assert(sizeof(UI_Selector_C_ResetSlider) == 0x000002, "Wrong size on UI_Selector_C_ResetSlider");
-static_assert(offsetof(UI_Selector_C_ResetSlider, Param_bShouldFocus) == 0x000000, "Member 'UI_Selector_C_ResetSlider::Param_bShouldFocus' has a wrong offset!");
+static_assert(offsetof(UI_Selector_C_ResetSlider, bShouldFocus_0) == 0x000000, "Member 'UI_Selector_C_ResetSlider::bShouldFocus_0' has a wrong offset!");
 static_assert(offsetof(UI_Selector_C_ResetSlider, bResetThisSlider) == 0x000001, "Member 'UI_Selector_C_ResetSlider::bResetThisSlider' has a wrong offset!");
 
 // Function UI_Selector.UI_Selector_C.SetDefaultOptionByIndex

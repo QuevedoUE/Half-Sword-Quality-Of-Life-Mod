@@ -106,7 +106,7 @@ public:
 	float GetLetterboxAspectRatio();
 	bool GetLoop();
 	class UMediaPlayer* GetMediaPlayer();
-	class UMediaTexture* GetMediaTexture(int32 Param_Index);
+	class UMediaTexture* GetMediaTexture(int32 Index_0);
 	void OnMediaEnd();
 	void OnMediaOpened(const class FString& DeviceUrl);
 	void OnMediaResumed();

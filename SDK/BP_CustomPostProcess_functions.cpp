@@ -61,9 +61,9 @@ void ABP_CustomPostProcess_C::GetPostProcess(struct FPostProcessSettings* PostPr
 // Function BP_CustomPostProcess.BP_CustomPostProcess_C.UpdatePostProcess
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPostProcessSettings             Param_PP                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FPostProcessSettings             PP_0                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_CustomPostProcess_C::UpdatePostProcess(const struct FPostProcessSettings& Param_PP)
+void ABP_CustomPostProcess_C::UpdatePostProcess(const struct FPostProcessSettings& PP_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -72,7 +72,7 @@ void ABP_CustomPostProcess_C::UpdatePostProcess(const struct FPostProcessSetting
 
 	Params::BP_CustomPostProcess_C_UpdatePostProcess Parms{};
 
-	Parms.Param_PP = std::move(Param_PP);
+	Parms.PP_0 = std::move(PP_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

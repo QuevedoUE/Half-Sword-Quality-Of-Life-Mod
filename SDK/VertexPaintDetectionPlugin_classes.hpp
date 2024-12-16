@@ -595,7 +595,7 @@ public:
 	static void RemoveComponentFromPaintTaskQueue(class UPrimitiveComponent* Component);
 	static void SetChaosClothPhysics(class USkeletalMeshComponent* SkeletalMeshComponent, class UClothingAssetBase* ClothingAsset, const struct FRVPDPChaosClothPhysicsSettings& ClothPhysicsSettings);
 	static void SetChaosWheeledVehicleFrictionMultiplier_Wrapper(class UChaosWheeledVehicleMovementComponent* ChaosWheeledVehicleMovementComponent, int32 WheelIndex, float Friction);
-	static class UDynamicMesh* SetMeshConstantVertexColorsAndEnablesThem(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Param_Flags, bool bClearExisting, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetMeshConstantVertexColorsAndEnablesThem(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Flags_0, bool bClearExisting, class UGeometryScriptDebug* Debug);
 	static void SetSkeletalMeshAndReleaseResources(class USkeletalMeshComponent* SkeletalMeshComponent, class USkeletalMesh* NewMesh, bool ClearVertexColorsOfChangedMesh);
 	static void SetStaticMeshAndReleaseResources(class UStaticMeshComponent* StaticMeshComponent, class UStaticMesh* NewMesh, bool ClearVertexColorsOfChangedMesh);
 	static void UnRegisterDetectTaskCallbacksToObjectFromSpecifiedMeshComponent_Wrapper(class UPrimitiveComponent* MeshComponent, class UObject* ObjectToUnregisterForCallbacks);

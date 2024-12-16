@@ -58,19 +58,19 @@ public:
 
 public:
 	void AddOption(const class FText& NewOption);
-	void AddOptions_Name_(TArray<class FName>& Param_Options);
-	void AddOptions_String_(TArray<class FString>& Param_Options);
-	void AddOptions_Text_(TArray<class FText>& Param_Options);
+	void AddOptions_Name_(TArray<class FName>& Options_0);
+	void AddOptions_String_(TArray<class FString>& Options_0);
+	void AddOptions_Text_(TArray<class FText>& Options_0);
 	void BndEvt__btn_left_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btn_right_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Slider_K2Node_ComponentBoundEvent_2_OnFloatValueChangedEvent__DelegateSignature(float Value);
-	void ChangeValue(double Value, bool Param_bShouldFocus);
+	void ChangeValue(double Value, bool bShouldFocus_0);
 	void ClearOptions();
 	void Construct();
 	void ExecuteUbergraph_UI_Selector(int32 EntryPoint);
 	void FocusThisWidget();
 	void FocusWithMouseWheel();
-	void GetFocusedOrUnfocusedColor(bool bChangeSliderColorWhenFocused, bool Param_bChangeTextColorWhenFocused, class USlider* Param_Slider, class UImage* ImgLeftButton, class UImage* ImgRightButton, class UWidget* Param_SliderTitle, class UWidget* Param_SliderValue, bool bSetMargin, struct FSlateBrush* LeftButtonColor, struct FSlateBrush* RightButtonColor);
+	void GetFocusedOrUnfocusedColor(bool bChangeSliderColorWhenFocused, bool bChangeTextColorWhenFocused_0, class USlider* Slider_0, class UImage* ImgLeftButton, class UImage* ImgRightButton, class UWidget* SliderTitle_0, class UWidget* SliderValue_0, bool bSetMargin, struct FSlateBrush* LeftButtonColor, struct FSlateBrush* RightButtonColor);
 	struct FSlateBrush GetLeftButtonSettings();
 	struct FSlateBrush GetRightButtonSettings();
 	void GetSelectedOption(int32* SelectedIndex, class FText* SelectedOption);
@@ -83,7 +83,7 @@ public:
 	void PreConstruct(bool IsDesignTime);
 	void RemoveOption(const class FText& Item);
 	void ResetDispatcher__DelegateSignature();
-	void ResetSlider(bool Param_bShouldFocus, bool bResetThisSlider);
+	void ResetSlider(bool bShouldFocus_0, bool bResetThisSlider);
 	void ResetSliderFocus();
 	void SetDefaultOptionByIndex(int32 DefaultIndex);
 	void SetDefaultOptionByName(const class FText& ItemToFind, bool* bSuccess);

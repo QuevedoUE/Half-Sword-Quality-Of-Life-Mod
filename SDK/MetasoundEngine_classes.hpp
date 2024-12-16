@@ -299,8 +299,8 @@ public:
 	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	struct FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(class FName Param_Name, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorInput);
-	struct FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(class FName Param_Name, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorOutput);
+	struct FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorInput);
+	struct FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorOutput);
 	void AddInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
 	struct FMetaSoundNodeHandle AddNode(const TScriptInterface<class IMetaSoundDocumentInterface>& NodeClass, EMetaSoundBuilderResult* OutResult);
 	struct FMetaSoundNodeHandle AddNodeByClassName(const struct FMetasoundFrontendClassName& ClassName, EMetaSoundBuilderResult* OutResult, int32 MajorVersion);
@@ -330,11 +330,11 @@ public:
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> FindNodeOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> FindNodeOutputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType);
 	struct FMetasoundFrontendLiteral GetNodeInputClassDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
-	void GetNodeInputData(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, class FName* Param_Name, class FName* DataType, EMetaSoundBuilderResult* OutResult);
+	void GetNodeInputData(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult);
 	struct FMetasoundFrontendLiteral GetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
-	void GetNodeOutputData(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, class FName* Param_Name, class FName* DataType, EMetaSoundBuilderResult* OutResult);
-	void RemoveGraphInput(class FName Param_Name, EMetaSoundBuilderResult* OutResult);
-	void RemoveGraphOutput(class FName Param_Name, EMetaSoundBuilderResult* OutResult);
+	void GetNodeOutputData(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult);
+	void RemoveGraphInput(class FName Name_0, EMetaSoundBuilderResult* OutResult);
+	void RemoveGraphOutput(class FName Name_0, EMetaSoundBuilderResult* OutResult);
 	void RemoveInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
 	void RemoveNode(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
 	void RemoveNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);

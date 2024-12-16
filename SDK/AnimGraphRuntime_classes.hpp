@@ -163,7 +163,7 @@ public:
 	static struct FAnimPoseContext ConvertToPoseContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
 	static struct FAnimUpdateContext ConvertToUpdateContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
 	static class UAnimInstance* GetAnimInstance(const struct FAnimExecutionContext& Context);
-	static struct FAnimNodeReference GetAnimNodeReference(class UAnimInstance* Instance, int32 Param_Index);
+	static struct FAnimNodeReference GetAnimNodeReference(class UAnimInstance* Instance, int32 Index_0);
 	static float GetCurrentWeight(const struct FAnimUpdateContext& Context);
 	static float GetDeltaTime(const struct FAnimUpdateContext& Context);
 	static bool IsActive(const struct FAnimExecutionContext& Context);

@@ -303,9 +303,9 @@ public:
 	void Screenshot();
 	void SendPhotoData(const struct FS_PhotosData& PhotoData);
 	void Set_Focus_Distance(bool bIsHitValid, struct FPostProcessSettings& PostProcess, double Distance);
-	void SetFocusBasedOnTab(int32 Param_Index);
+	void SetFocusBasedOnTab(int32 Index_0);
 	void SetFocusOnClick();
-	void SetMenuIcons(int32 Param_Index);
+	void SetMenuIcons(int32 Index_0);
 	ESlateVisibility ShowHideCharacterRotation();
 	ESlateVisibility ShowHideMouseButtonVisibility();
 	class FText ShowHideMouseTxtButton();

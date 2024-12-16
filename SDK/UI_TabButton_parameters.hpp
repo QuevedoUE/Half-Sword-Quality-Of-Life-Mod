@@ -61,11 +61,11 @@ static_assert(offsetof(UI_TabButton_C_ExecuteUbergraph_UI_TabButton, K2Node_Make
 struct UI_TabButton_C_Initialize final
 {
 public:
-	class UUI_PhotoMode_C*                        Param_PhotoModeWidgetRef;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUI_PhotoMode_C*                        PhotoModeWidgetRef_0;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_TabButton_C_Initialize) == 0x000008, "Wrong alignment on UI_TabButton_C_Initialize");
 static_assert(sizeof(UI_TabButton_C_Initialize) == 0x000008, "Wrong size on UI_TabButton_C_Initialize");
-static_assert(offsetof(UI_TabButton_C_Initialize, Param_PhotoModeWidgetRef) == 0x000000, "Member 'UI_TabButton_C_Initialize::Param_PhotoModeWidgetRef' has a wrong offset!");
+static_assert(offsetof(UI_TabButton_C_Initialize, PhotoModeWidgetRef_0) == 0x000000, "Member 'UI_TabButton_C_Initialize::PhotoModeWidgetRef_0' has a wrong offset!");
 
 // Function UI_TabButton.UI_TabButton_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)

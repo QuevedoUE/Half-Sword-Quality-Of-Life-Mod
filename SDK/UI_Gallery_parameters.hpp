@@ -13,8 +13,8 @@
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
-#include "S_PhotosData_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "S_PhotosData_structs.hpp"
 
 
 namespace SDK::Params
@@ -912,7 +912,7 @@ static_assert(offsetof(UI_Gallery_C_SendPhotoData, PhotoData) == 0x000000, "Memb
 struct UI_Gallery_C_SetIcons final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UUI_CommandButton_C*>            CallFunc_GetAllWidgetsOfClass_FoundWidgets;        // 0x0008(0x0010)(ReferenceParm, ContainsInstancedReference)
 	class UUI_CommandButton_C*                    CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -924,7 +924,7 @@ public:
 };
 static_assert(alignof(UI_Gallery_C_SetIcons) == 0x000008, "Wrong alignment on UI_Gallery_C_SetIcons");
 static_assert(sizeof(UI_Gallery_C_SetIcons) == 0x000030, "Wrong size on UI_Gallery_C_SetIcons");
-static_assert(offsetof(UI_Gallery_C_SetIcons, Param_Index) == 0x000000, "Member 'UI_Gallery_C_SetIcons::Param_Index' has a wrong offset!");
+static_assert(offsetof(UI_Gallery_C_SetIcons, Index_0) == 0x000000, "Member 'UI_Gallery_C_SetIcons::Index_0' has a wrong offset!");
 static_assert(offsetof(UI_Gallery_C_SetIcons, Temp_int_Array_Index_Variable) == 0x000004, "Member 'UI_Gallery_C_SetIcons::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(UI_Gallery_C_SetIcons, CallFunc_GetAllWidgetsOfClass_FoundWidgets) == 0x000008, "Member 'UI_Gallery_C_SetIcons::CallFunc_GetAllWidgetsOfClass_FoundWidgets' has a wrong offset!");
 static_assert(offsetof(UI_Gallery_C_SetIcons, CallFunc_Array_Get_Item) == 0x000018, "Member 'UI_Gallery_C_SetIcons::CallFunc_Array_Get_Item' has a wrong offset!");

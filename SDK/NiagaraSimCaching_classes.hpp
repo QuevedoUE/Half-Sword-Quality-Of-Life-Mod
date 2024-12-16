@@ -23,7 +23,7 @@ namespace SDK
 class UMovieSceneNiagaraCacheSection final : public UMovieSceneBaseCacheSection
 {
 public:
-	struct FMovieSceneNiagaraCacheParams          Params;                                            // 0x00F8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FMovieSceneNiagaraCacheParams          Params_0;                                          // 0x00F8(0x0088)(Edit, NativeAccessSpecifierPublic)
 	bool                                          bCacheOutOfDate;                                   // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -39,7 +39,7 @@ public:
 };
 static_assert(alignof(UMovieSceneNiagaraCacheSection) == 0x000008, "Wrong alignment on UMovieSceneNiagaraCacheSection");
 static_assert(sizeof(UMovieSceneNiagaraCacheSection) == 0x000188, "Wrong size on UMovieSceneNiagaraCacheSection");
-static_assert(offsetof(UMovieSceneNiagaraCacheSection, Params) == 0x0000F8, "Member 'UMovieSceneNiagaraCacheSection::Params' has a wrong offset!");
+static_assert(offsetof(UMovieSceneNiagaraCacheSection, Params_0) == 0x0000F8, "Member 'UMovieSceneNiagaraCacheSection::Params_0' has a wrong offset!");
 static_assert(offsetof(UMovieSceneNiagaraCacheSection, bCacheOutOfDate) == 0x000180, "Member 'UMovieSceneNiagaraCacheSection::bCacheOutOfDate' has a wrong offset!");
 
 // Class NiagaraSimCaching.MovieSceneNiagaraCacheTrack

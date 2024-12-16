@@ -106,13 +106,13 @@ static_assert(offsetof(UI_PhotoPage_C_ExecuteUbergraph_UI_PhotoPage, CallFunc_Ar
 struct UI_PhotoPage_C_Initialize final
 {
 public:
-	class UUI_Gallery_C*                          Param_GalleryReference;                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Param_PageIndex;                                   // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUI_Gallery_C*                          GalleryReference_0;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         PageIndex_0;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(UI_PhotoPage_C_Initialize) == 0x000008, "Wrong alignment on UI_PhotoPage_C_Initialize");
 static_assert(sizeof(UI_PhotoPage_C_Initialize) == 0x000010, "Wrong size on UI_PhotoPage_C_Initialize");
-static_assert(offsetof(UI_PhotoPage_C_Initialize, Param_GalleryReference) == 0x000000, "Member 'UI_PhotoPage_C_Initialize::Param_GalleryReference' has a wrong offset!");
-static_assert(offsetof(UI_PhotoPage_C_Initialize, Param_PageIndex) == 0x000008, "Member 'UI_PhotoPage_C_Initialize::Param_PageIndex' has a wrong offset!");
+static_assert(offsetof(UI_PhotoPage_C_Initialize, GalleryReference_0) == 0x000000, "Member 'UI_PhotoPage_C_Initialize::GalleryReference_0' has a wrong offset!");
+static_assert(offsetof(UI_PhotoPage_C_Initialize, PageIndex_0) == 0x000008, "Member 'UI_PhotoPage_C_Initialize::PageIndex_0' has a wrong offset!");
 
 // Function UI_PhotoPage.UI_PhotoPage_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)

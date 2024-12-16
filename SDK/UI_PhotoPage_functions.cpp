@@ -54,10 +54,10 @@ void UUI_PhotoPage_C::ExecuteUbergraph_UI_PhotoPage(int32 EntryPoint)
 // Function UI_PhotoPage.UI_PhotoPage_C.Initialize
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUI_Gallery_C*                    Param_GalleryReference                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_PageIndex                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUI_Gallery_C*                    GalleryReference_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   PageIndex_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_PhotoPage_C::Initialize(class UUI_Gallery_C* Param_GalleryReference, int32 Param_PageIndex)
+void UUI_PhotoPage_C::Initialize(class UUI_Gallery_C* GalleryReference_0, int32 PageIndex_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -66,8 +66,8 @@ void UUI_PhotoPage_C::Initialize(class UUI_Gallery_C* Param_GalleryReference, in
 
 	Params::UI_PhotoPage_C_Initialize Parms{};
 
-	Parms.Param_GalleryReference = Param_GalleryReference;
-	Parms.Param_PageIndex = Param_PageIndex;
+	Parms.GalleryReference_0 = GalleryReference_0;
+	Parms.PageIndex_0 = PageIndex_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

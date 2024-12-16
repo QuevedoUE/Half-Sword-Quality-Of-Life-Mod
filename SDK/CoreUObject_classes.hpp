@@ -18,7 +18,7 @@ namespace SDK
 
 // Class CoreUObject.Object
 // 0x0028 (0x0028 - 0x0000)
-class UObject
+class alignas(0x08) UObject
 {
 public:
 	static inline class TUObjectArrayWrapper      GObjects;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
@@ -67,15 +67,6 @@ public:
 	void ProcessEvent(class UFunction* Function, void* Parms) const
 	{
 		InSDKUtils::CallGameFunction(InSDKUtils::GetVirtualFunction<void(*)(const UObject*, class UFunction*, void*)>(this, Offsets::ProcessEventIdx), this, Function, Parms);
-	}
-
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"Object">();
-	}
-	static class UObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UObject>();
 	}
 };
 static_assert(alignof(UObject) == 0x000008, "Wrong alignment on UObject");
@@ -190,7 +181,7 @@ public:
 	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStruct*                                Super;                                             // 0x0040(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class UField*                                 Children;                                          // 0x0048(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	class FField*                                 ChildProperties;                                   // 0x0050(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	struct FField*                                 ChildProperties;                                   // 0x0050(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	int32                                         Size;                                              // 0x0058(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	int32                                         MinAlignemnt;                                      // 0x005C(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	uint8                                         Pad_60[0x50];                                      // 0x0060(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])

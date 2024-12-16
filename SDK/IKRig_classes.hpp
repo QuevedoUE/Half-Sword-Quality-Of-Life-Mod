@@ -305,10 +305,10 @@ public:
 	static struct FTargetRootSettings GetRootSettingsFromRetargetProfile(struct FRetargetProfile& RetargetProfile);
 	static void SetChainFKSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainFKSettings& FKSettings, const class FName TargetChainName);
 	static void SetChainIKSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainIKSettings& IKSettings, const class FName TargetChainName);
-	static void SetChainSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainSettings& Param_ChainSettings, const class FName TargetChainName);
+	static void SetChainSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainSettings& ChainSettings_0, const class FName TargetChainName);
 	static void SetChainSpeedPlantSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainSpeedPlantSettings& SpeedPlantSettings, const class FName TargetChainName);
-	static void SetGlobalSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FRetargetGlobalSettings& Param_GlobalSettings);
-	static void SetRootSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetRootSettings& Param_RootSettings);
+	static void SetGlobalSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FRetargetGlobalSettings& GlobalSettings_0);
+	static void SetRootSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetRootSettings& RootSettings_0);
 
 	bool HasSourceIKRig() const;
 	bool HasTargetIKRig() const;
