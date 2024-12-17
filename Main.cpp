@@ -169,7 +169,6 @@ static DWORD MainThread(HMODULE Module)
                 IsMassReduced = true;
             }
             else {
-
                 CurrentPawn->Default_Pelvis_Mass = OriginalPelvisMass;
                 CurrentPawn->R_Weapon_Mass = OriginalRWeaponMass;
                 CurrentPawn->L_Weapon_Mass = OriginalLWeaponMass;
