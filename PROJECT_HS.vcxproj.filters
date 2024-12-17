@@ -54,7 +54,7 @@
     <ClInclude Include="SDK\EngineSettings_structs.hpp">
       <Filter>MoreFiles</Filter>
     </ClInclude>
-    <ClInclude Include="AskForItemToSpawn.h">
+    <ClInclude Include="ItemSpawner.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -80,7 +80,7 @@
     <ClCompile Include="SDK\EngineSettings_functions.cpp">
       <Filter>MoreFiles</Filter>
     </ClCompile>
-    <ClCompile Include="AskForItem.cpp">
+    <ClCompile Include="ItemSpawner.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
