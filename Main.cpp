@@ -1,47 +1,16 @@
-#include "SDK.hpp"
 #include <Windows.h>
 #include <iostream>
 #include "pch.h"
-#include "SDK/Engine_classes.hpp"
-#include "SDK/Engine_parameters.hpp"
-#include "SDK/Engine_structs.hpp"
-#include "AskForItemToSpawn.h"
-#include <thread> 
-#include <chrono> 
-
+#include "ItemSpawner.h"
+#include <thread>
+#include <chrono>
 
 static bool IsMassReduced = false;
-    static float OriginalPelvisMass = -1.0f;
-    static float OriginalRWeaponMass = -1.0f;
-    static float OriginalLWeaponMass = -1.0f;
-    static float OriginalAimSwingSpeed = -1.0f;
-    static float OriginalSpine05Mass = -1.0f;
-
-static float ActualTimeDilation = 1.0f;
-
-SDK::AActor* SpawnActorFromClassInMain(class SDK::UObject* WorldContextObject,
-    SDK::TSubclassOf<class SDK::AActor> ActorClass,
-    struct SDK::FTransform& SpawnTransform,
-    SDK::ESpawnActorCollisionHandlingMethod CollisionHandlingOverride,
-    class SDK::AActor* Owner,
-    SDK::ESpawnActorScaleMethod SpawnActorScaleMethod)
-{
- 
-    SDK::ESpawnActorScaleMethod NormalScaleMethod = SDK::ESpawnActorScaleMethod::SelectDefaultAtRuntime;
-   
-    auto Spawned = SDK::UGameplayStatics::BeginDeferredActorSpawnFromClass(WorldContextObject,
-        ActorClass,
-        SpawnTransform,
-        CollisionHandlingOverride,
-        Owner,
-        SpawnActorScaleMethod);
-
-    Spawned = SDK::UGameplayStatics::FinishSpawningActor(Spawned, SpawnTransform, NormalScaleMethod);
-    
-    return Spawned; 
-}
-
-
+static float OriginalPelvisMass = -1.0f;
+static float OriginalRWeaponMass = -1.0f;
+static float OriginalLWeaponMass = -1.0f;
+static float OriginalAimSwingSpeed = -1.0f;
+static float OriginalSpine05Mass = -1.0f;
 
 // Last Position OF The Mouse
 POINT lastMousePosition = { 0, 0 };
@@ -60,185 +29,130 @@ static bool IsMouseMoving()
     return false;
 }
 
-static void ClearConsole()
-{
-    system("cls");
-}
-
 static DWORD MainThread(HMODULE Module)
 {
-    Sleep(800);
     /* Code to open a console window */
     AllocConsole();
-    Sleep(800);
     FILE* Dummy;
     freopen_s(&Dummy, "CONOUT$", "w", stdout);
-    Sleep(800);
     freopen_s(&Dummy, "CONIN$", "r", stdin);
-    Sleep(800);
 
     /* Functions returning "static" instances */
+    static ItemSpawner ItemSpawner;
     SDK::UEngine* Engine = SDK::UEngine::GetEngine();
-    Sleep(800);
     SDK::UWorld* World = SDK::UWorld::GetWorld();
-    Sleep(800);
-    SDK::APlayerController* MyController = World->OwningGameInstance->LocalPlayers[0]->PlayerController;
-    Sleep(800);
-    SDK::APawn PlayerPawn = *MyController->K2_GetPawn();
-
-    Sleep(800);
+    SDK::APlayerController* PlayerController = World->OwningGameInstance->LocalPlayers[0]->PlayerController;
     SDK::AWorldSettings* WorldSettings = World->K2_GetWorldSettings();
-    Sleep(800);
-    Sleep(800);
-    MyController->EnableCheats();
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    /* You might need to loop all levels in UWorld::Levels */
-    SDK::ULevel* Level = World->PersistentLevel;
-    Sleep(800);
-    SDK::TArray<SDK::AActor*>& Actors = Level->Actors;
-    Sleep(800);
-    std::this_thread::sleep_for(std::chrono::seconds(1));
 
-    Sleep(800);
-    SDK::UInputSettings::GetDefaultObj()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(L"F2");
-    Sleep(800);
-    SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
-    Sleep(800);
-    SDK::FTransform SpawnOriginTransform; Sleep(800);
-    Sleep(800);
+    SDK::FTransform SpawnOriginTransform{};
     // Asignar ubicaci�n directamente
     SpawnOriginTransform.Translation = SDK::FVector(0.0f, 0.0f, 0.0f);
-    Sleep(800);
     // Asignar rotaci�n directamente (usa una rotaci�n por defecto, como una identidad)
     SpawnOriginTransform.Rotation = SDK::FQuat(180.0f, 0.0f, 0.0f, 1.0f); // Quaternion identidad
-    Sleep(800);
     // Asignar escala directamente
     SpawnOriginTransform.Scale3D = SDK::FVector(1.0f, 1.0f, 1.0f); // Escala unitaria
-    Sleep(800);
-    //Engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
-    /* Creates a new UObject of class-type specified by Engine->ConsoleClass */
-    Sleep(800);
-    Sleep(800);
-    Sleep(5000);
-    ClearConsole();
-    Sleep(800);
-    Sleep(800);
-    MyController->EnableCheats();
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
-    Sleep(800);
+    class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(PlayerController->Pawn);
     SDK::FVector MenuCameraBetterLoc(-100, 920, 100);
-    Sleep(800);
     CurrentPawn->K2_SetActorLocation(MenuCameraBetterLoc, false, nullptr, true);
-    Sleep(800);
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    Sleep(800);
-    SDK::ESpawnActorCollisionHandlingMethod CollisionHandling = SDK::ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-    SDK::ESpawnActorScaleMethod SpawnMethod = SDK::ESpawnActorScaleMethod::SelectDefaultAtRuntime;
-    Sleep(800);
 
-    SDK::AActor* SpawnedActor = SpawnActorFromClassInMain(World, SDK::APostProcessVolume::StaticClass(), SpawnOriginTransform, CollisionHandling, nullptr, SpawnMethod);
-    Sleep(800);
+    SDK::AActor* SpawnedActor = ItemSpawner.SpawnActorFromClass(World, SDK::APostProcessVolume::StaticClass(), SpawnOriginTransform, nullptr);
+    SDK::APostProcessVolume* PostProcessCreatedVolume = static_cast<SDK::APostProcessVolume*>(SpawnedActor);
 
-    Sleep(800);
     if (SpawnedActor)
     {
-        Sleep(800);
-        SDK::APostProcessVolume* PostProcessCreatedVolume = static_cast<SDK::APostProcessVolume*>(SpawnedActor);
-        Sleep(800);
+        auto& Settings = PostProcessCreatedVolume->Settings;
 
-        PostProcessCreatedVolume->bUnbound = true;
-        Sleep(800);
-        PostProcessCreatedVolume->Settings.bOverride_ColorGradingIntensity = true;
-        PostProcessCreatedVolume->Settings.ColorGradingIntensity = 0.7f;
-        Sleep(800);
-        PostProcessCreatedVolume->Settings.bOverride_RayTracingGI = true;
-        PostProcessCreatedVolume->Settings.RayTracingTranslucencyMaxRoughness = 0.6f;
-        Sleep(800);
+        Settings.bOverride_ColorGradingIntensity = true;
+        Settings.ColorGradingIntensity = 0.7f;
+        Settings.bOverride_RayTracingGI = true;
+        Settings.RayTracingTranslucencyMaxRoughness = 0.6f;
 
-        PostProcessCreatedVolume->Settings.bOverride_BloomIntensity = true;
-        PostProcessCreatedVolume->Settings.BloomIntensity = 2.5f;
-        PostProcessCreatedVolume->Settings.bOverride_BloomSizeScale = true;
-        Sleep(800);
-        PostProcessCreatedVolume->Settings.BloomSizeScale = 1.2f;
-        PostProcessCreatedVolume->Settings.bOverride_BloomThreshold = true;
-        PostProcessCreatedVolume->Settings.BloomThreshold = 1.0f;
-        Sleep(800);
+        Settings.bOverride_BloomIntensity = true;
+        Settings.BloomIntensity = 2.5f;
+        Settings.bOverride_BloomSizeScale = true;
+        Settings.BloomSizeScale = 1.2f;
+        Settings.bOverride_BloomThreshold = true;
+        Settings.BloomThreshold = 1.0f;
 
-        PostProcessCreatedVolume->Settings.bOverride_MotionBlurAmount = true;
-        PostProcessCreatedVolume->Settings.MotionBlurAmount = 0.7f;
+        Settings.bOverride_MotionBlurAmount = true;
+        Settings.MotionBlurAmount = 0.7f;
 
+        Settings.bOverride_VignetteIntensity = true;
+        Settings.VignetteIntensity = 0.45f;
 
-        PostProcessCreatedVolume->Settings.bOverride_VignetteIntensity = true;
-        PostProcessCreatedVolume->Settings.VignetteIntensity = 0.45f;
-        Sleep(800);
+        Settings.bOverride_ReflectionsType = true;
+        Settings.ReflectionsType = SDK::EReflectionsType::RayTracing;
+        Settings.bOverride_RayTracingReflectionsMaxRoughness = true;
+        Settings.RayTracingAOIntensity = 0;
 
-        PostProcessCreatedVolume->Settings.bOverride_ReflectionsType = true;
-        PostProcessCreatedVolume->Settings.ReflectionsType = SDK::EReflectionsType::RayTracing;
-        PostProcessCreatedVolume->Settings.bOverride_RayTracingReflectionsMaxRoughness = true;
-        PostProcessCreatedVolume->Settings.RayTracingAOIntensity = 0;
-        Sleep(800);
+        Settings.bOverride_AutoExposureMethod = true;
+        Settings.AutoExposureMethod = SDK::EAutoExposureMethod::AEM_Histogram;
+        Settings.bOverride_AutoExposureBias = true;
+        Settings.AutoExposureBias = 0.3f;
 
-        PostProcessCreatedVolume->Settings.bOverride_AutoExposureMethod = true;
-        PostProcessCreatedVolume->Settings.AutoExposureMethod = SDK::EAutoExposureMethod::AEM_Histogram;
-        PostProcessCreatedVolume->Settings.bOverride_AutoExposureBias = true;
-        PostProcessCreatedVolume->Settings.AutoExposureBias = 0.3f;
+        Settings.bOverride_SceneFringeIntensity = true;
+        Settings.SceneFringeIntensity = 1.0f;
 
+        Settings.bOverride_FilmGrainIntensity = true;
+        Settings.FilmGrainIntensity = 0.35f;
 
-        PostProcessCreatedVolume->Settings.bOverride_SceneFringeIntensity = true;
-        PostProcessCreatedVolume->Settings.SceneFringeIntensity = 1.0f;
+        Settings.bOverride_AmbientCubemapIntensity = true;
+        Settings.AmbientCubemapIntensity = 0.5f;
+        Settings.bOverride_AmbientCubemapTint = true;
+        Settings.AmbientCubemapTint = SDK::FLinearColor(1.0f, 0.8f, 0.5f);
 
+        Settings.bOverride_DepthOfFieldFocalDistance = true;
+        Settings.DepthOfFieldFocalDistance = 250.0f;
+        Settings.bOverride_DepthOfFieldFocalRegion = true;
+        Settings.DepthOfFieldFocalRegion = 150.0f;
 
-        PostProcessCreatedVolume->Settings.bOverride_FilmGrainIntensity = true;
-        PostProcessCreatedVolume->Settings.FilmGrainIntensity = 0.35f;
-        Sleep(800);
+        Settings.bOverride_SceneColorTint = true;
+        Settings.SceneColorTint = SDK::FLinearColor(240.0f / 255.0f, 180.0f / 255.0f, 120.0f / 255.0f);
 
-        PostProcessCreatedVolume->Settings.bOverride_AmbientCubemapIntensity = true;
-        PostProcessCreatedVolume->Settings.AmbientCubemapIntensity = 0.5f;
-        PostProcessCreatedVolume->Settings.bOverride_AmbientCubemapTint = true;
-        PostProcessCreatedVolume->Settings.AmbientCubemapTint = SDK::FLinearColor(1.0f, 0.8f, 0.5f);
-        Sleep(800);
-
-
-        PostProcessCreatedVolume->Settings.bOverride_DepthOfFieldFocalDistance = true;
-        PostProcessCreatedVolume->Settings.DepthOfFieldFocalDistance = 250.0f;
-        Sleep(200);
-        PostProcessCreatedVolume->Settings.bOverride_DepthOfFieldFocalRegion = true;
-        PostProcessCreatedVolume->Settings.DepthOfFieldFocalRegion = 150.0f;
-        Sleep(800);
-
-        PostProcessCreatedVolume->Settings.bOverride_SceneColorTint = true;
-        PostProcessCreatedVolume->Settings.SceneColorTint = SDK::FLinearColor(240.0f / 255.0f, 180.0f / 255.0f, 120.0f / 255.0f);
-
-        std::cout << "!Post Process Created and Settings Applied!" << std::endl;
-        Sleep(800);
-
-        SDK::AWorldSettings* WorldSettings = World->K2_GetWorldSettings();
+        std::cout << "Post Process Created and Settings Applied!\n\n"
+            << "Keybinds:\n"
+            << "F1: Spawn custom item \n"
+            << "F3: Set custom player speed \n"
+            << "F4: Toggle player mass mod \n"
+            << "F5: Toggle postprocessing effects \n"
+            << "Z: Toggle slow motion \n"
+            << "G: Save current loadout\n"
+            << "END: Unload DLL\n" << std::endl;
     }
+
     while (true)
     {
+        class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(PlayerController->Pawn);
 
-        class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
+        if (GetAsyncKeyState(VK_F1) & 1)
+            ItemSpawner.AskForItemAndSpawn();
 
+        if (GetAsyncKeyState(VK_F5) & 1)
+            PostProcessCreatedVolume->bUnbound = ~PostProcessCreatedVolume->bUnbound;
 
+        if (GetAsyncKeyState(IsMouseMoving() & 1))
+            CurrentPawn->Stamina = 100;
+
+        if (GetAsyncKeyState(71) & 1) // G
+            CurrentPawn->Save_Loadout();
+
+        if (GetAsyncKeyState(90) & 1) // Z
+        {
+            WorldSettings->TimeDilation == 1.0f ? WorldSettings->TimeDilation = 0.4f : WorldSettings->TimeDilation = 1.0f;
+            Sleep(200);
+        }
 
         if (GetAsyncKeyState(VK_F3) & 1)
         {
             std::cout << "Enter new speed: ";
             std::cin >> CurrentPawn->Running_Speed_Rate;
-            class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
+            class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(PlayerController->Pawn);
             CurrentPawn->CharacterMovement->MaxAcceleration = 9999999;
             CurrentPawn->CharacterMovement->bCheatFlying = 1;
         }
 
-        if (GetAsyncKeyState(IsMouseMoving() & 1))
+        if (GetAsyncKeyState(VK_F4) & 1)
         {
-            CurrentPawn->Stamina = 100;
-        }
-
-        if (GetAsyncKeyState(74) & 1) // J
-        {
-
             if (!IsMassReduced) {
                 OriginalPelvisMass = CurrentPawn->Default_Pelvis_Mass;
                 OriginalRWeaponMass = CurrentPawn->R_Weapon_Mass;
@@ -266,47 +180,17 @@ static DWORD MainThread(HMODULE Module)
             }
         }
 
-
-        if (GetAsyncKeyState(71) & 1) //G
+        if (GetAsyncKeyState(VK_END) & 1)
         {
-            class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(MyController->Pawn);
-            CurrentPawn->Save_Loadout();
-        };
-        if (GetAsyncKeyState(9) & 1) // TAB
-        {
-            AskForItemToSpawn ItemSpawner; 
-            ItemSpawner.AskForItemAndSpawn();  
+			std::cout << "DLL unloaded. You can now close this window." << std::endl;
+			FreeConsole();
+			FreeLibraryAndExitThread(Module, 0);
         }
-        if (GetAsyncKeyState(90) & 0x8000) //Z
-        {
-            Sleep(300);
 
-            if (World && World->K2_GetWorldSettings())
-            {
-                SDK::AWorldSettings* WorldSettings = World->K2_GetWorldSettings();
-
-                if (ActualTimeDilation != 0.4f)
-                {
-                    WorldSettings->TimeDilation = 0.4f;
-                    ActualTimeDilation = 0.4f;
-                }
-                else
-                {
-                    WorldSettings->TimeDilation = 1.0f;
-                    ActualTimeDilation = 1.0f;
-                }
-            }
-            else
-            {
-                std::cout << "WORLD SETTINGS INVALID.";
-            }
-        }
+        Sleep(50);
     }
-        Sleep(100); //Don't Overcharge CPU    
-     return 0;
+    return 0;
 }
-
-
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
 {
