@@ -8,15 +8,12 @@ Features:
 * Better Fighting (At least for me)
 * Infinte Stamina
 * Set your own speed (F3 and writing in the console)
-* Saves Loadout between matchs
-
-To Do:
-* Select the Slow Motion Intensity (EASY)
+* Saves Loadout between matches
 
 If you inject it in the menu and doesn't crash, the camera will have a better position to select the class.
 For the mod to work better, inject it when you already played 2 matches for more posibilities to inject.
 
 JOIN OUR DISCORD!
-https://discord.gg/HmE2Wc7K
+* https://discord.gg/EJT9jqqy3M
 
 -Froid
