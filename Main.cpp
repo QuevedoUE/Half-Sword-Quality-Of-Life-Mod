@@ -128,7 +128,7 @@ static DWORD MainThread(HMODULE Module)
         if (GetAsyncKeyState(VK_F5) & 1)
             PostProcessCreatedVolume->bUnbound = ~PostProcessCreatedVolume->bUnbound;
 
-        if (GetAsyncKeyState(IsMouseMoving() & 1))
+        if (IsMouseMoving())
             CurrentPawn->Stamina = 100;
 
         if (GetAsyncKeyState(71) & 1) // G
