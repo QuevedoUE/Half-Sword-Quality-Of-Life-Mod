@@ -180,9 +180,9 @@ static DWORD MainThread(HMODULE Module)
 
         if (GetAsyncKeyState(VK_END) & 1)
         {
-			std::cout << "DLL unloaded. You can now close this window." << std::endl;
-			FreeConsole();
-			FreeLibraryAndExitThread(Module, 0);
+            std::cout << "DLL unloaded. You can now close this window." << std::endl;
+            FreeConsole();
+            FreeLibraryAndExitThread(Module, 0);
         }
 
         Sleep(50);
