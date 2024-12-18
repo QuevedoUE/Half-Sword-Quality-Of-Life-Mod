@@ -2,7 +2,6 @@
 #include "pch.h"
 #include "ItemSpawner.h"
 #include <thread>
-#include "SDK/Engine_parameters.hpp"
 
 static bool IsMassReduced = false;
 static float OriginalPelvisMass = -1.0f;
@@ -109,23 +108,18 @@ static DWORD MainThread(HMODULE Module)
         Settings.SceneColorTint = SDK::FLinearColor(240.0f / 255.0f, 180.0f / 255.0f, 120.0f / 255.0f);
 
         std::cout << R"(
- _   _   ___   _     ______   _____  _    _  _________________                      
-| | | | / _ \ | |    |  ___| /  ___|| |  | ||  _  | ___ \  _  \                     
-| |_| |/ /_\ \| |    | |_    \ `--. | |  | || | | | |_/ / | | |                     
-|  _  ||  _  || |    |  _|    `--. \| |/\| || | | |    /| | | |                     
-| | | || | | || |____| |     /\__/ /\  /\  /\ \_/ / |\ \| |/ /                      
-\_| |_/\_| |_/\_____/\_|     \____/  \/  \/  \___/\_| \_|___/                       
-                                                                                    
-                                                                                    
- _____ _   _  ___   _     _____ _______   __  ___________   _     ___________ _____ 
-|  _  | | | |/ _ \ | |   |_   _|_   _\ \ / / |  _  |  ___| | |   |_   _|  ___|  ___|
-| | | | | | / /_\ \| |     | |   | |  \ V /  | | | | |_    | |     | | | |_  | |__  
-| | | | | | |  _  || |     | |   | |   \ /   | | | |  _|   | |     | | |  _| |  __| 
-\ \/' / |_| | | | || |_____| |_  | |   | |   \ \_/ / |     | |_____| |_| |   | |___ 
- \_/\_\\___/\_| |_/\_____/\___/  \_/   \_/    \___/\_|     \_____/\___/\_|   \____/ 
-                                                                                                                                     
-)"
-            << "\nPost Process Created and Settings Applied!\n\n"
+        __  __      ______   _____                        __          
+       / / / /___ _/ / __/  / ___/      ______  _________/ /          
+      / /_/ / __ `/ / /_    \__ \ | /| / / __ \/ ___/ __  /           
+     / __  / /_/ / / __/   ___/ / |/ |/ / /_/ / /  / /_/ /            
+    /_/_/_/\__,_/_/_/    _/____/|__/|__/\____/_/___\__,_/    _ ____   
+      / __ \__  ______ _/ (_) /___  __   ____  / __/  / /   (_) __/__ 
+     / / / / / / / __ `/ / / __/ / / /  / __ \/ /_   / /   / / /_/ _ \
+    / /_/ / /_/ / /_/ / / / /_/ /_/ /  / /_/ / __/  / /___/ / __/  __/
+    \___\_\__,_/\__,_/_/_/\__/\__, /   \____/_/    /_____/_/_/  \___/ 
+                             /____/                                   
+               )"
+            << "\n\nPost Process Created and Settings Applied!\n\n"
             << "Keybinds:\n"
             << "All function keys work with it's number on the numpad\n\n"
             << "F1: Spawn custom item\n"
@@ -167,7 +161,7 @@ static DWORD MainThread(HMODULE Module)
             CurrentPawn->CharacterMovement->bCheatFlying = 1;
         }
 
-       /* if (GetAsyncKeyState(84) & 1) {
+       /* if (GetAsyncKeyState(84) & 1) { 
 
         }
        */
