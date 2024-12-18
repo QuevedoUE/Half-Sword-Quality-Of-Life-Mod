@@ -145,7 +145,6 @@ static DWORD MainThread(HMODULE Module)
         {
             std::cout << "Enter new speed: ";
             std::cin >> CurrentPawn->Running_Speed_Rate;
-            class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(PlayerController->Pawn);
             CurrentPawn->CharacterMovement->MaxAcceleration = 9999999;
             CurrentPawn->CharacterMovement->bCheatFlying = 1;
         }
