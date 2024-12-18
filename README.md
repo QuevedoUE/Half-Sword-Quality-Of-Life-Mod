@@ -4,6 +4,7 @@ precision using your mouse, feeling the intensity of each clash as you ascend th
 This mod enchances the normal HS gameplay in many ways
 
 Features:
+* Item Spawner
 * Slow Motion Toggle (z)
 * Better Fighting (At least for me)
 * Infinte Stamina
