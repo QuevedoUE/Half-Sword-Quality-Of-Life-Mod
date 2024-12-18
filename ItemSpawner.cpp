@@ -189,12 +189,12 @@ SDK::AActor* ItemSpawner::SpawnActorFromClass(class SDK::UObject* WorldContextOb
 void ItemSpawner::AskForItemAndSpawn() {
     int ItemID;
 
-    std::cout << "Enter Item ID (1-170): ";
+    std::cout << "Enter Item ID (1-167): ";
     while (!(std::cin >> ItemID) || ItemMap.find(ItemID) == ItemMap.end()) {
         std::cin.clear();
         #undef max
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Invalid input. Please enter a valid Item ID (1-170): ";
+        std::cout << "Invalid input. Please enter a valid Item ID (1-167): ";
     }
 
     SDK::UWorld* World = SDK::UWorld::GetWorld();
