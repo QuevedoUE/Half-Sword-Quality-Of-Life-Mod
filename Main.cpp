@@ -109,12 +109,12 @@ static DWORD MainThread(HMODULE Module)
 
         std::cout << "Post Process Created and Settings Applied!\n\n"
             << "Keybinds:\n"
-            << "All function keys work with it's number on the numpad\n"
-            << "F1: Spawn custom item \n"
-            << "F3: Set custom player speed \n"
-            << "F4: Toggle player mass mod \n"
-            << "F5: Toggle postprocessing effects \n"
-            << "Z: Toggle slow motion \n"
+            << "All function keys work with it's number on the numpad\n\n"
+            << "F1: Spawn custom item\n"
+            << "F3: Set custom player speed\n"
+            << "F4: Toggle player mass mod\n"
+            << "F5: Toggle postprocessing effects\n"
+            << "Z: Toggle slow motion\n"
             << "G: Save current loadout\n"
             << "END: Unload DLL\n" << std::endl;
     }
