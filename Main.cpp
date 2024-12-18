@@ -50,8 +50,11 @@ static DWORD MainThread(HMODULE Module)
     // Asignar escala directamente
     SpawnOriginTransform.Scale3D = SDK::FVector(1.0f, 1.0f, 1.0f); // Escala unitaria
     class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(PlayerController->Pawn);
-    SDK::FVector MenuCameraBetterLoc(-100, 920, 100);
-    CurrentPawn->K2_SetActorLocation(MenuCameraBetterLoc, false, nullptr, true);
+
+    if (CurrentPawn) {
+        SDK::FVector MenuCameraBetterLoc(-100, 920, 100);
+        CurrentPawn->K2_SetActorLocation(MenuCameraBetterLoc, false, nullptr, true);
+    }
 
     SDK::AActor* SpawnedActor = ItemSpawner.SpawnActorFromClass(World, SDK::APostProcessVolume::StaticClass(), SpawnOriginTransform, nullptr);
     SDK::APostProcessVolume* PostProcessCreatedVolume = static_cast<SDK::APostProcessVolume*>(SpawnedActor);
@@ -135,6 +138,11 @@ static DWORD MainThread(HMODULE Module)
     {
         class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(PlayerController->Pawn);
 
+        if (!CurrentPawn) {
+            Sleep(1000);
+            continue;
+        }
+
         if ((GetAsyncKeyState(VK_F1) & 1) || (GetAsyncKeyState(VK_NUMPAD1) & 1))
             ItemSpawner.AskForItemAndSpawn();
 
@@ -147,27 +155,24 @@ static DWORD MainThread(HMODULE Module)
         if (GetAsyncKeyState(71) & 1) // G
             CurrentPawn->Save_Loadout();
 
-        if (GetAsyncKeyState(90) & 1) // Z
-        {
+        if (GetAsyncKeyState(90) & 1) { // Z
             WorldSettings->TimeDilation == 1.0f ? WorldSettings->TimeDilation = 0.4f : WorldSettings->TimeDilation = 1.0f;
             Sleep(200);
         }
 
-        if ((GetAsyncKeyState(VK_F3) & 1) || (GetAsyncKeyState(VK_NUMPAD3) & 1))
-        {
+        if ((GetAsyncKeyState(VK_F3) & 1) || (GetAsyncKeyState(VK_NUMPAD3) & 1)) {
             std::cout << "Enter new speed: ";
             std::cin >> CurrentPawn->Running_Speed_Rate;
             CurrentPawn->CharacterMovement->MaxAcceleration = 9999999;
             CurrentPawn->CharacterMovement->bCheatFlying = 1;
         }
 
-       /* if (GetAsyncKeyState(84) & 1) { 
+        /* if (GetAsyncKeyState(84) & 1) {
 
-        }
-       */
+         }
+        */
 
-        if ((GetAsyncKeyState(VK_F4) & 1) || (GetAsyncKeyState(VK_NUMPAD4) & 1))
-        {
+        if ((GetAsyncKeyState(VK_F4) & 1) || (GetAsyncKeyState(VK_NUMPAD4) & 1)) {
             if (!IsMassReduced) {
                 OriginalPelvisMass = CurrentPawn->Default_Pelvis_Mass;
                 OriginalRWeaponMass = CurrentPawn->R_Weapon_Mass;
@@ -194,8 +199,7 @@ static DWORD MainThread(HMODULE Module)
             }
         }
 
-        if (GetAsyncKeyState(VK_END) & 1)
-        {
+        if (GetAsyncKeyState(VK_END) & 1) {
             std::cout << "DLL unloaded. You can now close this window." << std::endl;
             FreeConsole();
             FreeLibraryAndExitThread(Module, 0);
