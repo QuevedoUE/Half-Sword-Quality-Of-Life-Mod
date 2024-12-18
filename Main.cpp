@@ -109,6 +109,7 @@ static DWORD MainThread(HMODULE Module)
 
         std::cout << "Post Process Created and Settings Applied!\n\n"
             << "Keybinds:\n"
+            << "All function keys work with it's number on the numpad\n"
             << "F1: Spawn custom item \n"
             << "F3: Set custom player speed \n"
             << "F4: Toggle player mass mod \n"
@@ -122,10 +123,10 @@ static DWORD MainThread(HMODULE Module)
     {
         class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(PlayerController->Pawn);
 
-        if (GetAsyncKeyState(VK_F1) & 1)
+        if ((GetAsyncKeyState(VK_F1) & 1) || (GetAsyncKeyState(VK_NUMPAD1) & 1))
             ItemSpawner.AskForItemAndSpawn();
 
-        if (GetAsyncKeyState(VK_F5) & 1)
+        if ((GetAsyncKeyState(VK_F5) & 1) || (GetAsyncKeyState(VK_NUMPAD5) & 1))
             PostProcessCreatedVolume->bUnbound = ~PostProcessCreatedVolume->bUnbound;
 
         if (IsMouseMoving())
@@ -140,7 +141,7 @@ static DWORD MainThread(HMODULE Module)
             Sleep(200);
         }
 
-        if (GetAsyncKeyState(VK_F3) & 1)
+        if ((GetAsyncKeyState(VK_F3) & 1) || (GetAsyncKeyState(VK_NUMPAD3) & 1))
         {
             std::cout << "Enter new speed: ";
             std::cin >> CurrentPawn->Running_Speed_Rate;
@@ -148,13 +149,13 @@ static DWORD MainThread(HMODULE Module)
             CurrentPawn->CharacterMovement->bCheatFlying = 1;
         }
 
-        if (GetAsyncKeyState(VK_F4) & 1)
+        if ((GetAsyncKeyState(VK_F4) & 1) || (GetAsyncKeyState(VK_NUMPAD4) & 1))
         {
             if (!IsMassReduced) {
                 OriginalPelvisMass = CurrentPawn->Default_Pelvis_Mass;
                 OriginalRWeaponMass = CurrentPawn->R_Weapon_Mass;
                 OriginalLWeaponMass = CurrentPawn->L_Weapon_Mass;
-                OriginalAimSwingSpeed = CurrentPawn->Aim_Swing_Speed;
+                OriginalAimSwingSpeed = static_cast<float>(CurrentPawn->Aim_Swing_Speed);
                 OriginalSpine05Mass = CurrentPawn->Default_Spine_05_Mass;
 
                 CurrentPawn->Default_Pelvis_Mass = 0;
