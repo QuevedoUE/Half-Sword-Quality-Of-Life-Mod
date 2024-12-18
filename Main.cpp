@@ -1,5 +1,4 @@
 #include <Windows.h>
-#include <iostream>
 #include "pch.h"
 #include "ItemSpawner.h"
 #include <thread>
