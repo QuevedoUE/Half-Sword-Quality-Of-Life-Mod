@@ -99,7 +99,7 @@ enum class EXRTrackedDeviceType : uint8
 	Other                                    = 4,
 	Invalid                                  = 254,
 	Any                                      = 255,
-	EXRTrackedDeviceType_MAX                 = 256,
+	EXRTrackedDeviceType_MAX                 = 255,
 };
 
 // Enum HeadMountedDisplay.EHandKeypoint
