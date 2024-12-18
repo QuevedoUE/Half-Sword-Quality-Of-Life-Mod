@@ -22,7 +22,7 @@ enum class EDynamicMeshComponentTangentsMode : uint8
 	AutoCalculated                           = 1,
 	ExternallyProvided                       = 2,
 	Default                                  = 255,
-	EDynamicMeshComponentTangentsMode_MAX    = 256,
+	EDynamicMeshComponentTangentsMode_MAX    = 255,
 };
 
 // Enum GeometryFramework.EDynamicMeshComponentColorOverrideMode

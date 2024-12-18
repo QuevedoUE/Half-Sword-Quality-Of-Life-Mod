@@ -40,7 +40,7 @@ enum class ERigElementType : uint8
 	Last                                     = 128,
 	All                                      = 255,
 	ToResetAfterConstructionEvent            = 141,
-	ERigElementType_MAX                      = 256,
+	ERigElementType_MAX                      = 255,
 };
 
 // Enum ControlRig.ERigHierarchyNotification
