@@ -86,7 +86,8 @@ static DWORD MainThread(HMODULE Module)
      \___\_\__,_/\__,_/_/_/\__/\__, /   \____/_/    /_____/_/_/  \___/ 
                               /____/                                   
                )"
-            << "\n\nPost Process Created and Settings Applied!\n\n" << std::endl;
+            << "\n\nPost Process Created and Settings Applied!\n"
+            << "You can press CTRL + <KEY> to configure parameters of an action.\n\n" << std::endl;
     }
 
     GameInstances::Initialize(PostProcessVolume);
@@ -96,7 +97,6 @@ static DWORD MainThread(HMODULE Module)
     keyHandler->LoadKeyBindings();
 
     auto bindings = keyHandler->GetKeyBindings();
-    std::cout << "You can press CTRL + <KEY> to configure parameters of an action.\n";
     std::cout << "Key bindings:\n";
     for (const auto& [key, actionId] : bindings)
     {
