@@ -273,7 +273,7 @@ KeyHandler::KeyHandler()
     RegisterKey({ Actions::SAVE_LOADOUT, 0x47 }); // G
     RegisterKey({ Actions::TOGGLE_CUSTOM_GAME_SPEED, 0x5A }); // Z
     RegisterKey({ Actions::UNLOAD_DLL, VK_END });
-    RegisterKey({ Actions::REASSIGN_KEY, VK_HOME });
+    RegisterKey({ Actions::CHANGE_KEYBIND, VK_HOME });
 
     RegisterKeyCombination({ Actions::SET_CUSTOM_GAME_SPEED, {VK_CONTROL, 0x5A} }); // Ctrl + Z
 }

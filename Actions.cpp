@@ -21,7 +21,7 @@ std::unordered_map<Actions::ActionID, Actions::ActionInfo> Actions::actions = {
     { TOGGLE_CUSTOM_GAME_SPEED, { "Toggle Custom Game Speed", ToggleCustomGameSpeed } },
     { SET_CUSTOM_GAME_SPEED,    { "Set Custom Game Speed", SetCustomGameSpeed } },
     { UNLOAD_DLL,               { "Unload DLL", UnloadDLL } },
-    { REASSIGN_KEY,             { "Reassign Key", ShowKeyReassignmentMenu } }
+    { CHANGE_KEYBIND,           { "Change Keybind", ShowKeyReassignmentMenu } }
 };
 
 void Actions::Initialize(HMODULE& Module)

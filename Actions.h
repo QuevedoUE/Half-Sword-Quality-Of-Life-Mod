@@ -39,7 +39,7 @@ public:
         TOGGLE_CUSTOM_GAME_SPEED,
         SET_CUSTOM_GAME_SPEED,
         UNLOAD_DLL,
-        REASSIGN_KEY
+        CHANGE_KEYBIND
     };
 
     struct ActionInfo {
