@@ -96,6 +96,7 @@ static DWORD MainThread(HMODULE Module)
     keyHandler->LoadKeyBindings();
 
     auto bindings = keyHandler->GetKeyBindings();
+    std::cout << "You can press CTRL + <KEY> to configure parameters of an action.\n";
     std::cout << "Key bindings:\n";
     for (const auto& [key, actionId] : bindings)
     {
