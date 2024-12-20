@@ -4,7 +4,7 @@
 
 #undef max
 
-static const std::unordered_map<int, SDK::TSubclassOf<SDK::AActor>> ItemMap = {
+const std::unordered_map<int, SDK::TSubclassOf<SDK::AActor>> ItemSpawner::ItemMap = {
         { 1, SDK::ABP_Armor_Arms_Chains_T1_C::StaticClass() },
         { 2, SDK::ABP_Armor_Arms_Chains_T2_C::StaticClass() },
         { 3, SDK::ABP_Armor_Arms_Vambrace_A_T2_C::StaticClass() },
