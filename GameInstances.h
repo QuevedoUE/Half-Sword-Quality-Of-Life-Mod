@@ -2,6 +2,8 @@
 
 #include "SDK.hpp"
 
+using namespace SDK;
+
 class GameInstances
 {
 public:

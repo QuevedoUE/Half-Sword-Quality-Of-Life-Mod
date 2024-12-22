@@ -1,33 +1,33 @@
 #include "GameInstances.h"
 
-SDK::APostProcessVolume* GameInstances::PostProcessVolume = nullptr;
+APostProcessVolume* GameInstances::PostProcessVolume = nullptr;
 
-void GameInstances::Initialize(SDK::APostProcessVolume* PPVolume)
+void GameInstances::Initialize(APostProcessVolume* PPVolume)
 {
     PostProcessVolume = PPVolume;
 }
 
-SDK::UWorld* GameInstances::GetWorld()
+UWorld* GameInstances::GetWorld()
 {
-    return SDK::UWorld::GetWorld();
+    return UWorld::GetWorld();
 }
 
-SDK::APlayerController* GameInstances::GetPlayerController()
+APlayerController* GameInstances::GetPlayerController()
 {
     return GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController;
 }
 
-SDK::AWorldSettings* GameInstances::GetWorldSettings()
+AWorldSettings* GameInstances::GetWorldSettings()
 {
     return GetWorld()->K2_GetWorldSettings();
 }
 
-SDK::AWillie_BP_C* GameInstances::GetPawn()
+AWillie_BP_C* GameInstances::GetPawn()
 {
-    return static_cast<SDK::AWillie_BP_C*>(GetPlayerController()->Pawn);
+    return static_cast<AWillie_BP_C*>(GetPlayerController()->Pawn);
 }
 
-SDK::APostProcessVolume* GameInstances::GetPostProcessVolume()
+APostProcessVolume* GameInstances::GetPostProcessVolume()
 {
     return PostProcessVolume;
 }
