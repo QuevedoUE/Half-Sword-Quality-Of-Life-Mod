@@ -3,9 +3,9 @@
 #undef max
 
 KeyHandler* KeyHandler::Instance = nullptr;
-std::map<int, std::vector<KeyHandler::KeyHandlerFunc>> KeyHandler::Keys;
-std::vector<KeyHandler::KeyBinding> KeyHandler::keyBindings;
-std::vector<KeyHandler::KeyCombination> KeyHandler::keyCombinations;
+map<int, vector<KeyHandler::KeyHandlerFunc>> KeyHandler::Keys;
+vector<KeyHandler::KeyBinding> KeyHandler::keyBindings;
+vector<KeyHandler::KeyCombination> KeyHandler::keyCombinations;
 
 KeyHandler* KeyHandler::GetInstance()
 {
@@ -16,20 +16,21 @@ KeyHandler* KeyHandler::GetInstance()
 
 void KeyHandler::RegisterKey(const KeyBinding& binding)
 {
-    std::function<void()> action = Actions::GetActionById(binding.actionId);
+    function<void()> action = Actions::GetActionById(binding.actionId);
     Keys[binding.key].push_back(action);
     keyBindings.push_back(binding);
 }
 
 void KeyHandler::RegisterKeyCombination(const KeyCombination& combination)
 {
-    std::function<void()> action = Actions::GetActionById(combination.actionId);
+    function<void()> action = Actions::GetActionById(combination.actionId);
     keyCombinations.push_back(combination);
     keyCombinations.back().action = action;
 }
 
 void KeyHandler::HandleKeys()
 {
+    static set<int> pressedKeys;
     for (const auto& combination : keyCombinations)
     {
         bool allKeysPressed = true;
@@ -52,18 +53,26 @@ void KeyHandler::HandleKeys()
     {
         if (GetAsyncKeyState(key) & 0x8000)
         {
-            for (const auto& handler : handlers)
+            if (pressedKeys.find(key) == pressedKeys.end())
             {
-                handler();
+                for (const auto& handler : handlers)
+                {
+                    handler();
+                }
+                pressedKeys.insert(key);
             }
+        }
+        else
+        {
+            pressedKeys.erase(key);
         }
     }
 }
 
 void KeyHandler::LoadKeyBindings()
 {
-    std::filesystem::create_directories("HS-QOL-Mod");
-    std::ifstream file("HS-QOL-Mod/keybindings.txt");
+    filesystem::create_directories("HS-QOL-Mod");
+    ifstream file("HS-QOL-Mod/keybindings.txt");
     if (!file.is_open())
         return;
 
@@ -71,11 +80,11 @@ void KeyHandler::LoadKeyBindings()
     Keys.clear();
     keyCombinations.clear();
 
-    std::string line;
-    while (std::getline(file, line))
+    string line;
+    while (getline(file, line))
     {
-        std::istringstream iss(line);
-        std::string type;
+        istringstream iss(line);
+        string type;
         iss >> type;
 
         if (type == "key")
@@ -90,7 +99,7 @@ void KeyHandler::LoadKeyBindings()
         {
             int actionId;
             iss >> actionId;
-            std::vector<int> keys;
+            vector<int> keys;
             int key;
             while (iss >> key)
             {
@@ -106,13 +115,13 @@ void KeyHandler::LoadKeyBindings()
 
 void KeyHandler::SaveKeyBindings()
 {
-    std::ofstream file("HS-QOL-Mod/keybindings.txt");
+    ofstream file("HS-QOL-Mod/keybindings.txt");
     if (!file.is_open())
         return;
 
     for (const auto& binding : keyBindings)
     {
-        file << "key " << binding.key << " " << static_cast<int>(binding.actionId) << std::endl;
+        file << "key " << binding.key << " " << static_cast<int>(binding.actionId) << endl;
     }
 
     for (const auto& combination : keyCombinations)
@@ -122,7 +131,7 @@ void KeyHandler::SaveKeyBindings()
         {
             file << " " << key;
         }
-        file << std::endl;
+        file << endl;
     }
 
     file.close();
@@ -130,8 +139,8 @@ void KeyHandler::SaveKeyBindings()
 
 void KeyHandler::ReassignKey(KeyBinding& binding)
 {
-    std::cout << "Press the new key for " << Actions::GetActionName(binding.actionId);
-    std::function<void()> action = Actions::GetActionById(binding.actionId);
+    cout << "Press the new key for " << Actions::GetActionName(binding.actionId);
+    function<void()> action = Actions::GetActionById(binding.actionId);
 
     while (true)
     {
@@ -148,7 +157,7 @@ void KeyHandler::ReassignKey(KeyBinding& binding)
         {
             break;
         }
-        Sleep(50);
+        Sleep(1000 / 30);
     }
 
     bool keyCaptured = false;
@@ -162,11 +171,11 @@ void KeyHandler::ReassignKey(KeyBinding& binding)
 
                 while (GetAsyncKeyState(vkCode) & 0x8000)
                 {
-                    Sleep(50);
+                    Sleep(1000 / 30);
                 }
 
                 auto& handlers = Keys[binding.key];
-                handlers.erase(std::remove_if(handlers.begin(), handlers.end(),
+                handlers.erase(remove_if(handlers.begin(), handlers.end(),
                     [&binding, &action](const KeyHandlerFunc& func) {
                         return func.target<void()>() == action.target<void()>();
                     }), handlers.end());
@@ -182,40 +191,40 @@ void KeyHandler::ReassignKey(KeyBinding& binding)
 
                 UpdateKeyCombinations(oldKey, vkCode);
 
-                std::cout << "\n" << Actions::GetActionName(binding.actionId) << " successfully reassigned to " << GetKeyName(vkCode) << std::endl;
+                cout << "\n" << Actions::GetActionName(binding.actionId) << " successfully reassigned to " << GetKeyName(vkCode) << endl;
                 SaveKeyBindings();
                 keyCaptured = true;
                 break;
             }
         }
-        Sleep(50);
+        Sleep(1000 / 30);
     }
 }
 
 void KeyHandler::ShowKeyReassignmentMenu()
 {
-    std::cout << "\nKey Reassign Menu:\n";
+    cout << "\nKey Reassign Menu:\n";
     for (size_t i = 0; i < keyBindings.size(); ++i)
     {
-        std::cout << i + 1 << ". " << Actions::GetActionName(keyBindings[i].actionId) << " \n";
+        cout << i + 1 << ". " << Actions::GetActionName(keyBindings[i].actionId) << " \n";
     }
-    std::cout << "\nSelect an option to reassign: ";
+    cout << "\nSelect an option to reassign: ";
 
     int option;
-    while (!(std::cin >> option) || option <= 0 || option > keyBindings.size())
+    while (!(cin >> option) || option <= 0 || option > keyBindings.size())
     {
-        std::cout << "Invalid option. Try again.\n";
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Select an option: ";
+        cout << "Invalid option. Try again.\n";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Select an option: ";
     }
 
     ReassignKey(keyBindings[option - 1]);
 }
 
-std::vector<std::pair<int, Actions::ActionID>> KeyHandler::GetKeyBindings()
+vector<pair<int, Actions::ActionID>> KeyHandler::GetKeyBindings()
 {
-    std::vector<std::pair<int, Actions::ActionID>> bindings;
+    vector<pair<int, Actions::ActionID>> bindings;
     for (const auto& binding : keyBindings)
     {
         bindings.emplace_back(binding.key, binding.actionId);
@@ -223,9 +232,9 @@ std::vector<std::pair<int, Actions::ActionID>> KeyHandler::GetKeyBindings()
     return bindings;
 }
 
-std::string KeyHandler::GetKeyName(int vkCode)
+string KeyHandler::GetKeyName(int vkCode)
 {
-    static std::unordered_map<int, std::string> specialKeys = {
+    static const unordered_map<int, string> specialKeys = {
         {VK_HOME, "Home"}, {VK_END, "End"}, {VK_INSERT, "Insert"}, {VK_DELETE, "Delete"},
         {VK_PRIOR, "Page Up"}, {VK_NEXT, "Page Down"}, {VK_UP, "Up Arrow"}, {VK_DOWN, "Down Arrow"},
         {VK_LEFT, "Left Arrow"}, {VK_RIGHT, "Right Arrow"}, {VK_SPACE, "Space"}, {VK_RETURN, "Enter"},
@@ -244,7 +253,7 @@ std::string KeyHandler::GetKeyName(int vkCode)
     char keyName[128];
     if (GetKeyNameTextA(scanCode << 16, keyName, sizeof(keyName)) > 0)
     {
-        return std::string(keyName);
+        return string(keyName);
     }
     return "Unknown Key";
 }
@@ -256,9 +265,7 @@ void KeyHandler::UpdateKeyCombinations(int oldKey, int newKey)
         for (auto& key : combination.keys)
         {
             if (key == oldKey)
-            {
                 key = newKey;
-            }
         }
     }
 }
@@ -270,7 +277,7 @@ KeyHandler::KeyHandler()
     RegisterKey({ Actions::TOGGLE_MASS, VK_F4 });
     RegisterKey({ Actions::TOGGLE_POST_PROCESS, VK_F5 });
     RegisterKey({ Actions::TOGGLE_INFINITE_STAMINA, 0x49 }); // I
-    RegisterKey({ Actions::SAVE_LOADOUT, 0x47 }); // G
+    RegisterKey({ Actions::SAVE_LOADOUT, 0x54 }); // T
     RegisterKey({ Actions::TOGGLE_CUSTOM_GAME_SPEED, 0x5A }); // Z
     RegisterKey({ Actions::UNLOAD_DLL, VK_END });
     RegisterKey({ Actions::CHANGE_KEYBIND, VK_HOME });
