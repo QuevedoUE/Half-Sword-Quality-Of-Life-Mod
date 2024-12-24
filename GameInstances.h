@@ -7,14 +7,13 @@ using namespace SDK;
 class GameInstances
 {
 public:
-    static void Initialize(SDK::APostProcessVolume* PPVolume);
+    static APostProcessVolume* PostProcessVolume;
 
-    static SDK::UWorld* GetWorld();
-    static SDK::APlayerController* GetPlayerController();
-    static SDK::AWorldSettings* GetWorldSettings();
-    static SDK::AWillie_BP_C* GetPawn();
-    static SDK::APostProcessVolume* GetPostProcessVolume();
+    static void Initialize(APostProcessVolume* PPVolume) { PostProcessVolume = PPVolume; }
 
-private:
-    static SDK::APostProcessVolume* PostProcessVolume;
+    static UWorld* GetWorld()                          { return UWorld::GetWorld(); }
+    static APlayerController* GetPlayerController()    { return GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController; }
+    static AWorldSettings* GetWorldSettings()          { return GetWorld()->K2_GetWorldSettings(); }
+    static AWillie_BP_C* GetPawn()                     { return static_cast<AWillie_BP_C*>(GetPlayerController()->Pawn); }
+    static APostProcessVolume* GetPostProcessVolume()  { return PostProcessVolume; }
 };
