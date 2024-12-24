@@ -7,8 +7,6 @@ using namespace SDK;
 class GameInstances
 {
 public:
-    static APostProcessVolume* PostProcessVolume;
-
     static void Initialize(APostProcessVolume* PPVolume) { PostProcessVolume = PPVolume; }
 
     static UWorld* GetWorld()                          { return UWorld::GetWorld(); }
@@ -16,4 +14,6 @@ public:
     static AWorldSettings* GetWorldSettings()          { return GetWorld()->K2_GetWorldSettings(); }
     static AWillie_BP_C* GetPawn()                     { return static_cast<AWillie_BP_C*>(GetPlayerController()->Pawn); }
     static APostProcessVolume* GetPostProcessVolume()  { return PostProcessVolume; }
+private:
+    static APostProcessVolume* PostProcessVolume;
 };
