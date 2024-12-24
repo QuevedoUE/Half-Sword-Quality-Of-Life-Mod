@@ -1,7 +1,10 @@
 #include "ItemSpawner.h"
+#include "GameInstances.h"
 #include <iostream>
 
-static const std::unordered_map<int, SDK::TSubclassOf<SDK::AActor>> ItemMap = {
+#undef max
+
+const std::unordered_map<int, SDK::TSubclassOf<SDK::AActor>> ItemSpawner::ItemMap = {
         { 1, SDK::ABP_Armor_Arms_Chains_T1_C::StaticClass() },
         { 2, SDK::ABP_Armor_Arms_Chains_T2_C::StaticClass() },
         { 3, SDK::ABP_Armor_Arms_Vambrace_A_T2_C::StaticClass() },
@@ -186,23 +189,18 @@ SDK::AActor* ItemSpawner::SpawnActorFromClass(class SDK::UObject* WorldContextOb
     return SDK::UGameplayStatics::FinishSpawningActor(Spawned, SpawnTransform, SDK::ESpawnActorScaleMethod::SelectDefaultAtRuntime);
 }
 
-void ItemSpawner::AskForItemAndSpawn() {
+void ItemSpawner::AskForItemAndSpawn(SDK::UWorld* World, SDK::AWillie_BP_C* CurrentPawn)
+{
     int ItemID;
 
     std::cout << "Enter Item ID (1-167): ";
     while (!(std::cin >> ItemID) || ItemMap.find(ItemID) == ItemMap.end()) {
         std::cin.clear();
-        #undef max
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cout << "Invalid input. Please enter a valid Item ID (1-167): ";
     }
 
-    SDK::UWorld* World = SDK::UWorld::GetWorld();
-    SDK::APlayerController* PlayerController = World->OwningGameInstance->LocalPlayers[0]->PlayerController;
-    class SDK::AWillie_BP_C* CurrentPawn = static_cast<SDK::AWillie_BP_C*>(PlayerController->Pawn);
-
     SDK::FTransform CurrentPlayerTransform = CurrentPawn->GetTransform();
     CurrentPlayerTransform.Translation += CurrentPawn->GetActorForwardVector() * 40;
-
     SpawnActorFromClass(World, ItemMap.at(ItemID), CurrentPlayerTransform, nullptr);
 }
