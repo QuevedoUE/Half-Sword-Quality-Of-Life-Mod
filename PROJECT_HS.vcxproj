@@ -170,7 +170,6 @@
     <ClInclude Include="SDK\Engine_structs.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameInstances.cpp" />
     <ClCompile Include="ItemSpawner.cpp" />
     <ClCompile Include="KeyHandler.cpp" />
     <ClCompile Include="Main.cpp" />
