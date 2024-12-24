@@ -3,6 +3,7 @@
 #include "GameInstances.h"
 #include "ItemSpawner.h"
 #include "SDK.hpp"
+#include "MinHook.h"
 #include <iostream>
 
 class Actions {
