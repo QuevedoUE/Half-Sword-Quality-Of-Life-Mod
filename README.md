@@ -17,4 +17,5 @@ If you inject it in the menu and doesn't crash, the camera will have a better po
 JOIN OUR DISCORD!
 * https://discord.gg/EJT9jqqy3M
 
+
 -Froid
