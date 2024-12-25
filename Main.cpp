@@ -134,7 +134,7 @@ static DWORD MainThread(HMODULE Module)
     {
         keyHandler->HandleKeys();
 
-        Sleep(1000 / 30); //30 FPS
+        Sleep(1000 / 30); // 30 FPS
     }
     return 0;
 }
