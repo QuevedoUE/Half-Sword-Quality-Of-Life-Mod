@@ -170,7 +170,14 @@ const std::unordered_map<int, SDK::TSubclassOf<SDK::AActor>> ItemSpawner::ItemMa
         { 164, SDK::AModularWeaponBP_Spear_A_C::StaticClass() },
         { 165, SDK::AModularWeaponBP_Spear_B_C::StaticClass() },
         { 166, SDK::AModularWeaponBP_WarStaff_A_C::StaticClass() },
-        { 167, SDK::AModularWeaponBP_WarStaff_B_C::StaticClass() }
+        { 167, SDK::AModularWeaponBP_WarStaff_B_C::StaticClass() },
+        { 168, SDK::AShield_BossGrip_C::StaticClass() },
+        { 169, SDK::AShield_Buckler_C::StaticClass() },
+        { 170, SDK::AShield_Pavise_Heavy_C::StaticClass() },
+        { 171, SDK::AShield_Pavise_Light_C::StaticClass() },
+        { 172, SDK::AShield_Pavise_Tower_C::StaticClass() },
+        { 173, SDK::AShield_Tagre_C::StaticClass() },
+
 };
 
 SDK::AActor* ItemSpawner::SpawnActorFromClass(class SDK::UObject* WorldContextObject,
@@ -192,11 +199,11 @@ void ItemSpawner::AskForItemAndSpawn(SDK::UWorld* World, SDK::AWillie_BP_C* Curr
 {
     int ItemID;
 
-    std::cout << "Enter Item ID (1-167): ";
+    std::cout << "Enter Item ID (1-173): ";
     while (!(std::cin >> ItemID) || ItemMap.find(ItemID) == ItemMap.end()) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Invalid input. Please enter a valid Item ID (1-167): ";
+        std::cout << "Invalid input. Please enter a valid Item ID (1-173): ";
     }
 
     SDK::FTransform CurrentPlayerTransform = CurrentPawn->GetTransform();
