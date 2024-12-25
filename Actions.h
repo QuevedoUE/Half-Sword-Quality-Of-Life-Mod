@@ -8,7 +8,6 @@
 
 class Actions {
 public:
-    static void Initialize(HMODULE& Module);
     static void SpawnItem();
     static void SetPlayerSpeed();
     static void ToggleMass();
@@ -28,7 +27,6 @@ public:
     static float OriginalLWeaponMass;
     static float OriginalSpine05Mass;
     static float OriginalAimSwingSpeed;
-    static HMODULE Module;
 
     enum ActionID {
         SPAWN_ITEM,
