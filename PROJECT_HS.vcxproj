@@ -160,6 +160,7 @@
   <ItemGroup>
     <ClInclude Include="Actions.h" />
     <ClInclude Include="GameInstances.h" />
+    <ClInclude Include="Hooks.h" />
     <ClInclude Include="ItemSpawner.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="KeyHandler.h" />
@@ -176,11 +177,8 @@
     <ClInclude Include="SDK\Engine_structs.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameInstances.cpp" />
-    <ClCompile Include="ItemSpawner.cpp" />
-    <ClCompile Include="KeyHandler.cpp" />
-    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Actions.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="SDK\Basic.cpp" />
     <ClCompile Include="SDK\CoreUObject_functions.cpp" />
     <ClCompile Include="SDK\EngineSettings_functions.cpp" />

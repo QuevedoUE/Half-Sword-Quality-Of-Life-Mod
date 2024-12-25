@@ -66,6 +66,9 @@
     <ClInclude Include="GameInstances.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Hooks.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -89,16 +92,7 @@
     <ClCompile Include="SDK\EngineSettings_functions.cpp">
       <Filter>MoreFiles</Filter>
     </ClCompile>
-    <ClCompile Include="ItemSpawner.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="Actions.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyHandler.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="GameInstances.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
