@@ -109,7 +109,7 @@ void Actions::TogglePostProcess()
 {
     SDK::APostProcessVolume* PPVolume = GameInstances::GetPostProcessVolume();
     PPVolume->bUnbound = ~PPVolume->bUnbound;
-    std::cout << "Post process is now " << (PPVolume->bUnbound ? "enabled" : "disabled") << std::endl;
+    std::cout << "Post process effects are now " << (PPVolume->bUnbound ? "enabled" : "disabled") << std::endl;
 }
 
 void Actions::ToggleInfiniteStamina()
