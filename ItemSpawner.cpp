@@ -1,5 +1,4 @@
 #include "ItemSpawner.h"
-#include <iostream>
 
 #undef max
 
