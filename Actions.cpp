@@ -120,7 +120,12 @@ void Actions::ToggleInfiniteStamina()
 
 void Actions::SaveLoadout()
 {
+    if (GameInstances::GetPlayerController()->bShowMouseCursor) {
+        std::cout << "You must be in-game to save your loadout" << std::endl;
+        return;
+    }
     GameInstances::GetPawn()->Save_Loadout();
+    std::cout << "Loadout saved successfully" << std::endl;
 }
 
 void Actions::ToggleCustomGameSpeed()
