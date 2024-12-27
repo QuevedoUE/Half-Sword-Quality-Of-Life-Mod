@@ -8,18 +8,6 @@
 
 class Actions {
 public:
-    static void SpawnItem();
-    static void SetPlayerSpeed();
-    static void ToggleMass();
-    static void TogglePostProcess();
-    static void ToggleInfiniteStamina();
-    static void SaveLoadout();
-    static void ToggleCustomGameSpeed();
-    static void SetCustomGameSpeed();
-    static void UnloadDLL();
-    static void ShowKeyReassignmentMenu();
-    static void SetUITest();
-
     static float CustomGameSpeed;
     static bool bInfiniteStaminaEnabled;
     static bool bMassReduced;
@@ -39,8 +27,7 @@ public:
         TOGGLE_CUSTOM_GAME_SPEED,
         SET_CUSTOM_GAME_SPEED,
         UNLOAD_DLL,
-        CHANGE_KEYBIND,
-        SetUI
+        CHANGE_KEYBIND
     };
 
     struct ActionInfo {
@@ -51,6 +38,17 @@ public:
     static std::function<void()> GetActionById(ActionID id);
     static std::string GetActionName(ActionID id);
 
+    inline static void SpawnItem();
+    inline static void SetPlayerSpeed();
+    inline static void ToggleMass();
+    inline static void TogglePostProcess();
+    inline static void ToggleInfiniteStamina();
+    inline static void SaveLoadout();
+    inline static void ToggleCustomGameSpeed();
+    inline static void SetCustomGameSpeed();
+    inline static void UnloadDLL();
+    inline static void ShowKeyReassignmentMenu();
+
 private:
-    static std::unordered_map<ActionID, ActionInfo> actions;
+    const static std::unordered_map<ActionID, ActionInfo> actions;
 };
