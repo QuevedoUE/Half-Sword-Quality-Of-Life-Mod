@@ -1,5 +1,6 @@
 #include "Actions.h"
 #include "KeyHandler.h"
+#include "SDK.hpp"
 
 float Actions::CustomGameSpeed = 0.4f;
 bool Actions::bInfiniteStaminaEnabled = false;
@@ -20,7 +21,8 @@ std::unordered_map<Actions::ActionID, Actions::ActionInfo> Actions::actions = {
     { TOGGLE_CUSTOM_GAME_SPEED, { "Toggle Custom Game Speed", ToggleCustomGameSpeed } },
     { SET_CUSTOM_GAME_SPEED,    { "Set Custom Game Speed", SetCustomGameSpeed } },
     { UNLOAD_DLL,               { "Unload DLL", UnloadDLL } },
-    { CHANGE_KEYBIND,           { "Change Keybindings", ShowKeyReassignmentMenu } }
+    { CHANGE_KEYBIND,           { "Change Keybindings", ShowKeyReassignmentMenu } },
+    {SetUI,                     {"SetUI",  SetUITest}},
 };
 
 void Actions::UnloadDLL()
@@ -57,6 +59,11 @@ std::string Actions::GetActionName(ActionID id)
 void Actions::ShowKeyReassignmentMenu()
 {
     KeyHandler::GetInstance()->ShowKeyReassignmentMenu();
+}
+
+void Actions::SetUITest() {
+
+
 }
 
 void Actions::SpawnItem()

@@ -18,6 +18,7 @@ public:
     static void SetCustomGameSpeed();
     static void UnloadDLL();
     static void ShowKeyReassignmentMenu();
+    static void SetUITest();
 
     static float CustomGameSpeed;
     static bool bInfiniteStaminaEnabled;
@@ -38,7 +39,8 @@ public:
         TOGGLE_CUSTOM_GAME_SPEED,
         SET_CUSTOM_GAME_SPEED,
         UNLOAD_DLL,
-        CHANGE_KEYBIND
+        CHANGE_KEYBIND,
+        SetUI
     };
 
     struct ActionInfo {
