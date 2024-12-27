@@ -1,5 +1,6 @@
 #include "Actions.h"
 #include "KeyHandler.h"
+#include "SDK.hpp"
 
 float Actions::CustomGameSpeed = 0.4f;
 bool Actions::bInfiniteStaminaEnabled = false;
@@ -10,7 +11,7 @@ float Actions::OriginalLWeaponMass = 0.0f;
 float Actions::OriginalSpine05Mass = 0.0f;
 float Actions::OriginalAimSwingSpeed = 0.0f;
 
-const std::unordered_map<Actions::ActionID, Actions::ActionInfo> Actions::actions = {
+std::unordered_map<Actions::ActionID, Actions::ActionInfo> Actions::actions = {
     { SPAWN_ITEM,               { "Spawn Item", SpawnItem } },
     { SET_PLAYER_SPEED,         { "Set Player Speed", SetPlayerSpeed } },
     { TOGGLE_MASS,              { "Toggle Reduced Mass", ToggleMass } },
@@ -20,10 +21,11 @@ const std::unordered_map<Actions::ActionID, Actions::ActionInfo> Actions::action
     { TOGGLE_CUSTOM_GAME_SPEED, { "Toggle Custom Game Speed", ToggleCustomGameSpeed } },
     { SET_CUSTOM_GAME_SPEED,    { "Set Custom Game Speed", SetCustomGameSpeed } },
     { UNLOAD_DLL,               { "Unload DLL", UnloadDLL } },
-    { CHANGE_KEYBIND,           { "Change Keybindings", ShowKeyReassignmentMenu } }
+    { CHANGE_KEYBIND,           { "Change Keybindings", ShowKeyReassignmentMenu } },
+    {SetUI,                     {"SetUI",  SetUITest}},
 };
 
-inline void Actions::UnloadDLL()
+void Actions::UnloadDLL()
 {
     MH_DisableHook(MH_ALL_HOOKS);
     MH_RemoveHook(MH_ALL_HOOKS);
@@ -54,17 +56,22 @@ std::string Actions::GetActionName(ActionID id)
     return "Unknown Action";
 }
 
-inline void Actions::ShowKeyReassignmentMenu()
+void Actions::ShowKeyReassignmentMenu()
 {
     KeyHandler::GetInstance()->ShowKeyReassignmentMenu();
 }
 
-inline void Actions::SpawnItem()
+void Actions::SetUITest() {
+
+
+}
+
+void Actions::SpawnItem()
 {
     ItemSpawner::AskForItemAndSpawn(GameInstances::GetWorld(), GameInstances::GetPawn());
 }
 
-inline void Actions::SetPlayerSpeed()
+void Actions::SetPlayerSpeed()
 {
     SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
     CurrentPawn->CharacterMovement->MaxWalkSpeed = 9999999;
@@ -75,7 +82,7 @@ inline void Actions::SetPlayerSpeed()
     std::cout << "Player speed set to " << CurrentPawn->Running_Speed_Rate << std::endl;
 }
 
-inline void Actions::ToggleMass()
+void Actions::ToggleMass()
 {
     SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
     if (!bMassReduced) {
@@ -105,20 +112,20 @@ inline void Actions::ToggleMass()
     std::cout << "Mass modifications are now " << (bMassReduced ? "reduced" : "normal") << std::endl;
 }
 
-inline void Actions::TogglePostProcess()
+void Actions::TogglePostProcess()
 {
     SDK::APostProcessVolume* PPVolume = GameInstances::GetPostProcessVolume();
     PPVolume->bUnbound = ~PPVolume->bUnbound;
     std::cout << "Post process effects are now " << (PPVolume->bUnbound ? "enabled" : "disabled") << std::endl;
 }
 
-inline void Actions::ToggleInfiniteStamina()
+void Actions::ToggleInfiniteStamina()
 {
     bInfiniteStaminaEnabled = !bInfiniteStaminaEnabled;
     std::cout << "Infinite stamina is now " << (bInfiniteStaminaEnabled ? "enabled" : "disabled") << std::endl;
 }
 
-inline void Actions::SaveLoadout()
+void Actions::SaveLoadout()
 {
     if (GameInstances::GetPlayerController()->bShowMouseCursor) {
         std::cout << "You must be in-game to save your loadout" << std::endl;
@@ -128,7 +135,7 @@ inline void Actions::SaveLoadout()
     std::cout << "Loadout saved successfully" << std::endl;
 }
 
-inline void Actions::ToggleCustomGameSpeed()
+void Actions::ToggleCustomGameSpeed()
 {
     SDK::AWorldSettings* WorldSettings = GameInstances::GetWorldSettings();
     WorldSettings->TimeDilation == 1.0f ? WorldSettings->TimeDilation = CustomGameSpeed : WorldSettings->TimeDilation = 1.0f;
@@ -136,7 +143,7 @@ inline void Actions::ToggleCustomGameSpeed()
     Sleep(200);
 }
 
-inline void Actions::SetCustomGameSpeed()
+void Actions::SetCustomGameSpeed()
 {
     std::cout << "Enter new custom game speed (" << CustomGameSpeed << " currently): ";
     std::cin >> CustomGameSpeed;

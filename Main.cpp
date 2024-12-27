@@ -1,6 +1,44 @@
 #include "pch.h"
 #include "KeyHandler.h"
-#include "Hooks.h"
+#include "MinHook.h"
+
+typedef void(__thiscall* tProcessEvent)(SDK::UObject*, SDK::UFunction*, void*);
+tProcessEvent OriginalProcessEvent = nullptr;
+
+static void __fastcall HookedProcessEvent(SDK::UObject* Object, SDK::UFunction* Function, void* Params) {
+    // We gotta find a better way to handle this
+    if (Function->GetName() == "Camera Shake Timeline__UpdateFunc" && Actions::bInfiniteStaminaEnabled)
+        GameInstances::GetPawn()->Stamina = 100;
+    OriginalProcessEvent(Object, Function, Params);
+}
+
+static void InitializeHook() {
+    if (MH_Initialize() != MH_OK) {
+        std::cerr << "Error initializing MinHook" << std::endl;
+        return;
+    }
+
+    SDK::UObject* pObject = SDK::UObject::GObjects->GetByIndex(0);
+    if (!pObject) {
+        std::cerr << "Could not get an instance of UObject." << std::endl;
+        return;
+    }
+
+    uintptr_t* vtable = *reinterpret_cast<uintptr_t**>(pObject);
+    uintptr_t ProcessEventAddress = vtable[SDK::Offsets::ProcessEventIdx];
+
+    if (MH_CreateHook(reinterpret_cast<LPVOID>(ProcessEventAddress), reinterpret_cast<LPVOID>(&HookedProcessEvent), reinterpret_cast<LPVOID*>(&OriginalProcessEvent)) != MH_OK) {
+        std::cerr << "Error creating hook for ProcessEvent" << std::endl;
+        return;
+    }
+
+    if (MH_EnableHook(reinterpret_cast<LPVOID>(ProcessEventAddress)) != MH_OK) {
+        std::cerr << "Error enabling hook for ProcessEvent" << std::endl;
+        return;
+    }
+
+    std::cout << "Hooks initialized successfully!" << std::endl;
+}
 
 static DWORD MainThread(HMODULE Module)
 {
@@ -90,7 +128,7 @@ static DWORD MainThread(HMODULE Module)
     }
 
     std::cout << "\n";
-    Hooks::Init();
+    InitializeHook();
 
     while (true)
     {
