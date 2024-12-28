@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "KeyHandler.h"
 #include "MinHook.h"
+#include "KEI_PE_HOOK.hpp"
 
 typedef void(__thiscall* tProcessEvent)(SDK::UObject*, SDK::UFunction*, void*);
 tProcessEvent OriginalProcessEvent = nullptr;
@@ -133,6 +134,14 @@ static DWORD MainThread(HMODULE Module)
     while (true)
     {
         keyHandler->HandleKeys();
+        SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
+        
+
+        KPE_AddHook("Kick Event", {
+
+            std::cout << "Kick"
+            return true;
+            });
 
         Sleep(1000 / 20); // 30 FPS
     }

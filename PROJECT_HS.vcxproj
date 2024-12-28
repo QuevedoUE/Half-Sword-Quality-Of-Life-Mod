@@ -158,6 +158,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Downloads\KEI_PE_HOOK.hpp" />
     <ClInclude Include="Actions.h" />
     <ClInclude Include="GameInstances.h" />
     <ClInclude Include="ItemSpawner.h" />
