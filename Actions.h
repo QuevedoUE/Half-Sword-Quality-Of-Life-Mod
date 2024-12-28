@@ -18,7 +18,7 @@ public:
     static void SetCustomGameSpeed();
     static void UnloadDLL();
     static void ShowKeyReassignmentMenu();
-    static void SetUITest();
+    SDK::FVector SetWapeonScale();
 
     static float CustomGameSpeed;
     static bool bInfiniteStaminaEnabled;
@@ -28,6 +28,7 @@ public:
     static float OriginalLWeaponMass;
     static float OriginalSpine05Mass;
     static float OriginalAimSwingSpeed;
+    SDK::FVector ActualWapeonsScale;
 
     enum ActionID {
         SPAWN_ITEM,
@@ -40,7 +41,7 @@ public:
         SET_CUSTOM_GAME_SPEED,
         UNLOAD_DLL,
         CHANGE_KEYBIND,
-        SetUI
+        SetWapeon_Scale,
     };
 
     struct ActionInfo {
