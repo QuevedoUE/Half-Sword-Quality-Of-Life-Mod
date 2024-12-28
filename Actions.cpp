@@ -10,7 +10,7 @@ float Actions::OriginalRWeaponMass = 0.0f;
 float Actions::OriginalLWeaponMass = 0.0f;
 float Actions::OriginalSpine05Mass = 0.0f;
 float Actions::OriginalAimSwingSpeed = 0.0f;
-SDK::FVector Actions::ActualWapeonsScale = SDK::FVector(1, 1, 1);
+
 
 std::unordered_map<Actions::ActionID, Actions::ActionInfo> Actions::actions = {
     { SPAWN_ITEM,               { "Spawn Item", SpawnItem } },
@@ -23,7 +23,6 @@ std::unordered_map<Actions::ActionID, Actions::ActionInfo> Actions::actions = {
     { SET_CUSTOM_GAME_SPEED,    { "Set Custom Game Speed", SetCustomGameSpeed } },
     { UNLOAD_DLL,               { "Unload DLL", UnloadDLL } },
     { CHANGE_KEYBIND,           { "Change Keybindings", ShowKeyReassignmentMenu } },
-    { SetWapeon_Scale,           {"SetWapeonScale",  SetWapeon_Scale}}
 };
 
 void Actions::UnloadDLL()
@@ -62,12 +61,6 @@ void Actions::ShowKeyReassignmentMenu()
     KeyHandler::GetInstance()->ShowKeyReassignmentMenu();
 }
 
-SDK::FVector Actions::SetWapeonScale() {
-
-    std::cout << "Set New Wapeons Scales";
-
-
-}
 
 void Actions::SpawnItem()
 {

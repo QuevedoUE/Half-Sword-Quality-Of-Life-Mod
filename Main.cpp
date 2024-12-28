@@ -128,20 +128,19 @@ static DWORD MainThread(HMODULE Module)
         std::cout << keyHandler->GetKeyName(key) << " -> " << Actions::GetActionName(actionId) << "\n";
     }
 
+    SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
+    CurrentPawn = static_cast<SDK::AWillie_BP_C*>(GameInstances::GetPawn();)
+    KPE_AddHook("Kick Event", CurrentPawn, [](SDK::UObject* Object, SDK::UFunction* Function, void* Params) {
+        std::cout << "Kick" << std::endl;
+        return false; // Return false to skip the original function
+        });
+
     std::cout << "\n";
     InitializeHook();
 
     while (true)
     {
         keyHandler->HandleKeys();
-        SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
-        
-
-        KPE_AddHook("Kick Event", {
-
-            std::cout << "Kick"
-            return true;
-            });
 
         Sleep(1000 / 20); // 30 FPS
     }
