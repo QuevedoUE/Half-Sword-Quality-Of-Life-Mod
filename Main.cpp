@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "KeyHandler.h"
 #include "MinHook.h"
-#include "KEI_PE_HOOK.hpp"
 
 typedef void(__thiscall* tProcessEvent)(SDK::UObject*, SDK::UFunction*, void*);
 tProcessEvent OriginalProcessEvent = nullptr;
@@ -111,10 +110,14 @@ static DWORD MainThread(HMODULE Module)
       / / / / / / / __ `/ / / __/ / / /  / __ \/ /_   / /   / / /_/ _ \
      / /_/ / /_/ / /_/ / / / /_/ /_/ /  / /_/ / __/  / /___/ / __/  __/
      \___\_\__,_/\__,_/_/_/\__/\__, /   \____/_/    /_____/_/_/  \___/ 
-                              /____/    By Froid & The Ghost
-               )"
-        << "\n\nPost Process Created and Settings Applied!\n"
-        << "You can press CTRL + <KEY> to configure parameters of an action.\n\n";
+                              /____/
+    
+                        By Froid & The Ghost
+                            !TO EVERYONE!
+                          !2025 NEW EDITION!
+                                                                            )"
+        << "\n\nPost Process Created and Settings Applied!\n";
+
 
     GameInstances::Initialize(PostProcessVolume);
 
@@ -123,26 +126,54 @@ static DWORD MainThread(HMODULE Module)
 
     auto bindings = keyHandler->GetKeyBindings();
     std::cout << "Key bindings:\n";
-    for (const auto& [key, actionId] : bindings)
-    {
-        std::cout << keyHandler->GetKeyName(key) << " -> " << Actions::GetActionName(actionId) << "\n";
-    }
+    std::cout << R"(
+F1 -> Spawn Item
+F2 -> Set Player Speed
+F3  -> Toggle Infinite Stamina
+F4 -> Toggle Reduced Mass
+F5 -> Toggle Post Process Effects                
+T  -> Save Loadout
+Z  -> Slow Motion                   )";
 
     SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
-    CurrentPawn = static_cast<SDK::AWillie_BP_C*>(GameInstances::GetPawn();)
-    KPE_AddHook("Kick Event", CurrentPawn, [](SDK::UObject* Object, SDK::UFunction* Function, void* Params) {
-        std::cout << "Kick" << std::endl;
-        return false; // Return false to skip the original function
-        });
+    CurrentPawn = static_cast<SDK::AWillie_BP_C*>(GameInstances::GetPawn());
 
     std::cout << "\n";
     InitializeHook();
 
     while (true)
     {
-        keyHandler->HandleKeys();
+        if (GetAsyncKeyState(VK_F1) & 1) // F1
+        {
+            Actions::SpawnItem();
+        };
 
-        Sleep(1000 / 20); // 30 FPS
+        if (GetAsyncKeyState(VK_F2) & 1) // F2
+        {
+            Actions::SetPlayerSpeed();
+        };
+        if (GetAsyncKeyState(90) & 1) // Z
+        {
+            Actions::SetSlowMo();
+        };
+        if (GetAsyncKeyState(84) & 1) // T
+        {
+            Actions::SaveLoadout();
+        };
+        if (GetAsyncKeyState(VK_F5) & 1) // F5
+        {
+            Actions::TogglePostProcess();
+        };
+        if (GetAsyncKeyState(VK_F3) & 1) // F3
+        {
+            Actions::ToggleInfiniteStamina();
+        };
+        if (GetAsyncKeyState(VK_F4) & 1) // F4
+        {
+            Actions::ToggleMass();
+        };
+
+        Sleep(300); 
     }
     return 0;
 }

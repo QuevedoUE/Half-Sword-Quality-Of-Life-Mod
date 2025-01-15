@@ -276,11 +276,11 @@ KeyHandler::KeyHandler()
     RegisterKey({ Actions::SET_PLAYER_SPEED, VK_F3 });
     RegisterKey({ Actions::TOGGLE_MASS, VK_F4 });
     RegisterKey({ Actions::TOGGLE_POST_PROCESS, VK_F5 });
-    RegisterKey({ Actions::TOGGLE_INFINITE_STAMINA, 0x49 }); // I
+    RegisterKey({ Actions::TOGGLE_INFINITE_STAMINA, 0x49 }); // F3
     RegisterKey({ Actions::SAVE_LOADOUT, 0x54 }); // T
-    RegisterKey({ Actions::TOGGLE_CUSTOM_GAME_SPEED, 0x5A }); // Z
+    RegisterKey({ Actions::SETSLOWMO, 0x5A }); // Z
     RegisterKey({ Actions::UNLOAD_DLL, VK_END });
     RegisterKey({ Actions::CHANGE_KEYBIND, VK_HOME });
 
-    RegisterKeyCombination({ Actions::SET_CUSTOM_GAME_SPEED, {VK_CONTROL, 0x5A} }); // Ctrl + Z
+    RegisterKeyCombination({ Actions::SETSLOWMO, {VK_CONTROL, 0x5A} }); // Ctrl + Z
 }

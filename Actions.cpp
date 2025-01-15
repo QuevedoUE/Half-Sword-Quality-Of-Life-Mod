@@ -19,7 +19,7 @@ std::unordered_map<Actions::ActionID, Actions::ActionInfo> Actions::actions = {
     { TOGGLE_POST_PROCESS,      { "Toggle Post Process Effects", TogglePostProcess } },
     { TOGGLE_INFINITE_STAMINA,  { "Toggle Infinite Stamina", ToggleInfiniteStamina } },
     { SAVE_LOADOUT,             { "Save Loadout", SaveLoadout } },
-    { TOGGLE_CUSTOM_GAME_SPEED, { "Toggle Custom Game Speed", ToggleCustomGameSpeed } },
+    { SETSLOWMO,                { "Slow Motion", SetSlowMo } },
     { SET_CUSTOM_GAME_SPEED,    { "Set Custom Game Speed", SetCustomGameSpeed } },
     { UNLOAD_DLL,               { "Unload DLL", UnloadDLL } },
     { CHANGE_KEYBIND,           { "Change Keybindings", ShowKeyReassignmentMenu } },
@@ -131,17 +131,15 @@ void Actions::SaveLoadout()
     std::cout << "Loadout saved successfully" << std::endl;
 }
 
-void Actions::ToggleCustomGameSpeed()
-{
-    SDK::AWorldSettings* WorldSettings = GameInstances::GetWorldSettings();
-    WorldSettings->TimeDilation == 1.0f ? WorldSettings->TimeDilation = CustomGameSpeed : WorldSettings->TimeDilation = 1.0f;
-    std::cout << "Custom game speed is now " << (WorldSettings->TimeDilation == 1.0f ? "disabled" : "enabled") << std::endl;
-    Sleep(200);
+void Actions::SetCustomGameSpeed() {
+    SetSlowMo();
 }
 
-void Actions::SetCustomGameSpeed()
+void Actions::SetSlowMo()
 {
-    std::cout << "Enter new custom game speed (" << CustomGameSpeed << " currently): ";
-    std::cin >> CustomGameSpeed;
-    std::cout << "Custom game speed set to " << CustomGameSpeed << std::endl;
+    SDK::AWorldSettings* WorldSettings = GameInstances::GetWorldSettings();
+    WorldSettings->TimeDilation = (WorldSettings->TimeDilation == 1.0f ? WorldSettings->TimeDilation = 0.4f :
+    WorldSettings->TimeDilation == 0.4f ? WorldSettings->TimeDilation = 1.0f : 0);
+    std::cout << endl << "Custom game speed is now: " << WorldSettings->TimeDilation << endl;
+    Sleep(200);
 }

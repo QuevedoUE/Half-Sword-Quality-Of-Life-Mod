@@ -14,7 +14,7 @@ public:
     static void TogglePostProcess();
     static void ToggleInfiniteStamina();
     static void SaveLoadout();
-    static void ToggleCustomGameSpeed();
+    static void SetSlowMo();
     static void SetCustomGameSpeed();
     static void UnloadDLL();
     static void ShowKeyReassignmentMenu();
@@ -37,7 +37,7 @@ public:
         TOGGLE_POST_PROCESS,
         TOGGLE_INFINITE_STAMINA,
         SAVE_LOADOUT,
-        TOGGLE_CUSTOM_GAME_SPEED,
+        SETSLOWMO,
         SET_CUSTOM_GAME_SPEED,
         UNLOAD_DLL,
         CHANGE_KEYBIND,
