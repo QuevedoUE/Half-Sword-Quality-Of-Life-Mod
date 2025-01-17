@@ -5,6 +5,9 @@
 #include "SDK.hpp"
 #include "MinHook.h"
 #include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <cstdlib>
 
 class Actions {
 public:
@@ -19,6 +22,8 @@ public:
     static void UnloadDLL();
     static void ShowKeyReassignmentMenu();
     SDK::FVector SetWapeonScale();
+    static void Saveloadoutpreset();
+    static void LoadLoadoutPreset();
 
     static float CustomGameSpeed;
     static bool bInfiniteStaminaEnabled;
@@ -42,6 +47,8 @@ public:
         UNLOAD_DLL,
         CHANGE_KEYBIND,
         SetWapeon_Scale,
+        SAVE_LOADOUT_PRESET,
+        LOAD_LOADOUT_PRESET,
     };
 
     struct ActionInfo {

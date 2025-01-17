@@ -115,6 +115,7 @@ static DWORD MainThread(HMODULE Module)
                         By Froid & The Ghost
                             !TO EVERYONE!
                           !2025 NEW EDITION!
+                         --> 1.25 PRESETS <--
                                                                             )"
         << "\n\nPost Process Created and Settings Applied!\n";
 
@@ -129,11 +130,14 @@ static DWORD MainThread(HMODULE Module)
     std::cout << R"(
 F1 -> Spawn Item
 F2 -> Set Player Speed
-F3  -> Toggle Infinite Stamina
+F3 -> Toggle Infinite Stamina
 F4 -> Toggle Reduced Mass
 F5 -> Toggle Post Process Effects                
 T  -> Save Loadout
-Z  -> Slow Motion                   )";
+Z  -> Slow Motion
+F6 -> Save Preset
+F7 -> Load Preset
+HOME -> Unload DLL (DEBUGGIN PURPOSES !DONT TOUCH!)                  )";
 
     SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
     CurrentPawn = static_cast<SDK::AWillie_BP_C*>(GameInstances::GetPawn());
@@ -143,6 +147,16 @@ Z  -> Slow Motion                   )";
 
     while (true)
     {
+        if (GetAsyncKeyState(VK_F6) & 1) // F6
+        {
+            Actions::Saveloadoutpreset();
+        }
+
+        if (GetAsyncKeyState(VK_F8) & 1) // F7
+        {
+            Actions::LoadLoadoutPreset();
+        }
+
         if (GetAsyncKeyState(VK_F1) & 1) // F1
         {
             Actions::SpawnItem();
@@ -171,6 +185,11 @@ Z  -> Slow Motion                   )";
         if (GetAsyncKeyState(VK_F4) & 1) // F4
         {
             Actions::ToggleMass();
+        };
+
+        if (GetAsyncKeyState(VK_HOME) & 1) // HOME
+        {
+            Actions::UnloadDLL();
         };
 
         Sleep(300); 
