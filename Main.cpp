@@ -12,6 +12,48 @@ static void __fastcall HookedProcessEvent(SDK::UObject* Object, SDK::UFunction* 
     OriginalProcessEvent(Object, Function, Params);
 }
 
+void ClearConsole() {
+    // Last Row
+    std::cout << "\033[1A\033[2K"; 
+    std::cout << "\033[1J"; 
+}
+static void HSMessage() {
+    ClearConsole();
+    std::cout << R"(
+         __  __      ______   _____                        __          
+        / / / /___ _/ / __/  / ___/      ______  _________/ /          
+       / /_/ / __ `/ / /_    \__ \ | /| / / __ \/ ___/ __  /           
+      / __  / /_/ / / __/   ___/ / |/ |/ / /_/ / /  / /_/ /            
+     /_/_/_/\__,_/_/_/    _/____/|__/|__/\____/_/___\__,_/    _ ____   
+       / __ \__  ______ _/ (_) /___  __   ____  / __/  / /   (_) __/__ 
+      / / / / / / / __ `/ / / __/ / / /  / __ \/ /_   / /   / / /_/ _ \
+     / /_/ / /_/ / /_/ / / / /_/ /_/ /  / /_/ / __/  / /___/ / __/  __/
+     \___\_\__,_/\__,_/_/_/\__/\__, /   \____/_/    /_____/_/_/  \___/ 
+                              /____/
+    
+                        By Froid & The Ghost
+                            !TO EVERYONE!
+                          !2025 NEW EDITION!
+                     --> 1.25 PRESETS & FIXES <--
+                                                                            )";
+    std::cout << R"(
+Key bindings:
+
+F1 -> Spawn Item
+F2 -> Set Player Speed
+F3 -> Toggle Infinite Stamina
+F4 -> Toggle Reduced Mass
+F5 -> Toggle Post Process Effects                
+T  -> Save Loadout
+Z  -> Slow Motion
+F6 -> Save Preset
+F8 -> Load Preset
+HOME -> Unload DLL (DEBUGGIN PURPOSES !DONT TOUCH!) 
+)";
+std::cout << "\n";
+
+}
+
 static void InitializeHook() {
     if (MH_Initialize() != MH_OK) {
         std::cerr << "Error initializing MinHook" << std::endl;
@@ -100,25 +142,6 @@ static DWORD MainThread(HMODULE Module)
     Settings.DepthOfFieldFocalRegion = 150.0f;
     Settings.bOverride_SceneColorTint = true;
     Settings.SceneColorTint = SDK::FLinearColor(240.0f / 255.0f, 180.0f / 255.0f, 120.0f / 255.0f);
-    std::cout << R"(
-         __  __      ______   _____                        __          
-        / / / /___ _/ / __/  / ___/      ______  _________/ /          
-       / /_/ / __ `/ / /_    \__ \ | /| / / __ \/ ___/ __  /           
-      / __  / /_/ / / __/   ___/ / |/ |/ / /_/ / /  / /_/ /            
-     /_/_/_/\__,_/_/_/    _/____/|__/|__/\____/_/___\__,_/    _ ____   
-       / __ \__  ______ _/ (_) /___  __   ____  / __/  / /   (_) __/__ 
-      / / / / / / / __ `/ / / __/ / / /  / __ \/ /_   / /   / / /_/ _ \
-     / /_/ / /_/ / /_/ / / / /_/ /_/ /  / /_/ / __/  / /___/ / __/  __/
-     \___\_\__,_/\__,_/_/_/\__/\__, /   \____/_/    /_____/_/_/  \___/ 
-                              /____/
-    
-                        By Froid & The Ghost
-                            !TO EVERYONE!
-                          !2025 NEW EDITION!
-                         --> 1.25 PRESETS <--
-                                                                            )"
-        << "\n\nPost Process Created and Settings Applied!\n";
-
 
     GameInstances::Initialize(PostProcessVolume);
 
@@ -126,23 +149,11 @@ static DWORD MainThread(HMODULE Module)
     keyHandler->LoadKeyBindings();
 
     auto bindings = keyHandler->GetKeyBindings();
-    std::cout << "Key bindings:\n";
-    std::cout << R"(
-F1 -> Spawn Item
-F2 -> Set Player Speed
-F3 -> Toggle Infinite Stamina
-F4 -> Toggle Reduced Mass
-F5 -> Toggle Post Process Effects                
-T  -> Save Loadout
-Z  -> Slow Motion
-F6 -> Save Preset
-F7 -> Load Preset
-HOME -> Unload DLL (DEBUGGIN PURPOSES !DONT TOUCH!)                  )";
 
     SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
     CurrentPawn = static_cast<SDK::AWillie_BP_C*>(GameInstances::GetPawn());
 
-    std::cout << "\n";
+    HSMessage();
     InitializeHook();
 
     while (true)
@@ -150,29 +161,35 @@ HOME -> Unload DLL (DEBUGGIN PURPOSES !DONT TOUCH!)                  )";
         if (GetAsyncKeyState(VK_F6) & 1) // F6
         {
             Actions::Saveloadoutpreset();
+            HSMessage();
         }
 
         if (GetAsyncKeyState(VK_F8) & 1) // F7
         {
             Actions::LoadLoadoutPreset();
+            HSMessage();
         }
 
         if (GetAsyncKeyState(VK_F1) & 1) // F1
         {
             Actions::SpawnItem();
+            HSMessage();
         };
 
         if (GetAsyncKeyState(VK_F2) & 1) // F2
         {
             Actions::SetPlayerSpeed();
+            HSMessage();
         };
         if (GetAsyncKeyState(90) & 1) // Z
         {
             Actions::SetSlowMo();
+            HSMessage();
         };
         if (GetAsyncKeyState(84) & 1) // T
         {
             Actions::SaveLoadout();
+            HSMessage();
         };
         if (GetAsyncKeyState(VK_F5) & 1) // F5
         {
@@ -181,10 +198,12 @@ HOME -> Unload DLL (DEBUGGIN PURPOSES !DONT TOUCH!)                  )";
         if (GetAsyncKeyState(VK_F3) & 1) // F3
         {
             Actions::ToggleInfiniteStamina();
+            HSMessage();
         };
         if (GetAsyncKeyState(VK_F4) & 1) // F4
         {
             Actions::ToggleMass();
+            HSMessage();
         };
 
         if (GetAsyncKeyState(VK_HOME) & 1) // HOME

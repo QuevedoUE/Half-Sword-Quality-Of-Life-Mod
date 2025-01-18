@@ -70,52 +70,84 @@ void Actions::Saveloadoutpreset() {
     string sourcePath;
     char* localAppData = nullptr;
     size_t requiredSize = 0;
+    SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
 
+    
+    if (GameInstances::GetPlayerController()->bShowMouseCursor) {
+        std::cout << "You must be in-game to save your presets." << std::endl;
+        return;
+    }
+
+   
     if (_dupenv_s(&localAppData, &requiredSize, "LOCALAPPDATA") == 0 && localAppData != nullptr) {
         sourcePath = string(localAppData) + R"(\VersionTest54\Saved\SaveGames\SG Player Equipment.sav)";
         free(localAppData);
     }
     else {
-        cerr << "APPDATA NOT FOUND" << endl;
+        cerr << "APPDATA NOT FOUND. Error retrieving LOCALAPPDATA." << endl;
         return;
     }
 
+    
     if (!fs::exists(sourcePath)) {
         cerr << "The file SG Player Equipment.sav does not exist or is corrupted: " << sourcePath << endl;
         return;
     }
 
+    
     string targetFolder = "C:/HS-QOL";
     if (!fs::exists(targetFolder)) {
-        fs::create_directories(targetFolder);
+        if (!fs::create_directories(targetFolder)) {
+            cerr << "Failed to create target folder: " << targetFolder << endl;
+            return;
+        }
     }
 
+    
     string newName;
     cout << "Enter preset name (do not include .sav): ";
     cin >> newName;
 
+    
+    if (newName.find_first_of("\\/:*?\"<>|") != string::npos) {
+        cerr << "Preset name contains invalid characters. Please try again." << endl;
+        return;
+    }
+
     string targetPath = targetFolder + "/" + newName + ".sav";
 
+    
     try {
         fs::copy(sourcePath, targetPath, fs::copy_options::overwrite_existing);
         cout << "Preset saved as: " << newName << endl;
+        if (CurrentPawn) {
+            CurrentPawn->Save_Loadout();
+        }
+        else {
+            cerr << "Failed to save loadout: CurrentPawn is null." << endl;
+        }
     }
     catch (const fs::filesystem_error& e) {
         cerr << "Failed to save preset: " << e.what() << endl;
     }
 }
 
+
 void Actions::LoadLoadoutPreset() {
-    string targetPath;
+    string targetPathPlayer;
+    string targetPathGiveUp;
     char* localAppData = nullptr;
     size_t requiredSize = 0;
 
     if (_dupenv_s(&localAppData, &requiredSize, "LOCALAPPDATA") == 0 && localAppData != nullptr) {
-        targetPath = string(localAppData) + R"(\VersionTest54\Saved\SaveGames\SG Player Equipment.sav)";
+        // Defines APPDATA
+        string appDataBase = string(localAppData) + R"(\VersionTest54\Saved\SaveGames\)";
+        targetPathPlayer = appDataBase + "SG Player Equipment.sav";
+        targetPathGiveUp = appDataBase + "Save_GiveUp.sav";
         free(localAppData);
     }
     else {
-        cerr << "APPDATA NOT FOUND" << endl;
+        cerr << "APPDATA NOT FOUND. Error retrieving LOCALAPPDATA." << endl;
         return;
     }
 
@@ -154,17 +186,32 @@ void Actions::LoadLoadoutPreset() {
     }
 
     try {
-        fs::copy(sourcePath, targetPath, fs::copy_options::overwrite_existing);
-        cout << "Preset loaded: " << presetName << endl;
+        // Copia el archivo al destino SG Player Equipment.sav
+        fs::copy(sourcePath, targetPathPlayer, fs::copy_options::overwrite_existing);
+        cout << "Preset loaded for SG Player Equipment: " << presetName << endl;
+
+        // Copia el archivo al destino Save_GiveUp.sav
+        fs::copy(sourcePath, targetPathGiveUp, fs::copy_options::overwrite_existing);
+        cout << "Preset loaded for Save_GiveUp: " << presetName << endl;
+
+        // Forzar la recarga en el juego
+        SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
+        if (CurrentPawn) {
+            CurrentPawn->Load_Save();              
+            CurrentPawn->Add_Startup_Weapons();
+            CurrentPawn->Load_Save_Give_Up();
+            cout << "Loadout successfully updated in-game." << endl;
+        }
+        else {
+            cerr << "Failed to load preset: CurrentPawn is null." << endl;
+        }
     }
     catch (const fs::filesystem_error& e) {
         cerr << "Failed to load preset: " << e.what() << endl;
-        return;
     }
-
-    SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
-    CurrentPawn->Load_Save();
 }
+
+
 
 
 void Actions::SpawnItem()
@@ -176,11 +223,11 @@ void Actions::SetPlayerSpeed()
 {
     SDK::AWillie_BP_C* CurrentPawn = GameInstances::GetPawn();
     CurrentPawn->CharacterMovement->MaxWalkSpeed = 9999999;
-    std::cout << "Enter new speed (" << CurrentPawn->Running_Speed_Rate << " currently): ";
+    std::cout << "Enter new speed:  (" << CurrentPawn->Running_Speed_Rate << " currently): ";
     std::cin >> CurrentPawn->Running_Speed_Rate;
     CurrentPawn->CharacterMovement->MaxAcceleration = 9999999;
     CurrentPawn->CharacterMovement->bCheatFlying = 1;
-    std::cout << "Player speed set to " << CurrentPawn->Running_Speed_Rate << std::endl;
+    std::cout << "New Speed: " << CurrentPawn->Running_Speed_Rate << std::endl;
 }
 
 void Actions::ToggleMass()
@@ -196,7 +243,7 @@ void Actions::ToggleMass()
         CurrentPawn->Default_Pelvis_Mass = 0;
         CurrentPawn->R_Weapon_Mass = 0;
         CurrentPawn->L_Weapon_Mass = 0;
-        CurrentPawn->Aim_Swing_Speed = 999.0f;
+        CurrentPawn->Aim_Swing_Speed = 99999.0f;
         CurrentPawn->Default_Spine_05_Mass = 0;
 
         bMassReduced = true;
@@ -210,20 +257,19 @@ void Actions::ToggleMass()
 
         bMassReduced = false;
     }
-    std::cout << "Mass modifications are now " << (bMassReduced ? "reduced" : "normal") << std::endl;
 }
 
 void Actions::TogglePostProcess()
 {
     SDK::APostProcessVolume* PPVolume = GameInstances::GetPostProcessVolume();
     PPVolume->bUnbound = ~PPVolume->bUnbound;
-    std::cout << "Post process effects are now " << (PPVolume->bUnbound ? "enabled" : "disabled") << std::endl;
+    std::cout << "Post process is: " << (PPVolume->bUnbound ? "enabled" : "disabled") << std::endl;
 }
 
 void Actions::ToggleInfiniteStamina()
 {
     bInfiniteStaminaEnabled = !bInfiniteStaminaEnabled;
-    std::cout << "Infinite stamina is now " << (bInfiniteStaminaEnabled ? "enabled" : "disabled") << std::endl;
+    std::cout << "Infinite stamina is now:  " << (bInfiniteStaminaEnabled ? "enabled" : "disabled") << std::endl;
 }
 
 void Actions::SaveLoadout()
@@ -237,6 +283,7 @@ void Actions::SaveLoadout()
 }
 
 void Actions::SetCustomGameSpeed() {
+
     SetSlowMo();
 }
 
@@ -245,7 +292,6 @@ void Actions::SetSlowMo()
     SDK::AWorldSettings* WorldSettings = GameInstances::GetWorldSettings();
     WorldSettings->TimeDilation = (WorldSettings->TimeDilation == 1.0f ? WorldSettings->TimeDilation = 0.4f :
     WorldSettings->TimeDilation == 0.4f or WorldSettings->TimeDilation == 0.0f ? WorldSettings->TimeDilation = 1.0f : 0);
-    std::cout << endl << "Custom game speed is now: " << WorldSettings->TimeDilation << endl;
     Sleep(200);
 }
     
